@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GSG",
+    "TAT",
+    "BBB"
+  ],
+  "key": {
+    "G": {"item": "minecraft:gold_ingot"},
+    "S": {"item": "minecraft:smithing_table"},
+    "T": {"item": "minecraft:stick"},
+    "A": {"item": "minecraft:anvil"},
+    "B": {"item": "elementalsmithing:steel_block"}
+  },
+  "result": {
+    "item": "elementalsmithing:fusion_smithing_table"
+  }
+}

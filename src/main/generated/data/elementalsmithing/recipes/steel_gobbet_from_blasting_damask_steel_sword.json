@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 500,
+  "experience": 1.0,
+  "group": "steel",
+  "ingredient": {
+    "item": "elementalsmithing:damask_steel_sword"
+  },
+  "result": "elementalsmithing:steel_gobbet"
+}

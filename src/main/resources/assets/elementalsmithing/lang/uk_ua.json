@@ -1,0 +1,81 @@
+{
+  "item.elementalsmithing.graphite": "Графіт",
+  "item.elementalsmithing.raw_steel": "Необроблена сталь",
+  "item.elementalsmithing.steel_gobbet": "Шматок сталі",
+  "item.elementalsmithing.steel_ingot": "Сталевий злиток",
+
+  "block.elementalsmithing.steel_block" : "Блок сталі",
+  "block.elementalsmithing.fusion_smithing_table" : "Стіл злиття",
+  "gui.elementalsmithing.fusion_smithing_table.title" : "Стіл злиття",
+
+  "item.elementalsmithing.steel_axe": "Сталева сокира",
+  "item.elementalsmithing.steel_pickaxe": "Сталева кирка",
+  "item.elementalsmithing.steel_shovel": "Сталева лопата",
+  "item.elementalsmithing.steel_hoe": "Сталева сапа",
+  "item.elementalsmithing.steel_sword": "Сталевий меч",
+
+  "item.elementalsmithing.reinforced_steel_sword": "Міцний сталевий меч",
+
+  "item.elementalsmithing.damask_steel_axe": "Сокира з дамаської сталі",
+  "item.elementalsmithing.damask_steel_pickaxe": "Кирка з дамаської сталі",
+  "item.elementalsmithing.damask_steel_shovel": "Лопата з дамаської сталі",
+  "item.elementalsmithing.damask_steel_hoe": "Сапа з дамаської сталі",
+  "item.elementalsmithing.damask_steel_sword": "Меч з дамаської сталі",
+
+  "item.elementalsmithing.knight_helmet": "Лицарський шолом",
+  "item.elementalsmithing.knight_chestplate": "Лицарська кираса",
+  "item.elementalsmithing.knight_leggings": "Лицарські поножі",
+  "item.elementalsmithing.knight_boots": "Лицарські сабатони",
+
+  "item.elementalsmithing.blessed_crystal": "Благословенний кристал",
+  "item.elementalsmithing.cursed_crystal": "Проклятий кристал",
+  "item.elementalsmithing.pure_crystal": "Чистий кристал",
+
+  "item.elementalsmithing.blessed_crystal_sword": "Благословенний кристалічний меч",
+  "item.elementalsmithing.cursed_crystal_sword": "Проклятий кристалічний меч",
+  "item.elementalsmithing.pure_crystal_sword": "Чистий кристалічний меч",
+  "item.elementalsmithing.pure_crystal_shovel": "Чиста кристалічна лопата",
+  "item.elementalsmithing.pure_crystal_pickaxe": "Чиста кристалічна кирка",
+  "item.elementalsmithing.pure_crystal_axe": "Чиста кристалічна сокира",
+  "item.elementalsmithing.pure_crystal_hoe": "Чиста кристалічна сапа",
+
+  "item.elementalsmithing.flame_handle": "Полум'яне руків'я",
+  "item.elementalsmithing.frost_blade": "Морозне лезо",
+  "item.elementalsmithing.amorphous_sword": "Безформний меч",
+
+
+  "item.elementalsmithing.smithing_template.damask_steel_upgrade.applies_to": "Залізні обладунки та інструменти",
+  "item.elementalsmithing.smithing_template.damask_steel_upgrade.ingredients": "Сталевий злиток",
+  "item.elementalsmithing.smithing_template.damask_steel_upgrade.title":  "Сталеве покращення",
+  "item.elementalsmithing.smithing_template.damask_steel_upgrade.base_slot_description": "Куйте залізо та отримуйте візерунчастий булат, як це робили наші предки-ковалі",
+  "item.elementalsmithing.smithing_template.damask_steel_upgrade.additions_slot_description":  "Додайте сталь",
+
+
+  "tooltip.elementalsmithing.elemental_core.element":  "Керує елементом",
+  "tooltip.elementalsmithing.elemental_core.hint_damaged": "Щоб завершити ядро, наповніть його відповідною енергією",
+  "tooltip.elementalsmithing.elemental_core.hint": "Ядро завершене",
+  "tooltip.elementalsmithing.elemental_core.energy": "Енергія",
+
+  "item.elementalsmithing.flame_core":  "Полум'яне ядро",
+  "item.elementalsmithing.flame_core.description": "Вмістилище незгасаючого вогню",
+  "item.elementalsmithing.flame_core.element": "Вогонь",
+
+  "item.elementalsmithing.frost_core":  "Морозне ядро",
+  "item.elementalsmithing.frost_core.description": "Вмістилище полярного холоду",
+  "item.elementalsmithing.frost_core.element": "Сніг",
+
+  "item.elementalsmithing.soul_core":  "Ядро душі",
+  "item.elementalsmithing.soul_core.description": "Вмістилище життєвої енергії",
+  "item.elementalsmithing.soul_core.element": "Життя",
+
+
+  "item.elementalsmithing.tegukjflk_music_disk":  "Платівка",
+  "item.elementalsmithing.tegukjflk_music_disk.desc":  "ukrounay - tegukjflk",
+
+  "item.elementalsmithing.iwseuvhjk_music_disk":  "Платівка",
+  "item.elementalsmithing.iwseuvhjk_music_disk.desc":  "ukrounay - iwseuvhjk",
+
+  "death.attack.vital_energy_drain": "%1$s помер від виснаження життєвої енергії.",
+
+  "itemgroup.global": "Стихійне ковальство"
+}

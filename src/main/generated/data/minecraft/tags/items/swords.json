@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "elementalsmithing:damask_steel_sword",
+    "elementalsmithing:steel_sword",
+    "elementalsmithing:amorphous_sword",
+    "elementalsmithing:cursed_crystal_sword",
+    "elementalsmithing:blessed_crystal_sword",
+    "elementalsmithing:pure_crystal_sword"
+  ]
+}

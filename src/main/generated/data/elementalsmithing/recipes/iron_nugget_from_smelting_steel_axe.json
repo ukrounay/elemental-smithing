@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 1000,
+  "experience": 0.2,
+  "group": "steel",
+  "ingredient": {
+    "item": "elementalsmithing:steel_axe"
+  },
+  "result": "minecraft:iron_nugget"
+}

@@ -1,0 +1,10 @@
+{
+  "type": "elementalsmithing:fusion",
+  "fusing_craft_1": {"item": "elementalsmithing:flame_core"},
+  "fusing_craft_3": {"item": "elementalsmithing:steel_ingot"},
+  "fusing_craft_4": {"item": "elementalsmithing:steel_ingot"},
+  "fusing_craft_6": {"item": "minecraft:fire_charge"},
+  "fusing_left": {"item": "minecraft:blaze_rod"},
+  "fusing_right": {"item": "minecraft:blaze_rod"},
+  "result": {"item": "elementalsmithing:flame_handle"}
+}

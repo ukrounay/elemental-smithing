@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "elementalsmithing:item/pure_crystal_axe"
+  }
+}

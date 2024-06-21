@@ -1,0 +1,7 @@
+{
+  "type": "elementalsmithing:fusion",
+  "fusing_craft_1" : {"item": "elementalsmithing:soul_core"},
+  "fusing_left": {"item": "elementalsmithing:flame_handle"},
+  "fusing_right": {"item": "elementalsmithing:frost_blade"},
+  "result": {"item": "elementalsmithing:amorphous_sword"}
+}

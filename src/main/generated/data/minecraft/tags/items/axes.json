@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "elementalsmithing:damask_steel_axe",
+    "elementalsmithing:steel_axe",
+    "elementalsmithing:pure_crystal_axe"
+  ]
+}

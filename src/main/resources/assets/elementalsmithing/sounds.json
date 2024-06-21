@@ -1,0 +1,23 @@
+{
+  "tegukjflk" : {
+    "sounds": [
+      {
+        "name" : "elementalsmithing:tegukjflk",
+        "stream" : true
+      }
+    ]
+  },
+  "iwseuvhjk" : {
+    "sounds": [
+      {
+        "name" : "elementalsmithing:iwseuvhjk",
+        "stream" : true
+      }
+    ]
+  },
+  "vital_energy_absorbing": {"sounds": [{"name" : "elementalsmithing:vital_energy_absorbing"}]},
+  "vital_energy_extracting": {"sounds": [{"name" : "elementalsmithing:vital_energy_extracting"}]},
+  "flame_core_completion": {"sounds": [{"name" : "elementalsmithing:flame_core_completion"}]},
+  "frost_core_completion": {"sounds": [{"name" : "elementalsmithing:frost_core_completion"}]},
+  "soul_core_completion": {"sounds": [{"name" : "elementalsmithing:soul_core_completion"}]}
+}

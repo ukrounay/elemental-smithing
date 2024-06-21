@@ -1,0 +1,14 @@
+{
+  "type": "elementalsmithing:fusion",
+  "fusing_craft_0": {"item": "minecraft:quartz"},
+  "fusing_craft_1": {"item": "minecraft:diamond"},
+  "fusing_craft_2": {"item": "minecraft:quartz"},
+  "fusing_craft_3": {"item": "minecraft:diamond"},
+  "fusing_craft_4": {"item": "minecraft:diamond"},
+  "fusing_craft_5": {"item": "minecraft:quartz"},
+  "fusing_craft_6": {"item": "minecraft:diamond"},
+  "fusing_craft_7": {"item": "minecraft:quartz"},
+  "fusing_left": {"item": "minecraft:amethyst_shard"},
+  "fusing_right": {"item": "minecraft:amethyst_shard"},
+  "result": {"item": "elementalsmithing:blessed_crystal"}
+}

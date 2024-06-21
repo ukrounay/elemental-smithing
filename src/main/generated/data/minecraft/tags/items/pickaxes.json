@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "elementalsmithing:damask_steel_pickaxe",
+    "elementalsmithing:steel_pickaxe",
+    "elementalsmithing:pure_crystal_pickaxe"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "elementalsmithing:steel_ingot"
+    }
+  ],
+  "result": {
+    "item": "elementalsmithing:steel_gobbet",
+    "count": 4
+  },
+  "show_notification": true
+}

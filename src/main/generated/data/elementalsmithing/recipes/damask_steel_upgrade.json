@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "C": {
+      "item": "elementalsmithing:steel_ingot"
+    },
+    "S": {
+      "item": "elementalsmithing:damask_steel_upgrade"
+    }
+  },
+  "pattern": [
+    "#S#",
+    "#C#",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "item": "elementalsmithing:damask_steel_upgrade"
+  },
+  "show_notification": true
+}

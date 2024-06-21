@@ -1,0 +1,82 @@
+{
+  "item.elementalsmithing.graphite": "Graphite",
+  "item.elementalsmithing.raw_steel": "Raw Steel",
+  "item.elementalsmithing.steel_gobbet": "Steel Gobbet",
+  "item.elementalsmithing.steel_ingot": "Steel Ingot",
+
+  "block.elementalsmithing.steel_block" : "Block of Steel",
+  "block.elementalsmithing.fusion_smithing_table" : "Fusion Table",
+  "gui.elementalsmithing.fusion_smithing_table.title" : "Fusion Table",
+
+  "item.elementalsmithing.steel_axe": "Steel Axe",
+  "item.elementalsmithing.steel_pickaxe": "Steel Pickaxe",
+  "item.elementalsmithing.steel_shovel": "Steel Shovel",
+  "item.elementalsmithing.steel_hoe": "Steel Hoe",
+  "item.elementalsmithing.steel_sword": "Steel Sword",
+
+  "item.elementalsmithing.reinforced_steel_sword": "Reinforced Steel Sword",
+
+  "item.elementalsmithing.damask_steel_axe": "Damask Steel Axe",
+  "item.elementalsmithing.damask_steel_pickaxe": "Damask Steel Pickaxe",
+  "item.elementalsmithing.damask_steel_shovel": "Damask Steel Shovel",
+  "item.elementalsmithing.damask_steel_hoe": "Damask Steel Hoe",
+  "item.elementalsmithing.damask_steel_sword": "Damask Steel Sword",
+
+  "item.elementalsmithing.knight_helmet": "Knight Helmet",
+  "item.elementalsmithing.knight_chestplate": "Knight Chestplate",
+  "item.elementalsmithing.knight_leggings": "Knight Leggings",
+  "item.elementalsmithing.knight_boots": "Knight Boots",
+
+  "item.elementalsmithing.blessed_crystal": "Blessed Crystal",
+  "item.elementalsmithing.cursed_crystal": "Cursed Crystal",
+  "item.elementalsmithing.pure_crystal": "Pure Crystal",
+
+  "item.elementalsmithing.blessed_crystal_sword": "Blessed Crystal Sword",
+  "item.elementalsmithing.cursed_crystal_sword": "Cursed Crystal Sword",
+  "item.elementalsmithing.pure_crystal_sword": "Pure Crystal Sword",
+  "item.elementalsmithing.pure_crystal_shovel": "Pure Crystal Shovel",
+  "item.elementalsmithing.pure_crystal_pickaxe": "Pure Crystal Pickaxe",
+  "item.elementalsmithing.pure_crystal_axe": "Pure Crystal Axe",
+  "item.elementalsmithing.pure_crystal_hoe": "Pure Crystal Hoe",
+
+
+  "item.elementalsmithing.flame_handle": "Flame Handle",
+  "item.elementalsmithing.frost_blade": "Frost Blade",
+  "item.elementalsmithing.amorphous_sword": "Amorphous Sword",
+
+
+  "item.elementalsmithing.smithing_template.damask_steel_upgrade.applies_to": "Iron Armor and Tools",
+  "item.elementalsmithing.smithing_template.damask_steel_upgrade.ingredients": "Steel Ingot",
+  "item.elementalsmithing.smithing_template.damask_steel_upgrade.title":  "Damask Steel Upgrade",
+  "item.elementalsmithing.smithing_template.damask_steel_upgrade.base_slot_description": "Forge your iron to damask the way founded by ancient blacksmiths",
+  "item.elementalsmithing.smithing_template.damask_steel_upgrade.additions_slot_description":  "Add steel to harden material",
+
+
+  "tooltip.elementalsmithing.elemental_core.element":  "Controls the element",
+  "tooltip.elementalsmithing.elemental_core.hint_damaged": "To complete the core, imbue it with the appropriate energy",
+  "tooltip.elementalsmithing.elemental_core.hint": "The core is completed",
+  "tooltip.elementalsmithing.elemental_core.energy": "Energy",
+
+  "item.elementalsmithing.flame_core":  "Flame Core",
+  "item.elementalsmithing.flame_core.description": "Vessel of the undying fire",
+  "item.elementalsmithing.flame_core.element": "Fire",
+
+  "item.elementalsmithing.frost_core":  "Frost Core",
+  "item.elementalsmithing.frost_core.description": "Vessel of polar coldness",
+  "item.elementalsmithing.frost_core.element": "Snow",
+
+  "item.elementalsmithing.soul_core":  "Soul Core",
+  "item.elementalsmithing.soul_core.description": "Vessel of a vital energy",
+  "item.elementalsmithing.soul_core.element": "Life",
+
+
+  "item.elementalsmithing.tegukjflk_music_disk":  "Music Disk",
+  "item.elementalsmithing.tegukjflk_music_disk.desc":  "ukrounay - tegukjflk",
+
+  "item.elementalsmithing.iwseuvhjk_music_disk":  "Music Disk",
+  "item.elementalsmithing.iwseuvhjk_music_disk.desc":  "ukrounay - iwseuvhjk",
+
+  "death.attack.vital_energy_drain": "%1$s died from a vital energy draining.",
+
+  "itemgroup.global": "Elemental Smithing"
+}

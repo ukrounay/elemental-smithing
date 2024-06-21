@@ -1,0 +1,1 @@
+{  "type": "minecraft:crafting_shaped",  "category": "equipment",  "key": {    "#": {      "item": "minecraft:stick"    },    "X": {      "item": "elementalsmithing:cursed_crystal"    }  },  "pattern": [    "X",    "X",    "#"  ],  "result": {    "item": "elementalsmithing:cursed_crystal_sword"  },  "show_notification": true}

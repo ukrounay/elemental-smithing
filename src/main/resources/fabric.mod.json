@@ -1,0 +1,43 @@
+{
+	"schemaVersion": 1,
+	"id": "elementalsmithing",
+	"version": "${version}",
+	"name": "Elemental Smithing",
+	"description": "Medieval fantasy mod with a lot of cool equipment and in-game mechanics.",
+	"authors": [
+		"ukrounay"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/elementalsmithing/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.ukrounay.elementalsmithing.ElementalSmithing"
+		],
+		"client": [
+			"net.ukrounay.elementalsmithing.ElementalSmithingClient"
+		],
+		"fabric-datagen": [
+			"net.ukrounay.elementalsmithing.ElementalSmithingDataGenerator"
+		],
+		"rei_client": [
+			"net.ukrounay.elementalsmithing.compat.ElementalSmithingREIClientPlugin"
+		]
+	},
+	"mixins": [
+		"elementalsmithing.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

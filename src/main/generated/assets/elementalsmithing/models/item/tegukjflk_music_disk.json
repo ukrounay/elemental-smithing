@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "elementalsmithing:item/tegukjflk_music_disk"
+  }
+}

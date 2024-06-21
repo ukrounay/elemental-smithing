@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "elementalsmithing:steel_ingot"
+  },
+  "base": {
+    "item": "minecraft:iron_sword"
+  },
+  "result": {
+    "item": "elementalsmithing:damask_steel_sword"
+  },
+  "template": {
+    "item": "elementalsmithing:damask_steel_upgrade"
+  }
+}

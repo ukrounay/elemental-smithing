@@ -1,0 +1,14 @@
+{
+  "type": "elementalsmithing:fusion",
+  "fusing_craft_0": {"item": "minecraft:water_bucket"},
+  "fusing_craft_1": {"item": "elementalsmithing:steel_sword"},
+  "fusing_craft_2": {"item": "minecraft:water_bucket"},
+  "fusing_craft_3": {"item": "elementalsmithing:steel_ingot"},
+  "fusing_craft_4": {"item": "elementalsmithing:steel_ingot"},
+  "fusing_craft_5": {"item": "minecraft:lava_bucket"},
+  "fusing_craft_6": {"item": "elementalsmithing:steel_ingot"},
+  "fusing_craft_7": {"item": "minecraft:lava_bucket"},
+  "fusing_left": {"item": "minecraft:iron_ingot"},
+  "fusing_right": {"item": "minecraft:iron_ingot"},
+  "result": {"item": "elementalsmithing:reinforced_steel_sword"}
+}

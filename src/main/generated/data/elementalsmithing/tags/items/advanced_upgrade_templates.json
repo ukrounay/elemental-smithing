@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "elementalsmithing:damask_steel_upgrade",
+    "elementalsmithing:soul_core",
+    "elementalsmithing:flame_core",
+    "elementalsmithing:frost_core"
+  ]
+}

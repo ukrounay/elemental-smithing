@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:diamond",
+    "minecraft:emerald",
+    "minecraft:amethyst_shard",
+    "minecraft:quartz",
+    "minecraft:lapis_lazuli",
+    "elementalsmithing:graphite",
+    "elementalsmithing:blessed_crystal",
+    "elementalsmithing:cursed_crystal",
+    "elementalsmithing:pure_crystal"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "elementalsmithing:damask_steel_hoe",
+    "elementalsmithing:steel_hoe",
+    "elementalsmithing:pure_crystal_hoe"
+  ]
+}

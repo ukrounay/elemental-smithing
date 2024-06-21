@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "elementalsmithing:knight_helmet",
+    "elementalsmithing:knight_chestplate",
+    "elementalsmithing:knight_leggings",
+    "elementalsmithing:knight_boots"
+  ]
+}

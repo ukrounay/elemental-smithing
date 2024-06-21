@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "iron_ingot",
+  "key": {
+    "#": {
+      "item": "elementalsmithing:steel_gobbet"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "item": "elementalsmithing:steel_ingot"
+  },
+  "show_notification": true
+}
