@@ -5,6 +5,11 @@
   "item.elementalsmithing.steel_ingot": "Сталевий злиток",
 
   "block.elementalsmithing.steel_block" : "Блок сталі",
+  "block.elementalsmithing.graphite_block" : "Блок графіту",
+  "block.elementalsmithing.blessed_crystal_block" : "Блок благословенного кристалу",
+  "block.elementalsmithing.cursed_crystal_block" : "Блок проклятого кристалу",
+  "block.elementalsmithing.pure_crystal_block" : "Блок чистого кристалу",
+
   "block.elementalsmithing.fusion_smithing_table" : "Стіл злиття",
   "gui.elementalsmithing.fusion_smithing_table.title" : "Стіл злиття",
 
@@ -27,20 +32,35 @@
   "item.elementalsmithing.knight_leggings": "Лицарські поножі",
   "item.elementalsmithing.knight_boots": "Лицарські сабатони",
 
+  "item.elementalsmithing.reinforced_knight_helmet": "Міцний лицарський шолом",
+  "item.elementalsmithing.reinforced_knight_chestplate": "Міцна лицарська кираса",
+  "item.elementalsmithing.reinforced_knight_leggings": "Міцні лицарські поножі",
+  "item.elementalsmithing.reinforced_knight_boots": "Міцні лицарські черевики",
+
   "item.elementalsmithing.blessed_crystal": "Благословенний кристал",
   "item.elementalsmithing.cursed_crystal": "Проклятий кристал",
   "item.elementalsmithing.pure_crystal": "Чистий кристал",
 
   "item.elementalsmithing.blessed_crystal_sword": "Благословенний кристалічний меч",
+  "item.elementalsmithing.blessed_crystal_shovel": "Благословенна кристалічна лопата",
+  "item.elementalsmithing.blessed_crystal_pickaxe": "Благословенна кристалічна кирка",
+  "item.elementalsmithing.blessed_crystal_axe": "Благословенна кристалічна сокира",
+  "item.elementalsmithing.blessed_crystal_hoe": "Благословенна кристалічна сапа",
+
   "item.elementalsmithing.cursed_crystal_sword": "Проклятий кристалічний меч",
+  "item.elementalsmithing.cursed_crystal_shovel": "Проклята кристалічна лопата",
+  "item.elementalsmithing.cursed_crystal_pickaxe": "Проклята кристалічна кирка",
+  "item.elementalsmithing.cursed_crystal_axe": "Проклята кристалічна сокира",
+  "item.elementalsmithing.cursed_crystal_hoe": "Проклята кристалічна сапа",
+
   "item.elementalsmithing.pure_crystal_sword": "Чистий кристалічний меч",
   "item.elementalsmithing.pure_crystal_shovel": "Чиста кристалічна лопата",
   "item.elementalsmithing.pure_crystal_pickaxe": "Чиста кристалічна кирка",
   "item.elementalsmithing.pure_crystal_axe": "Чиста кристалічна сокира",
   "item.elementalsmithing.pure_crystal_hoe": "Чиста кристалічна сапа",
 
-  "item.elementalsmithing.flame_handle": "Полум'яне руків'я",
-  "item.elementalsmithing.frost_blade": "Морозне лезо",
+  "item.elementalsmithing.flame_sword": "Полум'яний меч",
+  "item.elementalsmithing.frost_sword": "Морозний меч",
   "item.elementalsmithing.amorphous_sword": "Безформний меч",
 
 

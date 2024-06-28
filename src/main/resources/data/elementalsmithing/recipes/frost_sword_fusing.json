@@ -1,0 +1,12 @@
+{
+  "type": "elementalsmithing:fusion",
+  "fusing_craft_1": {"item": "elementalsmithing:frost_core"},
+  "fusing_craft_3": {"item": "elementalsmithing:steel_ingot"},
+  "fusing_craft_4": {"item": "elementalsmithing:steel_ingot"},
+  "fusing_craft_5": {"item": "minecraft:blue_ice"},
+  "fusing_craft_6": {"item": "elementalsmithing:damask_steel_sword"},
+  "fusing_craft_7": {"item": "minecraft:blue_ice"},
+  "fusing_left": {"item": "minecraft:glass_pane"},
+  "fusing_right": {"item": "minecraft:glass_pane"},
+  "result": {"item": "elementalsmithing:frost_sword"}
+}

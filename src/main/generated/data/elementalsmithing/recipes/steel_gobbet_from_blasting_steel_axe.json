@@ -1,8 +1,8 @@
 {
   "type": "minecraft:blasting",
   "category": "misc",
-  "cookingtime": 500,
-  "experience": 1.0,
+  "cookingtime": 2500,
+  "experience": 5.0,
   "group": "steel",
   "ingredient": {
     "item": "elementalsmithing:steel_axe"

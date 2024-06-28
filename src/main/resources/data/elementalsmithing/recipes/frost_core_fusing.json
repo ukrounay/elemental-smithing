@@ -1,0 +1,14 @@
+{
+  "type": "elementalsmithing:fusion",
+  "fusing_craft_0": {"item": "elementalsmithing:steel_ingot"},
+  "fusing_craft_1": {"item": "minecraft:snowball"},
+  "fusing_craft_2": {"item": "elementalsmithing:steel_ingot"},
+  "fusing_craft_3": {"item": "elementalsmithing:pure_crystal"},
+  "fusing_craft_4": {"item": "elementalsmithing:pure_crystal"},
+  "fusing_craft_5": {"item": "elementalsmithing:steel_ingot"},
+  "fusing_craft_6": {"item": "minecraft:snowball"},
+  "fusing_craft_7": {"item": "elementalsmithing:steel_ingot"},
+  "fusing_left": {"item": "minecraft:blue_ice"},
+  "fusing_right": {"item": "minecraft:blue_ice"},
+  "result": {"item": "elementalsmithing:frost_core"}
+}

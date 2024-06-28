@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "elementalsmithing:item/blessed_crystal_pickaxe"
+  }
+}

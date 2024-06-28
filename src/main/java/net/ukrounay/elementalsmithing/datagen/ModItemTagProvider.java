@@ -20,7 +20,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ModTags.Items.ADVANSED_UPGRADE_TEMPLATES).add(
                 ModItems.DAMASK_STEEL_UPGRADE,
-                ModItems.HARMONY_CORE,
+                ModItems.SOUL_CORE,
                 ModItems.FLAME_CORE,
                 ModItems.FROST_CORE
         );

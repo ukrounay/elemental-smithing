@@ -5,6 +5,11 @@
   "item.elementalsmithing.steel_ingot": "Steel Ingot",
 
   "block.elementalsmithing.steel_block" : "Block of Steel",
+  "block.elementalsmithing.graphite_block" : "Block of Graphite",
+  "block.elementalsmithing.blessed_crystal_block" : "Block of Blessed Crystal",
+  "block.elementalsmithing.cursed_crystal_block" : "Block of Cursed Crystal",
+  "block.elementalsmithing.pure_crystal_block" : "Block of Pure Crystal",
+
   "block.elementalsmithing.fusion_smithing_table" : "Fusion Table",
   "gui.elementalsmithing.fusion_smithing_table.title" : "Fusion Table",
 
@@ -14,25 +19,40 @@
   "item.elementalsmithing.steel_hoe": "Steel Hoe",
   "item.elementalsmithing.steel_sword": "Steel Sword",
 
-  "item.elementalsmithing.reinforced_steel_sword": "Reinforced Steel Sword",
-
   "item.elementalsmithing.damask_steel_axe": "Damask Steel Axe",
   "item.elementalsmithing.damask_steel_pickaxe": "Damask Steel Pickaxe",
   "item.elementalsmithing.damask_steel_shovel": "Damask Steel Shovel",
   "item.elementalsmithing.damask_steel_hoe": "Damask Steel Hoe",
   "item.elementalsmithing.damask_steel_sword": "Damask Steel Sword",
 
+  "item.elementalsmithing.reinforced_steel_sword": "Reinforced Steel Sword",
+
   "item.elementalsmithing.knight_helmet": "Knight Helmet",
   "item.elementalsmithing.knight_chestplate": "Knight Chestplate",
   "item.elementalsmithing.knight_leggings": "Knight Leggings",
   "item.elementalsmithing.knight_boots": "Knight Boots",
+
+  "item.elementalsmithing.reinforced_knight_helmet": "Reinforced Knight Helmet",
+  "item.elementalsmithing.reinforced_knight_chestplate": "Reinforced Knight Chestplate",
+  "item.elementalsmithing.reinforced_knight_leggings": "Reinforced Knight Leggings",
+  "item.elementalsmithing.reinforced_knight_boots": "Reinforced Knight Boots",
 
   "item.elementalsmithing.blessed_crystal": "Blessed Crystal",
   "item.elementalsmithing.cursed_crystal": "Cursed Crystal",
   "item.elementalsmithing.pure_crystal": "Pure Crystal",
 
   "item.elementalsmithing.blessed_crystal_sword": "Blessed Crystal Sword",
+  "item.elementalsmithing.blessed_crystal_shovel": "Blessed Crystal Shovel",
+  "item.elementalsmithing.blessed_crystal_pickaxe": "Blessed Crystal Pickaxe",
+  "item.elementalsmithing.blessed_crystal_axe": "Blessed Crystal Axe",
+  "item.elementalsmithing.blessed_crystal_hoe": "Blessed Crystal Hoe",
+
   "item.elementalsmithing.cursed_crystal_sword": "Cursed Crystal Sword",
+  "item.elementalsmithing.cursed_crystal_shovel": "Cursed Crystal Shovel",
+  "item.elementalsmithing.cursed_crystal_pickaxe": "Cursed Crystal Pickaxe",
+  "item.elementalsmithing.cursed_crystal_axe": "Cursed Crystal Axe",
+  "item.elementalsmithing.cursed_crystal_hoe": "Cursed Crystal Hoe",
+
   "item.elementalsmithing.pure_crystal_sword": "Pure Crystal Sword",
   "item.elementalsmithing.pure_crystal_shovel": "Pure Crystal Shovel",
   "item.elementalsmithing.pure_crystal_pickaxe": "Pure Crystal Pickaxe",
@@ -40,8 +60,8 @@
   "item.elementalsmithing.pure_crystal_hoe": "Pure Crystal Hoe",
 
 
-  "item.elementalsmithing.flame_handle": "Flame Handle",
-  "item.elementalsmithing.frost_blade": "Frost Blade",
+  "item.elementalsmithing.flame_sword": "Flame Sword",
+  "item.elementalsmithing.frost_sword": "Frost Sword",
   "item.elementalsmithing.amorphous_sword": "Amorphous Sword",
 
 

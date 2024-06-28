@@ -17,7 +17,7 @@ public class ModArmorItem extends ArmorItem {
 
     private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
-                    .put(ModArmorMaterials.DAMASK_STEEL, new StatusEffectInstance(
+                    .put(ModArmorMaterials.REINFORCED_DAMASK_STEEL, new StatusEffectInstance(
                             StatusEffects.RESISTANCE,
                             400,2,
                             false, false, true

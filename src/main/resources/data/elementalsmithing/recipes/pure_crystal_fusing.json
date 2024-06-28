@@ -8,7 +8,6 @@
   "fusing_craft_5": {"item": "minecraft:chorus_fruit"},
   "fusing_craft_6": {"item": "minecraft:lapis_lazuli"},
   "fusing_craft_7": {"item": "minecraft:chorus_fruit"},
-
   "fusing_left": {"item": "elementalsmithing:blessed_crystal"},
   "fusing_right": {"item": "elementalsmithing:cursed_crystal"},
   "result": {"item": "elementalsmithing:pure_crystal"}

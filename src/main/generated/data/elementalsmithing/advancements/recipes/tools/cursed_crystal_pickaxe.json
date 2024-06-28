@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cursed_crystal_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "elementalsmithing:cursed_crystal_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "elementalsmithing:cursed_crystal_pickaxe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_cursed_crystal_pickaxe",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "elementalsmithing:cursed_crystal_pickaxe"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -17,7 +17,7 @@ public enum ModToolMaterial implements ToolMaterial {
     CURSED_CRYSTAL(MiningLevels.DIAMOND,120,4.0f,6f, 10, () -> Ingredient.fromTag(ModTags.Items.CRYSTALS)),
     PURE_CRYSTAL(MiningLevels.DIAMOND,2560,10.0f,4.5f, 10, () -> Ingredient.fromTag(ModTags.Items.CRYSTALS)),
 
-    AMORPHOUS(MiningLevels.HAND, 250, 2.0f, 10.0f, 30, () -> Ingredient.ofItems(Items.GLASS));
+    ELEMENTAL(MiningLevels.HAND, 1000, 2.0f, 10.0f, 30, () -> Ingredient.EMPTY);
 
 
 

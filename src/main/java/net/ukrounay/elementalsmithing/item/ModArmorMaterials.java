@@ -20,13 +20,22 @@ public enum ModArmorMaterials implements ArmorMaterial {
             1.0f
     ),
     DAMASK_STEEL("damask_steel",
-            35,
+            40,
             new int[] {3, 8, 6, 3},
             27,
-            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
+            SoundEvents.ITEM_ARMOR_EQUIP_IRON,
             0.1f,
             () -> Ingredient.ofItems(ModItems.STEEL_INGOT),
             1.5f
+    ),
+    REINFORCED_DAMASK_STEEL("reinforced_damask_steel",
+            45,
+            new int[] {4, 9, 7, 4},
+            20,
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
+            0.2f,
+            () -> Ingredient.ofItems(ModItems.STEEL_INGOT),
+            2f
     );
 
     private final String name;

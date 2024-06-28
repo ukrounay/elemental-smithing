@@ -17,6 +17,10 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STEEL_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRAPHITE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CURSED_CRYSTAL_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLESSED_CRYSTAL_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PURE_CRYSTAL_BLOCK);
 
         blockStateModelGenerator.registerSimpleState(ModBlocks.FUSION_SMITHING_TABLE);
     }
@@ -41,20 +45,29 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.DAMASK_STEEL_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.DAMASK_STEEL_HOE, Models.HANDHELD);
 
+        itemModelGenerator.register(ModItems.BLESSED_CRYSTAL_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.BLESSED_CRYSTAL_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.BLESSED_CRYSTAL_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.BLESSED_CRYSTAL_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.BLESSED_CRYSTAL_HOE, Models.HANDHELD);
+
+        itemModelGenerator.register(ModItems.CURSED_CRYSTAL_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.CURSED_CRYSTAL_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.CURSED_CRYSTAL_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.CURSED_CRYSTAL_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.CURSED_CRYSTAL_HOE, Models.HANDHELD);
+
         itemModelGenerator.register(ModItems.PURE_CRYSTAL_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PURE_CRYSTAL_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PURE_CRYSTAL_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PURE_CRYSTAL_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PURE_CRYSTAL_HOE, Models.HANDHELD);
 
-        itemModelGenerator.register(ModItems.BLESSED_CRYSTAL_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.CURSED_CRYSTAL_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.FLAME_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.FROST_SWORD, Models.HANDHELD);
 
         itemModelGenerator.register(ModItems.AMORPHOUS_SWORD, Models.HANDHELD);
 
-        // rod items
-        itemModelGenerator.register(ModItems.FLAME_HANDLE, Models.HANDHELD_ROD);
-        itemModelGenerator.register(ModItems.FROST_BLADE, Models.HANDHELD_ROD);
 
         // simple items
         itemModelGenerator.register(ModItems.GRAPHITE, Models.GENERATED);
@@ -68,7 +81,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.FLAME_CORE, Models.GENERATED);
         itemModelGenerator.register(ModItems.FROST_CORE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.HARMONY_CORE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SOUL_CORE, Models.GENERATED);
         itemModelGenerator.register(ModItems.DAMASK_STEEL_UPGRADE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.TEGUKJFLK_MUSIC_DISK, Models.GENERATED);
@@ -80,5 +93,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor((ArmorItem) ModItems.KNIGHT_CHESTPLATE);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.KNIGHT_LEGGINGS);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.KNIGHT_BOOTS);
+
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.REINFORCED_KNIGHT_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.REINFORCED_KNIGHT_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.REINFORCED_KNIGHT_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.REINFORCED_KNIGHT_BOOTS);
     }
 }

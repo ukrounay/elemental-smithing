@@ -1,6 +1,11 @@
 {
   "replace": false,
   "values": [
-    "elementalsmithing:steel_block"
+    "elementalsmithing:steel_block",
+    "elementalsmithing:graphite_block",
+    "elementalsmithing:blessed_crystal_block",
+    "elementalsmithing:cursed_crystal_block",
+    "elementalsmithing:pure_crystal_block",
+    "elementalsmithing:fusion_smithing_table"
   ]
 }

@@ -7,6 +7,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.ukrounay.elementalsmithing.ElementalSmithing;
+import net.ukrounay.elementalsmithing.block.ModBlocks;
 
 public class ModItemGroups {
 
@@ -16,7 +17,10 @@ public class ModItemGroups {
         FabricItemGroup.builder()
             .displayName(Text.translatable("itemgroup.global"))
             .icon(() -> new ItemStack(ModItems.STEEL_INGOT)).entries(
-                (displayContext, entries) ->  entries.addAll(ModItems.ModItemRegistry)
+                (displayContext, entries) -> {
+                    entries.addAll(ModBlocks.ModBlockItemRegistry);
+                    entries.addAll(ModItems.ModItemRegistry);
+                }
             ).build()
     );
 

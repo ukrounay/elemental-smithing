@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blessed_crystal_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "elementalsmithing:blessed_crystal_sword"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "elementalsmithing:blessed_crystal_sword"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_blessed_crystal_sword",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "elementalsmithing:blessed_crystal_sword"
+    ]
+  },
+  "sends_telemetry_event": false
+}

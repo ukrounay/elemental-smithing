@@ -14,6 +14,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
         addDrop(ModBlocks.STEEL_BLOCK);
+        addDrop(ModBlocks.GRAPHITE_BLOCK);
+        addDrop(ModBlocks.BLESSED_CRYSTAL_BLOCK);
+        addDrop(ModBlocks.CURSED_CRYSTAL_BLOCK);
+        addDrop(ModBlocks.PURE_CRYSTAL_BLOCK);
         addDrop(ModBlocks.FUSION_SMITHING_TABLE);
     }
 }

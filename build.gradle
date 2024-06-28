@@ -29,7 +29,7 @@ dependencies {
 
 	modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:12.1.725"
 	modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:12.1.725"
-	
+
 }
 
 processResources {

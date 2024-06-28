@@ -7,23 +7,17 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.ukrounay.elementalsmithing.sound.ModSounds;
 
 
 public class SoulElementalCoreItem extends ElementalCoreItem {
 
     public SoulElementalCoreItem(Settings settings) {
-        super(settings, 0xFFFF55FF, Formatting.LIGHT_PURPLE,
-            ModSounds.VITAL_ENERGY_ABSORBING, ModSounds.VITAL_ENERGY_EXTRACTING,
-            ModSounds.SOUL_CORE_COMPLETION, 30,30, StatusEffects.REGENERATION
+        super(settings, Element.SOUL, 30,30, StatusEffects.REGENERATION
         );
     }
-
-
 
     @Override
     public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
@@ -38,7 +32,7 @@ public class SoulElementalCoreItem extends ElementalCoreItem {
         if (stack.isDamaged() && !user.getItemCooldownManager().isCoolingDown(this)) {
             entity.damage(ModDamageTypes.of(world, ModDamageTypes.VITAL_ENERGY_DRAIN_DAMAGE_TYPE), damageAmount);
             stack.setDamage(Math.max(0, stack.getDamage() - damageAmount));
-            world.playSound(null, pos, stack.isDamaged() ? absorbSound : completionSound, SoundCategory.BLOCKS);
+            world.playSound(null, pos, stack.isDamaged() ? element.absorbSound : element.completionSound, SoundCategory.BLOCKS);
             user.getItemCooldownManager().set(this, absorbCooldown);
             return ActionResult.SUCCESS;
         }

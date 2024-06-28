@@ -12,7 +12,7 @@ import java.util.List;
 public class ModSmithingTemplateItem extends SmithingTemplateItem {
 
     public enum Type {
-        UPGRADE, CORE, FUSION_CORE
+        UPGRADE
     }
 
     private static final Identifier EMPTY_ARMOR_SLOT_HELMET_TEXTURE = new Identifier("item/empty_armor_slot_helmet");
@@ -27,17 +27,11 @@ public class ModSmithingTemplateItem extends SmithingTemplateItem {
     private static final Identifier EMPTY_SLOT_INGOT_TEXTURE = new Identifier("item/empty_slot_ingot");
 
     private static List<Identifier> getModEmptyBaseSlotTextures(Type type) {
-        return switch (type) {
-            case FUSION_CORE -> List.of(EMPTY_SLOT_SWORD_TEXTURE);
-            default -> List.of(EMPTY_SLOT_SWORD_TEXTURE, EMPTY_ARMOR_SLOT_HELMET_TEXTURE, EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE, EMPTY_SLOT_PICKAXE_TEXTURE, EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_ARMOR_SLOT_BOOTS_TEXTURE, EMPTY_SLOT_HOE_TEXTURE, EMPTY_SLOT_SHOVEL_TEXTURE);
-        };
+        return List.of(EMPTY_SLOT_SWORD_TEXTURE, EMPTY_ARMOR_SLOT_HELMET_TEXTURE, EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE, EMPTY_SLOT_PICKAXE_TEXTURE, EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_ARMOR_SLOT_BOOTS_TEXTURE, EMPTY_SLOT_HOE_TEXTURE, EMPTY_SLOT_SHOVEL_TEXTURE);
     }
 
     private static List<Identifier> getModEmptyAdditionsSlotTextures(Type type) {
-        return switch (type) {
-            case FUSION_CORE -> List.of(EMPTY_SLOT_SWORD_TEXTURE);
-            default -> List.of(EMPTY_SLOT_INGOT_TEXTURE);
-        };
+        return List.of(EMPTY_SLOT_INGOT_TEXTURE);
     }
 
     public ModSmithingTemplateItem(String name, Type type, Formatting formatting) {
