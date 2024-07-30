@@ -1,11 +1,15 @@
-// 1.20.1	2024-06-23T13:01:33.9270058	Elemental Smithing/Tags for minecraft:item
-3bbab5f6a4c80e5ca5bff6c69cd45fffd7e176c3 data\elementalsmithing\tags\items\advanced_upgrade_templates.json
+// 1.20.1	2024-07-30T10:19:45.1412956	Elemental Smithing/Tags for minecraft:item
 6c0ec35c1f3bd7523e0f49c1a9f976eb81f7e8c3 data\minecraft\tags\items\pickaxes.json
-e38f4e87fec81ff77126644f9c8db79a0bca6fd1 data\elementalsmithing\tags\items\music_discs.json
-c13b050a482aad007ad8d17449622cf2ed2c68df data\elementalsmithing\tags\items\crystals.json
-c4655cb28e4ea5a0870191c41c3bbb54149a14bd data\minecraft\tags\items\swords.json
+b9f06dea67fb858c0afa2f6e45e56818f086a01a data\elementalsmithing\tags\items\music_discs.json
 404d4dbe157a0a090fc13b5c8ba329737d1f9838 data\minecraft\tags\items\music_discs.json
+e192ddcdc3610f6d9194be931d8ea67fe54fc8c3 data\elementalsmithing\tags\items\elemental_swords.json
+fcdb85bb8d27e150f228132bfc30fcba530ca905 data\elementalsmithing\tags\items\readable_books.json
+9a20019e3852914b89c77053c344601d5fc41990 data\elementalsmithing\tags\items\elemental_items.json
+ad7b1d52e009392dbc7c1a8c7a668ac2612ba566 data\elementalsmithing\tags\items\elemental_cores.json
+c13b050a482aad007ad8d17449622cf2ed2c68df data\elementalsmithing\tags\items\crystals.json
+ead036a2b148826dac5625776a2fa88ac76d3fe3 data\minecraft\tags\items\swords.json
 3a0abca2d7f8fb3ed23134cad652027ae333c9e0 data\minecraft\tags\items\trimmable_armor.json
+d123960874d187ab59bf1a05e63904c80b883446 data\elementalsmithing\tags\items\swords.json
 dbee1fc34a5bb1f6f1ab032aa279fa5eda626ba2 data\minecraft\tags\items\hoes.json
-e8c1f84c878398bb6b9f63f30125492b23ab73a8 data\minecraft\tags\items\trim_materials.json
 22c1386ec39f0bd54094c486bcd159e902cdfa01 data\minecraft\tags\items\axes.json
+e8c1f84c878398bb6b9f63f30125492b23ab73a8 data\minecraft\tags\items\trim_materials.json

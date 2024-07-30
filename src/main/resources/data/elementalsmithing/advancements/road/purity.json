@@ -1,0 +1,30 @@
+{
+  "display": {
+    "title": {
+      "translate": "advancement.elementalsmithing.purity.title"
+    },
+    "description": {
+      "translate": "advancement.elementalsmithing.purity.description"
+    },
+    "icon": {
+      "item": "elementalsmithing:pure_crystal"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "elementalsmithing:road/mix_it",
+  "criteria": {
+    "get_pure_crystal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["elementalsmithing:pure_crystal"]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,4 +1,6 @@
 {
+  "item.elementalsmithing.steel_chronicles_book": "Steel Chronicles",
+
   "item.elementalsmithing.graphite": "Graphite",
   "item.elementalsmithing.raw_steel": "Raw Steel",
   "item.elementalsmithing.steel_gobbet": "Steel Gobbet",
@@ -12,6 +14,11 @@
 
   "block.elementalsmithing.fusion_smithing_table" : "Fusion Table",
   "gui.elementalsmithing.fusion_smithing_table.title" : "Fusion Table",
+  "gui.elementalsmithing.fusion_smithing_table.tooltip.mode_switch_off" : "Simple mode",
+  "gui.elementalsmithing.fusion_smithing_table.tooltip.mode_switch_on" : "Extended mode",
+
+
+  "block.elementalsmithing.energy_condensator" : "Energy Condensator",
 
   "item.elementalsmithing.steel_axe": "Steel Axe",
   "item.elementalsmithing.steel_pickaxe": "Steel Pickaxe",
@@ -71,32 +78,106 @@
   "item.elementalsmithing.smithing_template.damask_steel_upgrade.base_slot_description": "Forge your iron to damask the way founded by ancient blacksmiths",
   "item.elementalsmithing.smithing_template.damask_steel_upgrade.additions_slot_description":  "Add steel to harden material",
 
+  "elementalsmithing.element.flame": "Flame",
+  "elementalsmithing.element.frost": "Frost",
+  "elementalsmithing.element.soul": "Soul",
+  "elementalsmithing.element.amorphous": "Amorphous",
 
-  "tooltip.elementalsmithing.elemental_core.element":  "Controls the element",
-  "tooltip.elementalsmithing.elemental_core.hint_damaged": "To complete the core, imbue it with the appropriate energy",
-  "tooltip.elementalsmithing.elemental_core.hint": "The core is completed",
-  "tooltip.elementalsmithing.elemental_core.energy": "Energy",
+  "tooltip.elementalsmithing.elemental_item.element":  "Controls the element",
+  "tooltip.elementalsmithing.elemental_item.energy": "Energy",
+
+  "tooltip.elementalsmithing.elemental_item.hint_damaged": "To complete the core, imbue it with the appropriate energy",
+  "tooltip.elementalsmithing.elemental_item.hint": "The core is completed",
+  "tooltip.elementalsmithing.elemental_item.territory_hint_absent": "Element has no territory",
+  "tooltip.elementalsmithing.elemental_item.territory_hint": "Сan summon elemental territory",
 
   "item.elementalsmithing.flame_core":  "Flame Core",
   "item.elementalsmithing.flame_core.description": "Vessel of the undying fire",
-  "item.elementalsmithing.flame_core.element": "Fire",
 
   "item.elementalsmithing.frost_core":  "Frost Core",
   "item.elementalsmithing.frost_core.description": "Vessel of polar coldness",
-  "item.elementalsmithing.frost_core.element": "Snow",
 
   "item.elementalsmithing.soul_core":  "Soul Core",
   "item.elementalsmithing.soul_core.description": "Vessel of a vital energy",
-  "item.elementalsmithing.soul_core.element": "Life",
 
 
   "item.elementalsmithing.tegukjflk_music_disk":  "Music Disk",
-  "item.elementalsmithing.tegukjflk_music_disk.desc":  "ukrounay - tegukjflk",
+  "item.elementalsmithing.tegukjflk_music_disk.desc":  "tegukjflk",
 
   "item.elementalsmithing.iwseuvhjk_music_disk":  "Music Disk",
-  "item.elementalsmithing.iwseuvhjk_music_disk.desc":  "ukrounay - iwseuvhjk",
+  "item.elementalsmithing.iwseuvhjk_music_disk.desc":  "iwseuvhjk",
+
+  "item.elementalsmithing.zsdxghjmr_music_disk":  "Music Disk",
+  "item.elementalsmithing.zsdxghjmr_music_disk.desc":  "zsdxghjmr",
+
+  "item.elementalsmithing.ezsxdfcgh_music_disk":  "Music Disk",
+  "item.elementalsmithing.ezsxdfcgh_music_disk.desc":  "ezsxdfcgh",
+
+  "item.elementalsmithing.ubdcwjnk_music_disk":  "Music Disk",
+  "item.elementalsmithing.ubdcwjnk_music_disk.desc":  "ubdcwjnk",
 
   "death.attack.vital_energy_drain": "%1$s died from a vital energy draining.",
 
-  "itemgroup.global": "Elemental Smithing"
+  "effect.elementalsmithing.flame_embodiment": "Flame embodiment",
+  "effect.elementalsmithing.frost_embodiment": "Frost embodiment",
+  "effect.elementalsmithing.vital_energy_overflow": "Vital energy overflow",
+  "effect.elementalsmithing.amorphousness": "Amorphousness",
+
+  "itemgroup.global": "Elemental Smithing",
+
+  "entity.minecraft.villager.grand_blacksmith": "Grand Blacksmith",
+
+  "villager.elementalsmithing.random_name.0": "Thorin",
+  "villager.elementalsmithing.random_name.1": "Borin",
+  "villager.elementalsmithing.random_name.2": "Hagar",
+  "villager.elementalsmithing.random_name.3": "Garin",
+  "villager.elementalsmithing.random_name.4": "Ealdred",
+  "villager.elementalsmithing.random_name.5": "Fenrik",
+  "villager.elementalsmithing.random_name.6": "Marn",
+  "villager.elementalsmithing.random_name.7": "Olin",
+  "villager.elementalsmithing.random_name.8": "Rurik",
+  "villager.elementalsmithing.random_name.9": "Sigrid",
+  "villager.elementalsmithing.random_name.10": "Tormund",
+  "villager.elementalsmithing.random_name.11": "Varek",
+
+  "advancement.elementalsmithing.elemental_smithing.title": "Elemental Smithing",
+  "advancement.elementalsmithing.elemental_smithing.description": "The start is right now.",
+  "advancement.elementalsmithing.old_stories.title": "Old stories",
+  "advancement.elementalsmithing.old_stories.description": "Find a house of grand blacksmith",
+  "advancement.elementalsmithing.are_we_gonna_make_a_pencil.title": "Are we gonna make a pencil?",
+  "advancement.elementalsmithing.are_we_gonna_make_a_pencil.description": "Obtain graphite",
+  "advancement.elementalsmithing.a_bullet_but_there_is_no_gun.title": "A bullet, but there is no gun",
+  "advancement.elementalsmithing.a_bullet_but_there_is_no_gun.description": "Obtain steel gobbet",
+  "advancement.elementalsmithing.sturdy_piece.title": "Sturdy piece",
+  "advancement.elementalsmithing.sturdy_piece.description": "Obtain steel ingot",
+  "advancement.elementalsmithing.wrong_way.title": "Wrong way",
+  "advancement.elementalsmithing.wrong_way.description": "Make steel sword",
+  "advancement.elementalsmithing.or_not.title": "Or not?",
+  "advancement.elementalsmithing.or_not.description": "Reinforce your sword",
+  "advancement.elementalsmithing.as_in_ancient_times.title": "As in ancient times",
+  "advancement.elementalsmithing.as_in_ancient_times.description": "Make damask weapon",
+  "advancement.elementalsmithing.shiny_and_invincible.title": "Shiny and invincible",
+  "advancement.elementalsmithing.shiny_and_invincible.description": "Obtain knight armor",
+  "advancement.elementalsmithing.mountain_on_the_shoulders.title": "Mountain on the shoulders",
+  "advancement.elementalsmithing.mountain_on_the_shoulders.description": "Obtain reinforced knight armor",
+  "advancement.elementalsmithing.mix_it.title": "Mix it!",
+  "advancement.elementalsmithing.mix_it.description": "Obtain fusion table",
+  "advancement.elementalsmithing.only_the_shell.title": "Only the shell",
+  "advancement.elementalsmithing.only_the_shell.description": "Find or create an empty elemental core",
+  "advancement.elementalsmithing.full_of_energy.title": "Full of energy",
+  "advancement.elementalsmithing.full_of_energy.description": "Complete elemental core",
+  "advancement.elementalsmithing.imbued_force.title": "Imbued force",
+  "advancement.elementalsmithing.imbued_force.description": "Obtain elemental weapon",
+  "advancement.elementalsmithing.unstable_deity.title": "Unstable deity",
+  "advancement.elementalsmithing.unstable_deity.description": "Obtain Amorphous Sword",
+  "advancement.elementalsmithing.purity.title": "Purity",
+  "advancement.elementalsmithing.purity.description": "Obtain pure crystal",
+  "advancement.elementalsmithing.fast_charger.title": "Fast charger",
+  "advancement.elementalsmithing.fast_charger.description": "Charge your elemental items automatically",
+  "advancement.elementalsmithing.truth_or_tale.title" : "Truth or tale?",
+  "advancement.elementalsmithing.truth_or_tale.description" : "Test the effectiveness of the Pure Crystal Hoe",
+  "advancement.elementalsmithing.cry_of_the_soul.title" : "Cry of the soul",
+  "advancement.elementalsmithing.cry_of_the_soul.description" : "Витягніть душу з невинних тварин"
+
+
 }

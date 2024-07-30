@@ -25,7 +25,7 @@
 			"net.ukrounay.elementalsmithing.ElementalSmithingDataGenerator"
 		],
 		"rei_client": [
-			"net.ukrounay.elementalsmithing.compat.ElementalSmithingREIClientPlugin"
+          "net.ukrounay.elementalsmithing.compat.rei.ElementalSmithingREIClientPlugin"
 		]
 	},
 	"mixins": [

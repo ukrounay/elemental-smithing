@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_steel_axe": {
+    "has_steel_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "elementalsmithing:steel_axe"
+              "elementalsmithing:steel_ingot"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_steel_axe",
+      "has_steel_ingot",
       "has_the_recipe"
     ]
   ],

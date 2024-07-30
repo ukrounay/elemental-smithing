@@ -6,6 +6,7 @@
     "elementalsmithing:blessed_crystal_block",
     "elementalsmithing:cursed_crystal_block",
     "elementalsmithing:pure_crystal_block",
-    "elementalsmithing:fusion_smithing_table"
+    "elementalsmithing:fusion_smithing_table",
+    "elementalsmithing:energy_condensator"
   ]
 }

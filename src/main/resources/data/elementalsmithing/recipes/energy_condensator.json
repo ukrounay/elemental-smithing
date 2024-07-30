@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "IGI",
+    "POP",
+    "SGS"
+  ],
+  "key": {
+    "I": {"item": "minecraft:iron_block"},
+    "G": {"item": "minecraft:gold_block"},
+    "P": {"item": "elementalsmithing:pure_crystal_block"},
+    "O": {"item": "minecraft:obsidian"},
+    "S": {"item": "elementalsmithing:steel_block"}
+  },
+  "result": {
+    "item": "elementalsmithing:energy_condensator"
+  }
+}

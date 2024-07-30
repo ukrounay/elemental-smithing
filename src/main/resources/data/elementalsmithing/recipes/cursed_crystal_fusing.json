@@ -1,5 +1,6 @@
 {
   "type": "elementalsmithing:fusion",
+  "category": "misc",
   "fusing_craft_0": {"item": "minecraft:rotten_flesh"},
   "fusing_craft_1": {"item": "minecraft:diamond"},
   "fusing_craft_2": {"item": "minecraft:rotten_flesh"},

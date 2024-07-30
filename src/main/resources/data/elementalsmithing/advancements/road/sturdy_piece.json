@@ -1,0 +1,32 @@
+{
+  "display": {
+    "title": {
+      "translate": "advancement.elementalsmithing.sturdy_piece.title"
+    },
+    "description": {
+      "translate": "advancement.elementalsmithing.sturdy_piece.description"
+    },
+    "icon": {
+      "item": "elementalsmithing:steel_ingot"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "elementalsmithing:road/a_bullet_but_there_is_no_gun",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "elementalsmithing:steel_ingot"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

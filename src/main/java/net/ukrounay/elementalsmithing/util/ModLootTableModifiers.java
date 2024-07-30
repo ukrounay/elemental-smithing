@@ -25,9 +25,6 @@ public class ModLootTableModifiers {
 
     public static final Identifier END_CITY_TREASURE_CHEST_ID = new Identifier("minecraft", "chests/end_city_treasure");
 
-    public static final Identifier FROG_ID = new Identifier("minecraft", "entities/frog");
-    public static final Identifier SQUID_ID = new Identifier("minecraft", "entities/squid");
-
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
             if(id == VILLAGE_WEAPONSMITH_CHEST_ID || id == VILLAGE_TOOLSMITH_CHEST_ID || id == VILLAGE_ARMORER_CHEST_ID) {
@@ -43,7 +40,7 @@ public class ModLootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.6f))
                         .with(ItemEntry.builder(ModItems.FROST_CORE))
-                        .apply(SetDamageLootFunction.builder(UniformLootNumberProvider.create(ModItems.FROST_CORE.getMaxDamage(), ModItems.FROST_CORE.getMaxDamage())).build())
+                        .apply(SetDamageLootFunction.builder(UniformLootNumberProvider.create(ModItems.FROST_CORE.getMaxDamage()/5f, ModItems.FROST_CORE.getMaxDamage())).build())
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
@@ -52,7 +49,7 @@ public class ModLootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.3f))
                         .with(ItemEntry.builder(ModItems.FLAME_CORE))
-                        .apply(SetDamageLootFunction.builder(UniformLootNumberProvider.create(ModItems.FLAME_CORE.getMaxDamage(), ModItems.FLAME_CORE.getMaxDamage())).build())
+                        .apply(SetDamageLootFunction.builder(UniformLootNumberProvider.create(ModItems.FLAME_CORE.getMaxDamage()/5f, ModItems.FLAME_CORE.getMaxDamage())).build())
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
@@ -61,7 +58,7 @@ public class ModLootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.05f))
                         .with(ItemEntry.builder(ModItems.FLAME_CORE))
-                        .apply(SetDamageLootFunction.builder(UniformLootNumberProvider.create(ModItems.FLAME_CORE.getMaxDamage(), ModItems.FLAME_CORE.getMaxDamage())).build())
+                        .apply(SetDamageLootFunction.builder(UniformLootNumberProvider.create(ModItems.FLAME_CORE.getMaxDamage()/5f, ModItems.FLAME_CORE.getMaxDamage())).build())
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
@@ -70,7 +67,7 @@ public class ModLootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(1f))
                         .with(ItemEntry.builder(ModItems.SOUL_CORE))
-                        .apply(SetDamageLootFunction.builder(UniformLootNumberProvider.create(ModItems.SOUL_CORE.getMaxDamage(), ModItems.SOUL_CORE.getMaxDamage())).build())
+                        .apply(SetDamageLootFunction.builder(UniformLootNumberProvider.create(ModItems.SOUL_CORE.getMaxDamage()/5f, ModItems.SOUL_CORE.getMaxDamage())).build())
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }

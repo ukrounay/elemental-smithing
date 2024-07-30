@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": {"model": "elementalsmithing:block/fusion_smithing_table", "y": 180},
+    "facing=south": {"model":"elementalsmithing:block/fusion_smithing_table"},
+    "facing=west": {"model":"elementalsmithing:block/fusion_smithing_table", "y": 90},
+    "facing=east": {"model":"elementalsmithing:block/fusion_smithing_table", "y": 270}
+  }
+}

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cursed_crystal_pickaxe": {
+    "has_cursed_crystal": {
       "conditions": {
         "items": [
           {
             "items": [
-              "elementalsmithing:cursed_crystal_pickaxe"
+              "elementalsmithing:cursed_crystal"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_cursed_crystal_pickaxe",
+      "has_cursed_crystal",
       "has_the_recipe"
     ]
   ],

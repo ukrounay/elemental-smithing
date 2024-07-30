@@ -1,0 +1,30 @@
+{
+  "display": {
+    "title": {
+      "translate": "advancement.elementalsmithing.elemental_smithing.title"
+    },
+    "description": {
+      "translate": "advancement.elementalsmithing.elemental_smithing.description"
+    },
+    "icon": {
+      "item": "elementalsmithing:steel_block"
+    },
+    "background": "elementalsmithing:textures/block/pure_crystal_block.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "get_steel_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["minecraft:iron_ingot"]
+          }
+        ]
+      }
+    }
+  }
+}

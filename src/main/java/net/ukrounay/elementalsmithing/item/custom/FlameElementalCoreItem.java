@@ -1,19 +1,19 @@
 package net.ukrounay.elementalsmithing.item.custom;
 
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.ukrounay.elementalsmithing.util.Element;
 
 public class FlameElementalCoreItem extends ElementalCoreItem {
 
 
     public FlameElementalCoreItem(Settings settings) {
-        super(settings, Element.FLAME,10,10, StatusEffects.FIRE_RESISTANCE);
+        super(settings, Element.FLAME,10,40);
     }
 
     @Override

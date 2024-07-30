@@ -1,0 +1,30 @@
+{
+  "display": {
+    "title": {
+      "translate": "advancement.elementalsmithing.a_bullet_but_there_is_no_gun.title"
+    },
+    "description": {
+      "translate": "advancement.elementalsmithing.a_bullet_but_there_is_no_gun.description"
+    },
+    "icon": {
+      "item": "elementalsmithing:steel_gobbet"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "elementalsmithing:road/are_we_gonna_make_a_pencil",
+  "criteria": {
+    "get_steel_gobbet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["elementalsmithing:steel_gobbet"]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,2 +1,5 @@
-// 1.20.1	2024-06-23T13:01:33.9260021	Elemental Smithing/Tags for minecraft:block
-0b74786973a4aac273ae452db3f862f9b1fe5e86 data\minecraft\tags\blocks\mineable\pickaxe.json
+// 1.20.1	2024-07-30T10:19:45.1402904	Elemental Smithing/Tags for minecraft:block
+61a39cd4da5ffddf38b3e7c750262d0a0bec165c data\minecraft\tags\blocks\mineable\pickaxe.json
+12ab1fd2c8160e756913046227ba59e220ee648c data\elementalsmithing\tags\blocks\energy_providers.json
+c130b823f7cf21712750147413e8c3026ce5f755 data\elementalsmithing\tags\blocks\condensed_energy_providers.json
+645629bfe4981fc68be936a7cc03edf7c4133c47 data\elementalsmithing\tags\blocks\energy_barriers.json

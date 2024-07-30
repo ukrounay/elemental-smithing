@@ -1,5 +1,6 @@
 {
   "type": "elementalsmithing:fusion",
+  "category": "misc",
   "fusing_craft_1": {"item": "elementalsmithing:flame_core"},
   "fusing_craft_3": {"item": "elementalsmithing:steel_ingot"},
   "fusing_craft_4": {"item": "elementalsmithing:steel_ingot"},

@@ -13,6 +13,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.ukrounay.elementalsmithing.ElementalSmithing;
+import net.ukrounay.elementalsmithing.block.custom.EnergyCondensatorBlock;
 import net.ukrounay.elementalsmithing.block.custom.FusionSmithingTableBlock;
 import net.ukrounay.elementalsmithing.item.ModItems;
 
@@ -32,14 +33,17 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.COAL_BLOCK).hardness(5.0f).resistance(6.0f)));
 
     public static final Block BLESSED_CRYSTAL_BLOCK = registerBlock("blessed_crystal_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).hardness(3.0f).resistance(10.0f)));
+            new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).hardness(3.0f).resistance(10.0f).luminance(4).nonOpaque().allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
     public static final Block CURSED_CRYSTAL_BLOCK = registerBlock("cursed_crystal_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).hardness(3.0f).resistance(4.0f)));
+            new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).hardness(3.0f).resistance(4.0f).luminance(4).nonOpaque().allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
     public static final Block PURE_CRYSTAL_BLOCK = registerBlock("pure_crystal_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).hardness(3.0f).resistance(8.0f)));
+            new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).hardness(3.0f).resistance(8.0f).luminance(8).nonOpaque().allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
 
     public static final Block FUSION_SMITHING_TABLE = registerBlock("fusion_smithing_table",
             new FusionSmithingTableBlock(FabricBlockSettings.copyOf(Blocks.ANVIL).hardness(5.0f).resistance(6.0f).nonOpaque()));
+
+    public static final Block ENERGY_CONDENSATOR = registerBlock("energy_condensator",
+            new EnergyCondensatorBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).hardness(5.0f).resistance(6.0f).nonOpaque()));
 
 
     private static Block registerBlock(String name, Block block) {

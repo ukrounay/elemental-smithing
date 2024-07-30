@@ -6,6 +6,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 import net.ukrounay.elementalsmithing.ElementalSmithing;
+import net.ukrounay.elementalsmithing.screen.custom.FusionSmithingScreenHandler;
 
 public class ModScreenHandlers {
     public static final ScreenHandlerType<FusionSmithingScreenHandler> FUSION_SMITHING_SCREEN_HANDLER =

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "elementalsmithing:blessed_crystal_block",
+    "elementalsmithing:cursed_crystal_block",
+    "elementalsmithing:pure_crystal_block"
+  ]
+}

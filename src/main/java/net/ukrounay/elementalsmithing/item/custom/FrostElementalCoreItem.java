@@ -1,11 +1,11 @@
 package net.ukrounay.elementalsmithing.item.custom;
 
-import net.minecraft.entity.effect.StatusEffects;
+import net.ukrounay.elementalsmithing.util.Element;
 
 public class FrostElementalCoreItem extends ElementalCoreItem {
 
     public FrostElementalCoreItem(Settings settings) {
-        super(settings, Element.FROST, 20,20, StatusEffects.SLOW_FALLING);
+        super(settings, Element.FROST, 10,40);
     }
 
 }

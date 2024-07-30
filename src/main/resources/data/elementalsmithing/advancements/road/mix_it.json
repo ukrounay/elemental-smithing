@@ -1,0 +1,30 @@
+{
+  "display": {
+    "title": {
+      "translate": "advancement.elementalsmithing.mix_it.title"
+    },
+    "description": {
+      "translate": "advancement.elementalsmithing.mix_it.description"
+    },
+    "icon": {
+      "item": "elementalsmithing:fusion_smithing_table"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "elementalsmithing:road/sturdy_piece",
+  "criteria": {
+    "get_fusion_table": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["elementalsmithing:fusion_smithing_table"]
+          }
+        ]
+      }
+    }
+  }
+}

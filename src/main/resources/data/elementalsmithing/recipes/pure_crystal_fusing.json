@@ -1,5 +1,6 @@
 {
   "type": "elementalsmithing:fusion",
+  "category": "misc",
   "fusing_craft_0": {"item": "minecraft:chorus_fruit"},
   "fusing_craft_1": {"item": "minecraft:lapis_lazuli"},
   "fusing_craft_2": {"item": "minecraft:chorus_fruit"},

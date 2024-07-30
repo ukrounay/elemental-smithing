@@ -1,10 +1,10 @@
 package net.ukrounay.elementalsmithing.recipe;
 
-import net.minecraft.recipe.RecipeType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.ukrounay.elementalsmithing.ElementalSmithing;
+import net.ukrounay.elementalsmithing.recipe.custom.FusionSmithingRecipe;
 
 public class ModRecipe {
         public static void registerRecipes() {

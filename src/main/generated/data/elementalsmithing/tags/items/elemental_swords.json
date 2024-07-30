@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "elementalsmithing:flame_sword",
+    "elementalsmithing:frost_sword",
+    "elementalsmithing:amorphous_sword"
+  ]
+}

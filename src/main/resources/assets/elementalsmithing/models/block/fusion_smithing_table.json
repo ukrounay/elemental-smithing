@@ -365,8 +365,8 @@
 			"scale": [0.7, 0.7, 0.7]
 		},
 		"ground": {
-			"translation": [0, 4, 0],
-			"scale": [0.1, 0.1, 0.1]
+			"translation": [0, 2, 0],
+			"scale": [0.3, 0.3, 0.3]
 		},
 		"gui": {
 			"rotation": [28, 45, 0],

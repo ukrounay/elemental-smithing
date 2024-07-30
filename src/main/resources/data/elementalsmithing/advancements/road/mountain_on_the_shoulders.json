@@ -1,0 +1,38 @@
+{
+  "display": {
+    "title": {
+      "translate": "advancement.elementalsmithing.mountain_on_the_shoulders.title"
+    },
+    "description": {
+      "translate": "advancement.elementalsmithing.mountain_on_the_shoulders.description"
+    },
+    "icon": {
+      "item": "elementalsmithing:reinforced_knight_helmet"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "elementalsmithing:road/shiny_and_invincible",
+  "criteria": {
+    "get_reinforced_knight_armor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "elementalsmithing:reinforced_knight_helmet",
+              "elementalsmithing:reinforced_knight_chestplate",
+              "elementalsmithing:reinforced_knight_leggings",
+              "elementalsmithing:reinforced_knight_boots"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 300
+  }
+}

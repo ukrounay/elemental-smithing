@@ -4,13 +4,16 @@ import net.fabricmc.api.ModInitializer;
 
 import net.ukrounay.elementalsmithing.block.ModBlocks;
 import net.ukrounay.elementalsmithing.block.entity.ModBlockEntities;
+import net.ukrounay.elementalsmithing.entity.effect.ModStatusEffects;
 import net.ukrounay.elementalsmithing.item.ModItemGroups;
 import net.ukrounay.elementalsmithing.item.ModItems;
 import net.ukrounay.elementalsmithing.particles.ModParticles;
 import net.ukrounay.elementalsmithing.recipe.ModRecipe;
 import net.ukrounay.elementalsmithing.screen.ModScreenHandlers;
 import net.ukrounay.elementalsmithing.sound.ModSounds;
+import net.ukrounay.elementalsmithing.util.ModCustomTrades;
 import net.ukrounay.elementalsmithing.util.ModLootTableModifiers;
+import net.ukrounay.elementalsmithing.villager.ModVillagers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,5 +33,9 @@ public class ElementalSmithing implements ModInitializer {
 		ModBlockEntities.registerBlockEntities();
 		ModScreenHandlers.registerScreenHandlers();
 		ModParticles.registerParticles();
+		ModStatusEffects.registerModStatusEffects();
+		ModVillagers.registerVillagers();
+		ModCustomTrades.registerCustomTrades();
+//		ModStructures.registerModStructures();
 	}
 }

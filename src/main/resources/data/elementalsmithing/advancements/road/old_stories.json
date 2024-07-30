@@ -1,0 +1,39 @@
+{
+  "display": {
+    "title": {
+      "translate": "advancement.elementalsmithing.old_stories.title"
+    },
+    "description": {
+      "translate": "advancement.elementalsmithing.old_stories.description"
+    },
+    "icon": {
+      "item": "minecraft:book"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "elementalsmithing:road/root",
+  "criteria": {
+    "find_grand_blacksmith_house": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "elementalsmithing:grand_blacksmith_house"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "rewards": {
+    "experience": 500
+  }
+}

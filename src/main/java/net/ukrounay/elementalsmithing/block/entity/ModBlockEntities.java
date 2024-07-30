@@ -9,9 +9,13 @@ import net.ukrounay.elementalsmithing.ElementalSmithing;
 import net.ukrounay.elementalsmithing.block.ModBlocks;
 
 public class ModBlockEntities {
-    public static final BlockEntityType<FusionSmithingTableBlockEntity> FUSION_SMITHING_TABLE_BLOCK_ENTITY =
+    public static final BlockEntityType<FusionSmithingTableBlockEntity> FUSION_SMITHING_TABLE =
             Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(ElementalSmithing.MOD_ID, "fusion_smithing_be"),
                     FabricBlockEntityTypeBuilder.create(FusionSmithingTableBlockEntity::new, ModBlocks.FUSION_SMITHING_TABLE).build());
+
+    public static final BlockEntityType<EnergyCondensatorBlockEntity> ENERGY_CONDENSATOR =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(ElementalSmithing.MOD_ID, "energy_condensator_be"),
+                    FabricBlockEntityTypeBuilder.create(EnergyCondensatorBlockEntity::new, ModBlocks.ENERGY_CONDENSATOR).build());
 
     public static void registerBlockEntities() {
         ElementalSmithing.LOGGER.info("Registering block entities for" + ElementalSmithing.MOD_ID);

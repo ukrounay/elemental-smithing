@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_pure_crystal_shovel": {
+    "has_pure_crystal": {
       "conditions": {
         "items": [
           {
             "items": [
-              "elementalsmithing:pure_crystal_shovel"
+              "elementalsmithing:pure_crystal"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_pure_crystal_shovel",
+      "has_pure_crystal",
       "has_the_recipe"
     ]
   ],

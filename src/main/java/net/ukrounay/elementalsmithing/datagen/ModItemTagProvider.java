@@ -1,5 +1,6 @@
 package net.ukrounay.elementalsmithing.datagen;
 
+import dev.architectury.platform.Mod;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.item.Items;
@@ -18,12 +19,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
 
-        getOrCreateTagBuilder(ModTags.Items.ADVANSED_UPGRADE_TEMPLATES).add(
-                ModItems.DAMASK_STEEL_UPGRADE,
-                ModItems.SOUL_CORE,
-                ModItems.FLAME_CORE,
-                ModItems.FROST_CORE
+        getOrCreateTagBuilder(ModTags.Items.READABLE_BOOKS).add(
+                ModItems.STEEL_CHRONICLES_BOOK
         );
+
         getOrCreateTagBuilder(ItemTags.TRIM_MATERIALS).add(
                 ModItems.STEEL_INGOT
         );
@@ -50,18 +49,37 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 ModItems.STEEL_PICKAXE,
                 ModItems.PURE_CRYSTAL_PICKAXE
         );
-        getOrCreateTagBuilder(ItemTags.SWORDS).add(
+
+        getOrCreateTagBuilder(ModTags.Items.SWORDS).add(
                 ModItems.DAMASK_STEEL_SWORD,
                 ModItems.STEEL_SWORD,
-                ModItems.AMORPHOUS_SWORD,
                 ModItems.CURSED_CRYSTAL_SWORD,
                 ModItems.BLESSED_CRYSTAL_SWORD,
                 ModItems.PURE_CRYSTAL_SWORD
         );
+        getOrCreateTagBuilder(ModTags.Items.ELEMENTAL_SWORDS).add(
+                ModItems.FLAME_SWORD,
+                ModItems.FROST_SWORD,
+                ModItems.AMORPHOUS_SWORD
+        );
+        getOrCreateTagBuilder(ModTags.Items.SWORDS).forceAddTag(ModTags.Items.ELEMENTAL_SWORDS);
+        getOrCreateTagBuilder(ItemTags.SWORDS).forceAddTag(ModTags.Items.SWORDS);
+
+        getOrCreateTagBuilder(ModTags.Items.ELEMENTAL_CORES).add(
+                ModItems.FLAME_CORE,
+                ModItems.FROST_CORE,
+                ModItems.SOUL_CORE
+        );
+        getOrCreateTagBuilder(ModTags.Items.ELEMENTAL_ITEMS).forceAddTag(ModTags.Items.ELEMENTAL_CORES);
+        getOrCreateTagBuilder(ModTags.Items.ELEMENTAL_ITEMS).forceAddTag(ModTags.Items.ELEMENTAL_SWORDS);
+
 
         getOrCreateTagBuilder(ModTags.Items.MUSIC_DISCS).add(
                 ModItems.TEGUKJFLK_MUSIC_DISK,
-                ModItems.IWSEUVHJK_MUSIC_DISK
+                ModItems.IWSEUVHJK_MUSIC_DISK,
+                ModItems.ZSDXGHJMR_MUSIC_DISK,
+                ModItems.EZSXDFCGH_MUSIC_DISK,
+                ModItems.UBDCWJNK_MUSIC_DISK
         );
         getOrCreateTagBuilder(ItemTags.MUSIC_DISCS).forceAddTag(ModTags.Items.MUSIC_DISCS);
 

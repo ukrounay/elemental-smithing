@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:writable_book"
+    },
+    {
+      "item": "elementalsmithing:steel_ingot"
+    }
+  ],
+  "result": {
+    "item": "elementalsmithing:steel_chronicles_book"
+  }
+}

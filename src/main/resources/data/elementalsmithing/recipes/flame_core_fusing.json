@@ -1,5 +1,6 @@
 {
   "type": "elementalsmithing:fusion",
+  "category": "misc",
   "fusing_craft_0": {"item": "elementalsmithing:steel_ingot"},
   "fusing_craft_1": {"item": "minecraft:fire_charge"},
   "fusing_craft_2": {"item": "elementalsmithing:steel_ingot"},

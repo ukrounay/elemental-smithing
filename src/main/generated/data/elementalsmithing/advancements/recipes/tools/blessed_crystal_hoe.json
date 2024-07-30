@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_blessed_crystal_hoe": {
+    "has_blessed_crystal": {
       "conditions": {
         "items": [
           {
             "items": [
-              "elementalsmithing:blessed_crystal_hoe"
+              "elementalsmithing:blessed_crystal"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_blessed_crystal_hoe",
+      "has_blessed_crystal",
       "has_the_recipe"
     ]
   ],

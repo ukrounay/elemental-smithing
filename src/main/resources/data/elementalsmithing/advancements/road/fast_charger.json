@@ -1,0 +1,33 @@
+{
+  "display": {
+    "title": {
+      "translate": "advancement.elementalsmithing.fast_charger.title"
+    },
+    "description": {
+      "translate": "advancement.elementalsmithing.fast_charger.description"
+    },
+    "icon": {
+      "item": "elementalsmithing:energy_condensator"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "elementalsmithing:road/purity",
+  "criteria": {
+    "get_energy_condensator": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["elementalsmithing:energy_condensator"]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 500
+  }
+}

@@ -3,7 +3,10 @@ package net.ukrounay.elementalsmithing.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Blocks;
+import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.ukrounay.elementalsmithing.block.ModBlocks;
 
 public class ModLootTableProvider extends FabricBlockLootTableProvider {
@@ -19,5 +22,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CURSED_CRYSTAL_BLOCK);
         addDrop(ModBlocks.PURE_CRYSTAL_BLOCK);
         addDrop(ModBlocks.FUSION_SMITHING_TABLE);
+        addDrop(ModBlocks.ENERGY_CONDENSATOR);
+
     }
 }

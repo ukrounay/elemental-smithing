@@ -1,0 +1,80 @@
+{
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.elementalsmithing.cry_of_the_soul.description"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "elementalsmithing:ezsxdfcgh_music_disk"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.elementalsmithing.cry_of_the_soul.title"
+    }
+  },
+  "parent": "elementalsmithing:road/only_the_shell",
+  "criteria": {
+    "elementalsmithing:tegukjflk_music_disk": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["elementalsmithing:tegukjflk_music_disk"]
+          }
+        ]
+      }
+    },
+    "elementalsmithing:iwseuvhjk_music_disk": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["elementalsmithing:iwseuvhjk_music_disk"]
+          }
+        ]
+      }
+    },
+    "elementalsmithing:zsdxghjmr_music_disk": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["elementalsmithing:zsdxghjmr_music_disk"]
+          }
+        ]
+      }
+    },
+    "elementalsmithing:ezsxdfcgh_music_disk": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["elementalsmithing:ezsxdfcgh_music_disk"]
+          }
+        ]
+      }
+    },
+    "elementalsmithing:ubdcwjnk_music_disk": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["elementalsmithing:ubdcwjnk_music_disk"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["elementalsmithing:tegukjflk_music_disk"],
+    ["elementalsmithing:iwseuvhjk_music_disk"],
+    ["elementalsmithing:zsdxghjmr_music_disk"],
+    ["elementalsmithing:ezsxdfcgh_music_disk"],
+    ["elementalsmithing:ubdcwjnk_music_disk"]
+  ],
+  "rewards": {
+    "experience": 500
+  }
+}

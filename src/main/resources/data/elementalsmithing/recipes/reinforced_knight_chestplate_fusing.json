@@ -1,0 +1,15 @@
+{
+  "type": "elementalsmithing:fusion",
+  "category": "misc",
+  "fusing_craft_0": {"item": "minecraft:water_bucket"},
+  "fusing_craft_1": {"item": "elementalsmithing:knight_chestplate"},
+  "fusing_craft_2": {"item": "minecraft:water_bucket"},
+  "fusing_craft_3": {"item": "minecraft:iron_ingot"},
+  "fusing_craft_4": {"item": "minecraft:iron_ingot"},
+  "fusing_craft_5": {"item": "minecraft:lava_bucket"},
+  "fusing_craft_6": {"item": "elementalsmithing:graphite_block"},
+  "fusing_craft_7": {"item": "minecraft:lava_bucket"},
+  "fusing_left": {"item": "elementalsmithing:steel_block"},
+  "fusing_right": {"item": "elementalsmithing:steel_block"},
+  "result": {"item": "elementalsmithing:reinforced_knight_chestplate"}
+}

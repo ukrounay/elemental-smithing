@@ -6,8 +6,10 @@ import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.item.Items;
 import net.ukrounay.elementalsmithing.block.ModBlocks;
 import net.ukrounay.elementalsmithing.item.ModItems;
+import net.ukrounay.elementalsmithing.util.ModTags;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -22,12 +24,11 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLESSED_CRYSTAL_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PURE_CRYSTAL_BLOCK);
 
-        blockStateModelGenerator.registerSimpleState(ModBlocks.FUSION_SMITHING_TABLE);
+        blockStateModelGenerator.registerSimpleState(ModBlocks.ENERGY_CONDENSATOR);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-
 
 
         // handheld items
@@ -66,7 +67,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.FLAME_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.FROST_SWORD, Models.HANDHELD);
 
-        itemModelGenerator.register(ModItems.AMORPHOUS_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.AMORPHOUS_SWORD, Models.HANDHELD_ROD);
 
 
         // simple items
@@ -82,10 +83,14 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.FLAME_CORE, Models.GENERATED);
         itemModelGenerator.register(ModItems.FROST_CORE, Models.GENERATED);
         itemModelGenerator.register(ModItems.SOUL_CORE, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.DAMASK_STEEL_UPGRADE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.TEGUKJFLK_MUSIC_DISK, Models.GENERATED);
         itemModelGenerator.register(ModItems.IWSEUVHJK_MUSIC_DISK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ZSDXGHJMR_MUSIC_DISK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.EZSXDFCGH_MUSIC_DISK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.UBDCWJNK_MUSIC_DISK, Models.GENERATED);
 
 
         // armor
@@ -98,5 +103,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor((ArmorItem) ModItems.REINFORCED_KNIGHT_CHESTPLATE);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.REINFORCED_KNIGHT_LEGGINGS);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.REINFORCED_KNIGHT_BOOTS);
+
+//        // custom
+//        itemModelGenerator.register(ModItems.STEEL_SHIELD, Items.SHIELD, Models.CUBE);
+
     }
 }

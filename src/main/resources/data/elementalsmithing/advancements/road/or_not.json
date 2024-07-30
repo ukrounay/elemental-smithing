@@ -1,0 +1,30 @@
+{
+  "display": {
+    "title": {
+      "translate": "advancement.elementalsmithing.or_not.title"
+    },
+    "description": {
+      "translate": "advancement.elementalsmithing.or_not.description"
+    },
+    "icon": {
+      "item": "elementalsmithing:reinforced_steel_sword"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "elementalsmithing:road/wrong_way",
+  "criteria": {
+    "get_reinforced_steel_sword": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["elementalsmithing:reinforced_steel_sword"]
+          }
+        ]
+      }
+    }
+  }
+}

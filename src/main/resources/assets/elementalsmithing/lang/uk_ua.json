@@ -1,7 +1,7 @@
 {
   "item.elementalsmithing.graphite": "Графіт",
   "item.elementalsmithing.raw_steel": "Необроблена сталь",
-  "item.elementalsmithing.steel_gobbet": "Шматок сталі",
+  "item.elementalsmithing.steel_gobbet": "Сталева грудка",
   "item.elementalsmithing.steel_ingot": "Сталевий злиток",
 
   "block.elementalsmithing.steel_block" : "Блок сталі",
@@ -12,6 +12,10 @@
 
   "block.elementalsmithing.fusion_smithing_table" : "Стіл злиття",
   "gui.elementalsmithing.fusion_smithing_table.title" : "Стіл злиття",
+  "gui.elementalsmithing.fusion_smithing_table.tooltip.mode_switch_off" : "Простий режим",
+  "gui.elementalsmithing.fusion_smithing_table.tooltip.mode_switch_on" : "Розширений режим",
+
+  "block.elementalsmithing.energy_condensator" : "Збирач енергії",
 
   "item.elementalsmithing.steel_axe": "Сталева сокира",
   "item.elementalsmithing.steel_pickaxe": "Сталева кирка",
@@ -50,6 +54,8 @@
   "item.elementalsmithing.cursed_crystal_sword": "Проклятий кристалічний меч",
   "item.elementalsmithing.cursed_crystal_shovel": "Проклята кристалічна лопата",
   "item.elementalsmithing.cursed_crystal_pickaxe": "Проклята кристалічна кирка",
+
+
   "item.elementalsmithing.cursed_crystal_axe": "Проклята кристалічна сокира",
   "item.elementalsmithing.cursed_crystal_hoe": "Проклята кристалічна сапа",
 
@@ -70,32 +76,106 @@
   "item.elementalsmithing.smithing_template.damask_steel_upgrade.base_slot_description": "Куйте залізо та отримуйте візерунчастий булат, як це робили наші предки-ковалі",
   "item.elementalsmithing.smithing_template.damask_steel_upgrade.additions_slot_description":  "Додайте сталь",
 
+  "elementalsmithing.element.flame": "Вогонь",
+  "elementalsmithing.element.frost": "Мороз",
+  "elementalsmithing.element.soul": "Душа",
+  "elementalsmithing.element.amorphous": "Аморфність",
 
-  "tooltip.elementalsmithing.elemental_core.element":  "Керує елементом",
-  "tooltip.elementalsmithing.elemental_core.hint_damaged": "Щоб завершити ядро, наповніть його відповідною енергією",
-  "tooltip.elementalsmithing.elemental_core.hint": "Ядро завершене",
-  "tooltip.elementalsmithing.elemental_core.energy": "Енергія",
+  "tooltip.elementalsmithing.elemental_item.element":  "Керує стихією",
+  "tooltip.elementalsmithing.elemental_item.energy": "Енергія",
+
+  "tooltip.elementalsmithing.elemental_item.hint_damaged": "Щоб завершити ядро, наповніть його відповідною енергією",
+  "tooltip.elementalsmithing.elemental_item.hint": "Ядро завершене",
+
+  "tooltip.elementalsmithing.elemental_item.territory_hint_absent": "Стихія не має території",
+  "tooltip.elementalsmithing.elemental_item.territory_hint": "Може викликати територію стихії",
 
   "item.elementalsmithing.flame_core":  "Полум'яне ядро",
   "item.elementalsmithing.flame_core.description": "Вмістилище незгасаючого вогню",
-  "item.elementalsmithing.flame_core.element": "Вогонь",
 
   "item.elementalsmithing.frost_core":  "Морозне ядро",
   "item.elementalsmithing.frost_core.description": "Вмістилище полярного холоду",
-  "item.elementalsmithing.frost_core.element": "Сніг",
 
   "item.elementalsmithing.soul_core":  "Ядро душі",
   "item.elementalsmithing.soul_core.description": "Вмістилище життєвої енергії",
-  "item.elementalsmithing.soul_core.element": "Життя",
 
 
   "item.elementalsmithing.tegukjflk_music_disk":  "Платівка",
-  "item.elementalsmithing.tegukjflk_music_disk.desc":  "ukrounay - tegukjflk",
+  "item.elementalsmithing.tegukjflk_music_disk.desc": "tegukjflk",
 
   "item.elementalsmithing.iwseuvhjk_music_disk":  "Платівка",
-  "item.elementalsmithing.iwseuvhjk_music_disk.desc":  "ukrounay - iwseuvhjk",
+  "item.elementalsmithing.iwseuvhjk_music_disk.desc": "iwseuvhjk",
+
+  "item.elementalsmithing.zsdxghjmr_music_disk":  "Платівка",
+  "item.elementalsmithing.zsdxghjmr_music_disk.desc": "zsdxghjmr",
+
+  "item.elementalsmithing.ezsxdfcgh_music_disk":  "Платівка",
+  "item.elementalsmithing.ezsxdfcgh_music_disk.desc": "ezsxdfcgh",
+
+  "item.elementalsmithing.ubdcwjnk_music_disk": "Платівка",
+  "item.elementalsmithing.ubdcwjnk_music_disk.desc": "ubdcwjnk",
 
   "death.attack.vital_energy_drain": "%1$s помер від виснаження життєвої енергії.",
 
-  "itemgroup.global": "Стихійне ковальство"
+  "effect.elementalsmithing.flame_embodiment": "Втілення вогню",
+  "effect.elementalsmithing.frost_embodiment": "Втілення морозу",
+  "effect.elementalsmithing.vital_energy_overflow": "Переповнення життєвою енергією",
+  "effect.elementalsmithing.amorphousness": "Аморфність",
+
+  "itemgroup.global": "Стихійне ковальство",
+
+  "entity.minecraft.villager.grand_blacksmith": "Бувалий коваль",
+
+  "villager.elementalsmithing.random_name.0": "Трохим",
+  "villager.elementalsmithing.random_name.1": "Борис",
+  "villager.elementalsmithing.random_name.2": "Гаврило",
+  "villager.elementalsmithing.random_name.3": "Герасим",
+  "villager.elementalsmithing.random_name.4": "Олекса",
+  "villager.elementalsmithing.random_name.5": "Федір",
+  "villager.elementalsmithing.random_name.6": "Мирон",
+  "villager.elementalsmithing.random_name.7": "Олег",
+  "villager.elementalsmithing.random_name.8": "Роман",
+  "villager.elementalsmithing.random_name.9": "Станіслав",
+  "villager.elementalsmithing.random_name.10": "Тарас",
+  "villager.elementalsmithing.random_name.11": "Василь",
+
+  "advancement.elementalsmithing.elemental_smithing.title": "Стихійне ковальство",
+  "advancement.elementalsmithing.elemental_smithing.description": "Початок саме зараз.",
+  "advancement.elementalsmithing.old_stories.title": "Старі історії",
+  "advancement.elementalsmithing.old_stories.description": "Знайдіть будинок бувалого коваля",
+  "advancement.elementalsmithing.are_we_gonna_make_a_pencil.title": "Ми що, олівці робимо?",
+  "advancement.elementalsmithing.are_we_gonna_make_a_pencil.description": "Отримайте графіт",
+  "advancement.elementalsmithing.a_bullet_but_there_is_no_gun.title": "Куля та без рушниці",
+  "advancement.elementalsmithing.a_bullet_but_there_is_no_gun.description": "Отримайте грудку сталі",
+  "advancement.elementalsmithing.sturdy_piece.title": "Міцний шматок",
+  "advancement.elementalsmithing.sturdy_piece.description": "Отримайте сталевий злиток",
+  "advancement.elementalsmithing.wrong_way.title": "Неправильно",
+  "advancement.elementalsmithing.wrong_way.description": "Отримайте сталевий меч",
+  "advancement.elementalsmithing.or_not.title": "Чи все ж таки правильно?",
+  "advancement.elementalsmithing.or_not.description": "Зміцніть свій меч",
+  "advancement.elementalsmithing.as_in_ancient_times.title": "Як у давнину",
+  "advancement.elementalsmithing.as_in_ancient_times.description": "Отримайте зброю з дамаської сталі",
+  "advancement.elementalsmithing.shiny_and_invincible.title": "Блискучий і непереможний",
+  "advancement.elementalsmithing.shiny_and_invincible.description": "Отримайте лицарські обладунки",
+  "advancement.elementalsmithing.mountain_on_the_shoulders.title": "Гора на плечах",
+  "advancement.elementalsmithing.mountain_on_the_shoulders.description": "Отримайте посилені лицарські обладунки",
+  "advancement.elementalsmithing.mix_it.title": "Змішай!",
+  "advancement.elementalsmithing.mix_it.description": "Отримайте стіл злиття",
+  "advancement.elementalsmithing.only_the_shell.title": "Лише оболонка",
+  "advancement.elementalsmithing.only_the_shell.description": "Знайдіть або створіть пусте ядро",
+  "advancement.elementalsmithing.full_of_energy.title": "Повно, аж за край",
+  "advancement.elementalsmithing.full_of_energy.description": "Завершіть ядро стихії",
+  "advancement.elementalsmithing.imbued_force.title": "Закладена сила",
+  "advancement.elementalsmithing.imbued_force.description": "Отримайте стихійну зброю",
+  "advancement.elementalsmithing.unstable_deity.title": "Нестійке божество",
+  "advancement.elementalsmithing.unstable_deity.description": "Отримайте Безформний меч",
+  "advancement.elementalsmithing.purity.title": "Небесна чистота",
+  "advancement.elementalsmithing.purity.description": "Отримайте чистий кристал",
+  "advancement.elementalsmithing.fast_charger.title": "Швидка зарядка",
+  "advancement.elementalsmithing.fast_charger.description": "Наповнюйте стихійні речі автоматично",
+  "advancement.elementalsmithing.truth_or_tale.title": "Правда чи казка?",
+  "advancement.elementalsmithing.truth_or_tale.description": "Перевірте ефективність Чистої кристалічної сапи",
+  "advancement.elementalsmithing.cry_of_the_soul.title": "Крик душі",
+  "advancement.elementalsmithing.cry_of_the_soul.description": "Витягніть душу з невинних тварин"
+
 }

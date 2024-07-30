@@ -1,0 +1,60 @@
+{
+  "display": {
+    "title": {
+      "translate": "advancement.elementalsmithing.only_the_shell.title"
+    },
+    "description": {
+      "translate": "advancement.elementalsmithing.only_the_shell.description"
+    },
+    "icon": {
+      "item": "elementalsmithing:flame_core"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "elementalsmithing:road/purity",
+  "criteria": {
+    "get_complete_flame_core": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["elementalsmithing:flame_core"],
+            "nbt": "{Damage:1000}"
+          }
+        ]
+      }
+    },
+    "get_complete_frost_core": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["elementalsmithing:frost_core"],
+            "nbt": "{Damage:1000}"
+          }
+        ]
+      }
+    },
+    "get_complete_soul_core": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["elementalsmithing:soul_core"],
+            "nbt": "{Damage:2000}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_complete_flame_core",
+      "get_complete_frost_core",
+      "get_complete_soul_core"
+    ]
+  ]
+}

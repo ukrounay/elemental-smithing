@@ -1,5 +1,6 @@
 {
   "type": "elementalsmithing:fusion",
+  "category": "misc",
   "fusing_craft_1" : {"item": "elementalsmithing:soul_core"},
   "fusing_left": {"item": "elementalsmithing:flame_sword"},
   "fusing_right": {"item": "elementalsmithing:frost_sword"},
