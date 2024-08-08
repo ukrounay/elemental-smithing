@@ -83,7 +83,7 @@ public class ModItems {
             new HoeItem(ModToolMaterials.DAMASK_STEEL,-3, 0.1f, new FabricItemSettings()));
 
     public static final Item REINFORCED_STEEL_SWORD = registerItem("reinforced_steel_sword",
-            new SwordItem(ModToolMaterials.STEEL,5, -2.7f, new FabricItemSettings().fireproof().rarity(Rarity.UNCOMMON)));
+            new SwordItem(ModToolMaterials.REINFORCED_DAMASK_STEEL,5, -2.7f, new FabricItemSettings().fireproof().rarity(Rarity.UNCOMMON)));
 
     public static final Item KNIGHT_HELMET = registerItem("knight_helmet",
             new ArmorItem(ModArmorMaterials.DAMASK_STEEL, ArmorItem.Type.HELMET, new FabricItemSettings()));
@@ -264,11 +264,14 @@ public class ModItems {
             new ElementalSwordItem(Element.FLAME,5, 9, -1.8f, 15, Enchantments.FIRE_ASPECT,
                     new FabricItemSettings().fireproof().rarity(Rarity.RARE)), true);
     public static final Item FROST_SWORD = registerItem("frost_sword",
-            new ElementalSwordItem(Element.FROST, 5, 9, -1.8f,18, Enchantments.UNBREAKING,
+            new ElementalSwordItem(Element.FROST, 5, 9, -1.8f,18, Enchantments.SWEEPING,
                     new FabricItemSettings().rarity(Rarity.RARE)), true);
+    public static final Item UNSTABLE_AMORPHOUS_SWORD = registerItem("unstable_amorphous_sword",
+            new ElementalSwordItem(Element.AMORPHOUS, 5, 19,-1.4f, 30, Enchantments.LOOTING,
+                    new FabricItemSettings().maxDamage(2000).rarity(Rarity.EPIC)), true);
     public static final Item AMORPHOUS_SWORD = registerItem("amorphous_sword",
-            new ElementalSwordItem(Element.AMORPHOUS, 1, 23,-1.4f, 20, Enchantments.FORTUNE,
-                    new FabricItemSettings().rarity(Rarity.EPIC)), true);
+            new AmorphousSwordItem(Element.AMORPHOUS, 5, 23,-1.4f, 50, Enchantments.LOOTING,
+                    new FabricItemSettings().maxDamage(5000).rarity(Rarity.EPIC)), true);
 
 
 

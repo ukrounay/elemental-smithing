@@ -36,9 +36,6 @@ public class ModStatusEffects {
     );
     public static final StatusEffect AMORPHOUSNESS = registerStatusEffect("amorphousness",
             new AmorphousStatusEffect(StatusEffectCategory.BENEFICIAL, 0xFFFF55FF)
-                    .addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH, UUID.randomUUID().toString(), -20, EntityAttributeModifier.Operation.ADDITION)
-                    .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED, UUID.randomUUID().toString(), 0.5f, EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
-
     );
 
 

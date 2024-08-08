@@ -30,6 +30,8 @@ public class ModTags {
         public static final TagKey<Item> ELEMENTAL_CORES = createTag("elemental_cores");
         public static final TagKey<Item> ELEMENTAL_SWORDS = createTag("elemental_swords");
         public static final TagKey<Item> READABLE_BOOKS = createTag("readable_books");
+        public static final TagKey<Item> ENERGY_REPAIRABLE = createTag("energy_repairable");
+        public static final TagKey<Item> CRYSTAL_TOOLS = createTag("crystal_tools");
 
 
         private static TagKey<Item> createTag(String name) {

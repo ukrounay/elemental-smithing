@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "logo": "Elemental Smithing"
+  },
+  "header": {
+    "title": "Elemental Smithing Wiki",
+    "subtitle": "Mod by ukrounay for Minecraft Fabric",
+    "description": "Medieval vibes and challenges await you!",
+    "github": "Source Code",
+    "modrinth": "Mod on Modrinth",
+    "curseforge": "Mod on CurseForge"
+  },
+  "overview": {
+    "title": "Overview",
+    "text": "<p>Elemental Smithing is a medieval fantasy-style mod that introduces new materials, tools, armor sets, blocks, status effects, a new villager profession, and a unique structure.</p><p>Created for Fabric 1.20.1 with a 0.15.11+ loader. Supports REI 12.1.725 or higher.</p><p>The mod supports English and Ukrainian languages.</p>"
+  },
+  "content": {
+    "title": "Content",
+    "items": {
+      "title": "Items"
+    },
+    "blocks": {
+      "title": "Blocks"
+    },
+    "effects": {
+      "title": "Status Effects"
+    },
+    "structures": {
+      "title": "Structures",
+      "gbh": {
+        "title": "Grand Blacksmith's House",
+        "text": "<p>A house belonging to a villager with the Grand Blacksmith profession.</p><p>There are three large chests with general loot on the first floor and two small treasure chests near the bed on the second floor. You can find the Steel Chronicles book and an elemental core there, along with some equipment and many materials.</p>"
+      }
+    },
+    "other": {
+      "title": "Other",
+      "gb": {
+        "title": "Grand Blacksmith",
+        "text": "<p>A villager profession made available through the Fusion table.</p><ul><li><strong>Level 0:</strong> Buys graphite and sells a steel sword.</li><li><strong>Level 1:</strong> Buys amethyst shards and exchanges iron ingots for steel ingots.</li><li><strong>Level 2:</strong> Sells damask equipment and reinforced swords.</li><li><strong>Level 4:</strong> Sells reinforced equipment.</li><li><strong>Level 5:</strong> Crafts elemental weapons.</li></ul>"
+      },
+      "terraforming": {
+        "title": "Terraforming",
+        "text": "<p>Elemental weapons with territory abilities can change their surroundings to their liking. This occurs in 5 stages:</p><ul><li><strong>Stage 1-2:</strong> Spreading cracks</li><li><strong>Stage 3:</strong> Restoring cracks</li><li><strong>Stage 4:</strong> Creating territory standing</li><li><strong>Stage 5:</strong> Summoning spikes</li></ul>",
+        "label": "Flame and frost territories."
+      }
+    }
+  },
+  "popup": {
+    "properties": {
+      "title": "Properties",
+      "material": "Item Material"
+    },
+    "crafting": {
+      "title": "Crafting"
+    },
+    "description": {
+      "book": {
+        "header": "Book Contents",
+        "title": "Title",
+        "author": "Author"
+      }
+    },
+    "gallery": {
+      "title": "Gallery"
+    }
+  }
+}

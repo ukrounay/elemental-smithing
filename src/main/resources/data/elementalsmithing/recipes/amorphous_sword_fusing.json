@@ -2,6 +2,8 @@
   "type": "elementalsmithing:fusion",
   "category": "misc",
   "fusing_craft_1" : {"item": "elementalsmithing:soul_core"},
+  "fusing_craft_5" : {"item": "elementalsmithing:pure_crystal"},
+  "fusing_craft_7" : {"item": "elementalsmithing:pure_crystal"},
   "fusing_left": {"item": "elementalsmithing:flame_sword"},
   "fusing_right": {"item": "elementalsmithing:frost_sword"},
   "result": {"item": "elementalsmithing:amorphous_sword"}

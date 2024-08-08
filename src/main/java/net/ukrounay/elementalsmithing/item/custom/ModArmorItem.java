@@ -9,6 +9,7 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import net.ukrounay.elementalsmithing.entity.effect.ModStatusEffects;
 import net.ukrounay.elementalsmithing.item.ModArmorMaterials;
 
 import java.util.ArrayList;
@@ -71,8 +72,11 @@ public class ModArmorItem extends ArmorItem {
 
     private void addStatusEffectsForMaterial(PlayerEntity player, List<StatusEffectInstance> effects) {
         for (StatusEffectInstance effect : effects) {
-            if(!player.hasStatusEffect(effect.getEffectType())) {
-                player.addStatusEffect(new StatusEffectInstance(effect));
+            StatusEffectInstance currentEffect = player.getStatusEffect(effect.getEffectType());
+            if (currentEffect == null) {
+                player.addStatusEffect(effect);
+            } else if (currentEffect.isDurationBelow(20)) {
+                currentEffect.upgrade(effect);
             }
         }
     }

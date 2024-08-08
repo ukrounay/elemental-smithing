@@ -11,6 +11,7 @@ import net.minecraft.nbt.NbtElement;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Hand;
 import net.minecraft.util.collection.DefaultedList;
@@ -45,9 +46,10 @@ public class EnergyCondensatorBlockEntity extends BlockEntity  {
                 stack.setDamage(stack.getDamage() - 1);
                 entity.setItem(stack);
                 if(!stack.isDamaged()) {
-                    var sound = ModSounds.TERRITORY_COMPLETION;
+                    SoundEvent sound = null;
                     if(stack.getItem() instanceof ElementalSwordItem) sound = ((ElementalSwordItem)stack.getItem()).element.completionSound;
                     if(stack.getItem() instanceof ElementalCoreItem) sound = ((ElementalCoreItem)stack.getItem()).element.completionSound;
+                    if (sound == null) sound = ModSounds.TERRITORY_COMPLETION;
                     world.playSound(null, pos, sound, SoundCategory.BLOCKS, 1, 1);
                 }
                 entity.ticksToCharge = calculateTicksToCharge(world, pos);
@@ -147,7 +149,7 @@ public class EnergyCondensatorBlockEntity extends BlockEntity  {
     }
 
     public boolean isCharging() {
-        return getItem().isIn(ModTags.Items.ELEMENTAL_ITEMS) && getItem().isDamaged();
+        return getItem().isIn(ModTags.Items.ENERGY_REPAIRABLE) && getItem().isDamaged();
     }
 
 

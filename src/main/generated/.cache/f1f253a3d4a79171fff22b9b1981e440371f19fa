@@ -1,6 +1,6 @@
-// 1.20.1	2024-07-30T10:19:45.1312927	Elemental Smithing/Block Loot Tables
-567e6fc9d2d2c8bc181fcf1fd70a1f62a2d573a7 data\elementalsmithing\loot_tables\blocks\graphite_block.json
+// 1.20.1	2024-08-05T17:42:30.2888628	Elemental Smithing/Block Loot Tables
 6d94b21fe5213959ded306120b553fe366cefbf2 data\elementalsmithing\loot_tables\blocks\blessed_crystal_block.json
+567e6fc9d2d2c8bc181fcf1fd70a1f62a2d573a7 data\elementalsmithing\loot_tables\blocks\graphite_block.json
 230752815c198763391c0bffc09ed6b47560a5c2 data\elementalsmithing\loot_tables\blocks\pure_crystal_block.json
 e3cfabc2fb78f6c33db232a79c38b7076c894d4a data\elementalsmithing\loot_tables\blocks\fusion_smithing_table.json
 2f2ceebd78c35413565404d273c8ca8785ab6dc5 data\elementalsmithing\loot_tables\blocks\cursed_crystal_block.json

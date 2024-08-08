@@ -48,7 +48,7 @@ public class EnergyCondensatorBlock extends BlockWithEntity implements BlockEnti
             Block.createCuboidShape(9.5, 10, 4.5 , 11.5, 12, 6.5)
     );
 
-    public static final List<BlockPos> ENERGY_PROVIDER_OFFSETS = BlockPos.stream(-3, -3, -3, 3, 3, 3).filter(pos -> Math.abs(pos.getX()) != 1 && Math.abs(pos.getY()) != 1 && Math.abs(pos.getZ()) != 1).map(BlockPos::toImmutable).toList();
+    public static final List<BlockPos> ENERGY_PROVIDER_OFFSETS = BlockPos.stream(-2, -2, -2, 2, 2, 2).filter(pos -> Math.abs(pos.getX()) != 1 && Math.abs(pos.getY()) != 1 && Math.abs(pos.getZ()) != 1).map(BlockPos::toImmutable).toList();
 
 
     public EnergyCondensatorBlock(Settings settings) {

@@ -1,0 +1,101 @@
+{
+  "categories": [
+    {
+      "name": "Blocks",
+      "blocks": [
+        {
+          "name": "Block of Steel",
+          "id": "steel_block",
+          "properties": [
+            {"name": "Hardness", "value": "6"},
+            {"name": "Resistance", "value": "10"}
+          ],
+          "description": "This block is energy isolator (see more about Energy Condensator).",
+          "recipe": "image"
+        },
+        {
+          "name": "Block of Graphite",
+          "id": "graphite_block",
+          "properties": [
+            {"name": "Hardness", "value": "5"},
+            {"name": "Resistance", "value": "6"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Block of Blessed Crystal",
+          "id": "blessed_crystal_block",
+          "properties": [
+            {"name": "Hardness", "value": "3"},
+            {"name": "Resistance", "value": "4"},
+            {"name": "Luminance", "value": "4"},
+            {"name": "Opaque", "value": "False"}
+          ],
+          "description": "This block is energy provider (see more about Energy Condensator).",
+          "recipe": "image"
+        },
+        {
+          "name": "Block of Cursed Crystal",
+          "id": "cursed_crystal_block",
+          "properties": [
+            {"name": "Hardness", "value": "3"},
+            {"name": "Resistance", "value": "10"},
+            {"name": "Luminance", "value": "4"},
+            {"name": "Opaque", "value": "False"}
+          ],
+          "description": "This block is energy provider (see more about Energy Condensator).",
+          "recipe": "image"
+        },
+        {
+          "name": "Block of Pure Crystal",
+          "id": "pure_crystal_block",
+          "properties": [
+            {"name": "Hardness", "value": "3"},
+            {"name": "Resistance", "value": "8"},
+            {"name": "Luminance", "value": "8"},
+            {"name": "Opaque", "value": "False"}
+          ],
+          "description": "This block is energy provider (see more about Energy Condensator).",
+          "recipe": "image"
+        }
+      ]
+    },
+    {
+      "name": "Utility Blocks",
+      "blocks": [
+        {
+          "name": "Fusion Table",
+          "id": "fusion_table",
+          "properties": [
+            {"name": "Hardness", "value": "5"},
+            {"name": "Resistance", "value": "6"},
+            {"name": "Interactive", "value": "True"},
+            {"name": "Has screen", "value": "True"}
+          ],
+          "description": "<p>Main mod workstation.</p><p>Has 2 fusion slots and 8 fusion craft slots - total 10 inputs and 1 output. You can craft only 1 item at a time.</p><p>Gives a custom profession to villagers (see Other section).</p>",
+          "recipe": "image",
+          "gallery": [
+            "fst-1.png",
+            "fst-2.png"
+          ]
+        },
+        {
+          "name": "Energy Condensator",
+          "id": "energy_condensator",
+          "properties": [
+            {"name": "Hardness", "value": "5"},
+            {"name": "Resistance", "value": "6"},
+            {"name": "Interactive", "value": "True"},
+            {"name": "Has screen", "value": "False"}
+          ],
+          "description": "<p>Auto charging station for elemental items.</p><p>Player can put or grab items on right click. Block inventory can contain one item of any type, it will be rendered on top of block.</p><p>If item is elemental, block will start working and increasing energy by 1 point each 72 ticks. Charging will be progressing faster, if energy providers placed around in radius of 2 blocks, similar to enchanting table leveling.</p>",
+          "recipe": "image",
+          "gallery": [
+            "ec-1.png",
+            "ec-2.png"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -16,18 +16,31 @@
   },
   "parent": "elementalsmithing:road/full_of_energy",
   "criteria": {
-    "get_elemental_weapon": {
+    "get_flame_sword": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": ["elementalsmithing:flame_sword"]
-          },
+          }
+        ]
+      }
+    },
+    "get_frost_sword": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
           {
             "items": ["elementalsmithing:frost_sword"]
           }
         ]
       }
     }
-  }
+  },
+  "requirements": [
+    [
+      "get_flame_sword",
+      "get_frost_sword"
+    ]
+  ]
 }

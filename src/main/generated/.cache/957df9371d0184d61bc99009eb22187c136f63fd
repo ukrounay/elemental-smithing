@@ -1,15 +1,18 @@
-// 1.20.1	2024-07-30T10:19:45.1412956	Elemental Smithing/Tags for minecraft:item
-6c0ec35c1f3bd7523e0f49c1a9f976eb81f7e8c3 data\minecraft\tags\items\pickaxes.json
+// 1.20.1	2024-08-05T17:42:30.2998647	Elemental Smithing/Tags for minecraft:item
+1e946533ad8947bf25f5d59b87338fe99915e701 data\minecraft\tags\items\pickaxes.json
 b9f06dea67fb858c0afa2f6e45e56818f086a01a data\elementalsmithing\tags\items\music_discs.json
 404d4dbe157a0a090fc13b5c8ba329737d1f9838 data\minecraft\tags\items\music_discs.json
-e192ddcdc3610f6d9194be931d8ea67fe54fc8c3 data\elementalsmithing\tags\items\elemental_swords.json
+a78cdbfce0d303ceeaf746039f5c64d8eecf9853 data\elementalsmithing\tags\items\elemental_swords.json
+b6e43b5ff3cb7d68200d3ce0043ee3a36bceecfb data\elementalsmithing\tags\items\crystal_tools.json
 fcdb85bb8d27e150f228132bfc30fcba530ca905 data\elementalsmithing\tags\items\readable_books.json
 9a20019e3852914b89c77053c344601d5fc41990 data\elementalsmithing\tags\items\elemental_items.json
 ad7b1d52e009392dbc7c1a8c7a668ac2612ba566 data\elementalsmithing\tags\items\elemental_cores.json
 c13b050a482aad007ad8d17449622cf2ed2c68df data\elementalsmithing\tags\items\crystals.json
 ead036a2b148826dac5625776a2fa88ac76d3fe3 data\minecraft\tags\items\swords.json
-3a0abca2d7f8fb3ed23134cad652027ae333c9e0 data\minecraft\tags\items\trimmable_armor.json
+de17af6914568124c2a297b623212c148839eaef data\minecraft\tags\items\trimmable_armor.json
 d123960874d187ab59bf1a05e63904c80b883446 data\elementalsmithing\tags\items\swords.json
-dbee1fc34a5bb1f6f1ab032aa279fa5eda626ba2 data\minecraft\tags\items\hoes.json
-22c1386ec39f0bd54094c486bcd159e902cdfa01 data\minecraft\tags\items\axes.json
+921b82354c2624f3d08b83277bbaddce35bc1585 data\minecraft\tags\items\hoes.json
+e4d6307bb0fb49a54201096a40912f772b48d081 data\minecraft\tags\items\axes.json
 e8c1f84c878398bb6b9f63f30125492b23ab73a8 data\minecraft\tags\items\trim_materials.json
+5c45115e3a38efe89b6efbd1d1f98189621e18fd data\minecraft\tags\items\shovels.json
+2fad8ae3f4e11ac3bf8e17baa28c8c0e271307ae data\elementalsmithing\tags\items\energy_repairable.json

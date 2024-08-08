@@ -66,8 +66,9 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.FLAME_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.FROST_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.AMORPHOUS_SWORD, Models.HANDHELD);
 
-        itemModelGenerator.register(ModItems.AMORPHOUS_SWORD, Models.HANDHELD_ROD);
+        itemModelGenerator.register(ModItems.UNSTABLE_AMORPHOUS_SWORD, Models.HANDHELD_ROD);
 
 
         // simple items

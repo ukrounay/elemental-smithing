@@ -27,7 +27,7 @@ public class ModLootTableModifiers {
 
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            if(id == VILLAGE_WEAPONSMITH_CHEST_ID || id == VILLAGE_TOOLSMITH_CHEST_ID || id == VILLAGE_ARMORER_CHEST_ID) {
+            if(id.equals(VILLAGE_WEAPONSMITH_CHEST_ID) || id.equals(VILLAGE_TOOLSMITH_CHEST_ID) || id.equals(VILLAGE_ARMORER_CHEST_ID)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.3f))
@@ -35,40 +35,35 @@ public class ModLootTableModifiers {
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 3.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
-            if(id == IGLOO_CHEST_ID || id == ANCIENT_CITY_ICE_BOX_CHEST_ID) {
+            if(id.equals(IGLOO_CHEST_ID) || id.equals(ANCIENT_CITY_ICE_BOX_CHEST_ID)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.6f))
+                        .conditionally(RandomChanceLootCondition.builder(0.4f))
                         .with(ItemEntry.builder(ModItems.FROST_CORE))
-                        .apply(SetDamageLootFunction.builder(UniformLootNumberProvider.create(ModItems.FROST_CORE.getMaxDamage()/5f, ModItems.FROST_CORE.getMaxDamage())).build())
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                        .apply(SetDamageLootFunction.builder(UniformLootNumberProvider.create(ModItems.FROST_CORE.getMaxDamage()/5f, ModItems.FROST_CORE.getMaxDamage())).build());
                 tableBuilder.pool(poolBuilder.build());
             }
-            if(id == NETHER_BRIDGE_CHEST_ID) {
+            if(id.equals(NETHER_BRIDGE_CHEST_ID)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.3f))
+                        .conditionally(RandomChanceLootCondition.builder(0.2f))
                         .with(ItemEntry.builder(ModItems.FLAME_CORE))
-                        .apply(SetDamageLootFunction.builder(UniformLootNumberProvider.create(ModItems.FLAME_CORE.getMaxDamage()/5f, ModItems.FLAME_CORE.getMaxDamage())).build())
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                        .apply(SetDamageLootFunction.builder(UniformLootNumberProvider.create(ModItems.FLAME_CORE.getMaxDamage()/5f, ModItems.FLAME_CORE.getMaxDamage())).build());
                 tableBuilder.pool(poolBuilder.build());
             }
-            if(id == RUINED_PORTAL_CHEST_ID) {
+            if(id.equals(RUINED_PORTAL_CHEST_ID)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f))
+                        .conditionally(RandomChanceLootCondition.builder(0.15f))
                         .with(ItemEntry.builder(ModItems.FLAME_CORE))
-                        .apply(SetDamageLootFunction.builder(UniformLootNumberProvider.create(ModItems.FLAME_CORE.getMaxDamage()/5f, ModItems.FLAME_CORE.getMaxDamage())).build())
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                        .apply(SetDamageLootFunction.builder(UniformLootNumberProvider.create(ModItems.FLAME_CORE.getMaxDamage()/5f, ModItems.FLAME_CORE.getMaxDamage())).build());
                 tableBuilder.pool(poolBuilder.build());
             }
-            if(id == END_CITY_TREASURE_CHEST_ID) {
+            if(id.equals(END_CITY_TREASURE_CHEST_ID)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(1f))
                         .with(ItemEntry.builder(ModItems.SOUL_CORE))
-                        .apply(SetDamageLootFunction.builder(UniformLootNumberProvider.create(ModItems.SOUL_CORE.getMaxDamage()/5f, ModItems.SOUL_CORE.getMaxDamage())).build())
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                        .apply(SetDamageLootFunction.builder(UniformLootNumberProvider.create(ModItems.SOUL_CORE.getMaxDamage()/5f, ModItems.SOUL_CORE.getMaxDamage())).build());
                 tableBuilder.pool(poolBuilder.build());
             }
         });

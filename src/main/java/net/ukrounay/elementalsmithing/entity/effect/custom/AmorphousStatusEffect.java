@@ -6,28 +6,38 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.player.PlayerEntity;
+import net.ukrounay.elementalsmithing.entity.effect.ModStatusEffects;
 
-public class AmorphousStatusEffect extends StatusEffect {
+public class AmorphousStatusEffect extends ModHealthBoostStatusEffect {
 
     public AmorphousStatusEffect(StatusEffectCategory category, int color) {
-        super(category, color);
+        super(category, color, 2, 2);
     }
 
     @Override
     public void onApplied(LivingEntity entity, AttributeContainer attributes, int amplifier) {
         super.onApplied(entity, attributes, amplifier);
-        entity.setNoGravity(true);
-        entity.addVelocity(0, 0.5,0);
+        if (!entity.getWorld().isClient && entity instanceof PlayerEntity player) {
+            player.getAbilities().allowFlying = true;
+            player.getAbilities().flying = true;
+            player.sendAbilitiesUpdate();
+        }
     }
-
 
     @Override
     public void onRemoved(LivingEntity entity, AttributeContainer attributes, int amplifier) {
         super.onRemoved(entity, attributes, amplifier);
-        if (entity.getHealth() > entity.getMaxHealth()) {
-            entity.setHealth(entity.getMaxHealth());
+        if (!entity.getWorld().isClient && entity instanceof PlayerEntity player
+            && !player.isCreative()
+            && !player.isSpectator()
+        ) {
+            player.getAbilities().allowFlying = false;
+            player.getAbilities().flying = false;
+            player.sendAbilitiesUpdate();
         }
-        entity.setNoGravity(false);
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 120));
+        entity.addStatusEffect(new StatusEffectInstance(
+                StatusEffects.SLOW_FALLING, 120));
     }
+
 }

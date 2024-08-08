@@ -45,8 +45,12 @@ public class FusionSmithingRecipe implements Recipe<SimpleInventory> {
             !inventory.getStack(FusionSmithingTableBlockEntity.FUSION_CRAFT_6).isDamaged() && craftItems.get(5).test(inventory.getStack(FusionSmithingTableBlockEntity.FUSION_CRAFT_6)) &&
             !inventory.getStack(FusionSmithingTableBlockEntity.FUSION_CRAFT_7).isDamaged() && craftItems.get(6).test(inventory.getStack(FusionSmithingTableBlockEntity.FUSION_CRAFT_7)) &&
             !inventory.getStack(FusionSmithingTableBlockEntity.FUSION_CRAFT_8).isDamaged() && craftItems.get(7).test(inventory.getStack(FusionSmithingTableBlockEntity.FUSION_CRAFT_8)) &&
-            !inventory.getStack(FusionSmithingTableBlockEntity.FUSION_INGREDIENT_LEFT).isDamaged() && leftFusionItem.test(inventory.getStack(FusionSmithingTableBlockEntity.FUSION_INGREDIENT_LEFT)) &&
-            !inventory.getStack(FusionSmithingTableBlockEntity.FUSION_INGREDIENT_RIGHT).isDamaged() && rightFusionItem.test(inventory.getStack(FusionSmithingTableBlockEntity.FUSION_INGREDIENT_RIGHT));
+            !inventory.getStack(FusionSmithingTableBlockEntity.FUSION_INGREDIENT_LEFT).isDamaged() &&
+            !inventory.getStack(FusionSmithingTableBlockEntity.FUSION_INGREDIENT_RIGHT).isDamaged()
+                    && (leftFusionItem.test(inventory.getStack(FusionSmithingTableBlockEntity.FUSION_INGREDIENT_LEFT))
+                    || rightFusionItem.test(inventory.getStack(FusionSmithingTableBlockEntity.FUSION_INGREDIENT_LEFT)))
+                    && (leftFusionItem.test(inventory.getStack(FusionSmithingTableBlockEntity.FUSION_INGREDIENT_RIGHT))
+                    || rightFusionItem.test(inventory.getStack(FusionSmithingTableBlockEntity.FUSION_INGREDIENT_RIGHT)));
 
         // shapeless recipe -->
 

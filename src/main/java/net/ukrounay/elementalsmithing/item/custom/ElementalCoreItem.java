@@ -34,7 +34,6 @@ public class ElementalCoreItem extends Item {
         this.useCooldown = useCooldown;
     }
 
-
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);

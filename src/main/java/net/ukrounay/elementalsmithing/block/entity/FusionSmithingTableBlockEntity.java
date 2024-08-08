@@ -79,7 +79,7 @@ public class FusionSmithingTableBlockEntity extends BlockEntity implements Exten
     }
 
     private void showResult() {
-        if(!world.isClient) {
+        if(world != null && !world.isClient) {
             Optional<FusionSmithingRecipe> recipe = getCurrentRecipe();
             inventory.set(FUSION_OUTPUT,
                     recipe.isPresent()

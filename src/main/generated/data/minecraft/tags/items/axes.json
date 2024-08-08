@@ -3,6 +3,8 @@
   "values": [
     "elementalsmithing:damask_steel_axe",
     "elementalsmithing:steel_axe",
+    "elementalsmithing:blessed_crystal_axe",
+    "elementalsmithing:cursed_crystal_axe",
     "elementalsmithing:pure_crystal_axe"
   ]
 }

@@ -4,6 +4,10 @@
     "elementalsmithing:knight_helmet",
     "elementalsmithing:knight_chestplate",
     "elementalsmithing:knight_leggings",
-    "elementalsmithing:knight_boots"
+    "elementalsmithing:knight_boots",
+    "elementalsmithing:reinforced_knight_helmet",
+    "elementalsmithing:reinforced_knight_chestplate",
+    "elementalsmithing:reinforced_knight_leggings",
+    "elementalsmithing:reinforced_knight_boots"
   ]
 }

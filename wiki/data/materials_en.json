@@ -1,0 +1,87 @@
+{
+    "steel": {
+        "name": "Steel",
+        "properties": [
+            {"name": "Durability", "value": "890"},
+            {"name": "Mining level", "value": "3 (diamond)"},
+            {"name": "Enchantability", "value": "15"},
+            {"name": "Repair ingredients", "value": "Steel Ingot"}
+        ]
+    },
+    "damask_steel": {
+        "name": "Damask steel",
+        "properties": [
+            {"name": "Durability", "value": "3280"},
+            {"name": "Mining level", "value": "4 (netherite)"},
+            {"name": "Enchantability", "value": "25"},
+            {"name": "Repair ingredients", "value": "Steel Ingot"}
+        ]
+    },
+    "reinforced_damask_steel": {
+        "name": "Reinforced damask steel",
+        "properties": [
+            {"name": "Durability", "value": "3460"},
+            {"name": "Mining level", "value": "4 (netherite)"},
+            {"name": "Enchantability", "value": "15"},
+            {"name": "Repair ingredients", "value": "Steel Ingot"}
+        ]
+    },
+    "blessed_crystal": {
+        "name": "Blessed crystal",
+        "properties": [
+            {"name": "Durability", "value": "64"},
+            {"name": "Mining level", "value": "4 (netherite)"},
+            {"name": "Mining speed", "value": "15"},
+            {"name": "Enchantability", "value": "15"},
+            {"name": "Repair ingredients", "value": "All existing crystals"},
+            {"name": "Infused enchantment", "value": "Power X"}
+        ]
+    },
+    "cursed_crystal": {
+        "name": "Cursed crystal",
+        "properties": [
+            {"name": "Durability", "value": "560"},
+            {"name": "Mining level", "value": "-1 (hand)"},
+            {"name": "Mining speed", "value": "2"},
+            {"name": "Enchantability", "value": "15"},
+            {"name": "Repair ingredients", "value": "All existing crystals"},
+            {"name": "Infused enchantment", "value": "Curse of binding X"}
+        ]
+    },
+    "pure_crystal": {
+        "name": "Pure crystal",
+        "properties": [
+            {"name": "Durability", "value": "2560"},
+            {"name": "Mining level", "value": "4 (netherite)"},
+            {"name": "Mining speed", "value": "14"},
+            {"name": "Enchantability", "value": "15"},
+            {"name": "Repair ingredients", "value": "All existing crystals"},
+            {"name": "Infused enchantment", "value": "Mending"}
+        ]
+    },
+    "damask_steel_armor": {
+        "name": "Damask steel",
+        "properties": [
+            {"name": "Armour toughness", "value": "1.5"},
+            {"name": "Knockback resistanse", "value": "1"},
+            {"name": "Enchantability", "value": "27"}
+        ]
+    },
+    "reinforced_damask_steel_armor": {
+        "name": "Reinforced damask steel",
+        "properties": [
+            {"name": "Armour toughness", "value": "2"},
+            {"name": "Knockback resistanse", "value": "2"},
+            {"name": "Enchantability", "value": "20"}
+        ]
+    },
+    "elemental": {
+        "name": "Elemental",
+        "properties": [
+            {"name": "Durability", "value": "1000"},
+            {"name": "Mining level", "value": "-1 (hand)"},
+            {"name": "Mining speed", "value": "2"},
+            {"name": "Enchantability", "value": "30"}
+        ]
+    }
+}

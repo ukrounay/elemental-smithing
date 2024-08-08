@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "elementalsmithing:blessed_crystal_hoe",
+    "elementalsmithing:cursed_crystal_hoe",
+    "elementalsmithing:pure_crystal_hoe",
+    "elementalsmithing:blessed_crystal_axe",
+    "elementalsmithing:cursed_crystal_axe",
+    "elementalsmithing:pure_crystal_axe",
+    "elementalsmithing:blessed_crystal_pickaxe",
+    "elementalsmithing:cursed_crystal_pickaxe",
+    "elementalsmithing:pure_crystal_pickaxe",
+    "elementalsmithing:blessed_crystal_shovel",
+    "elementalsmithing:cursed_crystal_shovel",
+    "elementalsmithing:pure_crystal_shovel",
+    "elementalsmithing:cursed_crystal_sword",
+    "elementalsmithing:blessed_crystal_sword",
+    "elementalsmithing:pure_crystal_sword"
+  ]
+}

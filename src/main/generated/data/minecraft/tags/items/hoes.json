@@ -3,6 +3,8 @@
   "values": [
     "elementalsmithing:damask_steel_hoe",
     "elementalsmithing:steel_hoe",
+    "elementalsmithing:blessed_crystal_hoe",
+    "elementalsmithing:cursed_crystal_hoe",
     "elementalsmithing:pure_crystal_hoe"
   ]
 }

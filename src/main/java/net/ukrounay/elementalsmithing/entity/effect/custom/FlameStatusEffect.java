@@ -6,34 +6,34 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.ukrounay.elementalsmithing.entity.effect.ModStatusEffectInstance;
+import net.ukrounay.elementalsmithing.entity.effect.ModStatusEffects;
 
-public class FlameStatusEffect extends StatusEffect {
+public class FlameStatusEffect extends ModHealthBoostStatusEffect {
+
+    private static final StatusEffectInstance additionalEffect =
+        new ModStatusEffectInstance(StatusEffects.FIRE_RESISTANCE,
+        60,3,true, false, false);
 
 
     public FlameStatusEffect(StatusEffectCategory category, int color) {
-        super(category, color);
-    }
-
-    @Override
-    public void onRemoved(LivingEntity entity, AttributeContainer attributes, int amplifier) {
-        super.onRemoved(entity, attributes, amplifier);
-        if (entity.getHealth() > entity.getMaxHealth()) {
-            entity.setHealth(entity.getMaxHealth());
-        }
-    }
-
-    @Override
-    public boolean canApplyUpdateEffect(int duration, int amplifier) {
-        return true;
+        super(category, color, 10, 1);
     }
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
+        super.applyUpdateEffect(entity, amplifier);
         if(entity.isOnFire()) {
             entity.setFireTicks(0);
             entity.setOnFire(false);
         }
-        if(!entity.hasStatusEffect(StatusEffects.FIRE_RESISTANCE))
-            entity.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 1, 3, true, false, false));
+
+        StatusEffectInstance currentEffect = entity.getStatusEffect(additionalEffect.getEffectType());
+        if(currentEffect instanceof ModStatusEffectInstance modEffect) {
+            if(modEffect.isDurationBelow(20))
+                modEffect.updateDuration(additionalEffect.getDuration());
+        } else entity.addStatusEffect(new ModStatusEffectInstance(additionalEffect));
+
     }
+
 }

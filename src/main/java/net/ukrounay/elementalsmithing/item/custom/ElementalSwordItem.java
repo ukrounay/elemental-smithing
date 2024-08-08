@@ -1,5 +1,6 @@
 package net.ukrounay.elementalsmithing.item.custom;
 
+import net.minecraft.block.BlockState;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.LivingEntity;
@@ -15,6 +16,7 @@ import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.ukrounay.elementalsmithing.ElementalSmithing;
 import net.ukrounay.elementalsmithing.util.Element;
@@ -71,7 +73,7 @@ public class ElementalSwordItem extends SwordItem {
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         float fullness =  1 - stack.getDamage() /  (float)stack.getMaxDamage();
-        int damage = (int)(bonusDamage * FastMath.expgrow(fullness, 2));
+        int damage = (int)(bonusDamage * fullness);
         if (stack.getDamage() + damage < stack.getMaxDamage() && attacker instanceof PlayerEntity) {
             target.damage(target.getDamageSources().playerAttack((PlayerEntity)attacker), damage);
             stack.setDamage(stack.getDamage() + damage);
@@ -80,10 +82,17 @@ public class ElementalSwordItem extends SwordItem {
     }
 
     @Override
+    public boolean postMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
+        return true;
+    }
+
+    @Override
     public int getMaxUseTime(ItemStack stack) {
         if (element.territory) return 7 * (stageTicks + 1) + 35;
         return 0;
     }
+
+
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {

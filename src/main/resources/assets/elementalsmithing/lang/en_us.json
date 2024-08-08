@@ -69,6 +69,7 @@
 
   "item.elementalsmithing.flame_sword": "Flame Sword",
   "item.elementalsmithing.frost_sword": "Frost Sword",
+  "item.elementalsmithing.unstable_amorphous_sword": "Unstable Amorphous Sword",
   "item.elementalsmithing.amorphous_sword": "Amorphous Sword",
 
 
@@ -120,7 +121,7 @@
 
   "effect.elementalsmithing.flame_embodiment": "Flame embodiment",
   "effect.elementalsmithing.frost_embodiment": "Frost embodiment",
-  "effect.elementalsmithing.vital_energy_overflow": "Vital energy overflow",
+  "effect.elementalsmithing.vital_energy_overflow": "Overflow",
   "effect.elementalsmithing.amorphousness": "Amorphousness",
 
   "itemgroup.global": "Elemental Smithing",
@@ -169,7 +170,7 @@
   "advancement.elementalsmithing.imbued_force.title": "Imbued force",
   "advancement.elementalsmithing.imbued_force.description": "Obtain elemental weapon",
   "advancement.elementalsmithing.unstable_deity.title": "Unstable deity",
-  "advancement.elementalsmithing.unstable_deity.description": "Obtain Amorphous Sword",
+  "advancement.elementalsmithing.unstable_deity.description": "Obtain Unstable Amorphous Sword",
   "advancement.elementalsmithing.purity.title": "Purity",
   "advancement.elementalsmithing.purity.description": "Obtain pure crystal",
   "advancement.elementalsmithing.fast_charger.title": "Fast charger",
@@ -177,7 +178,7 @@
   "advancement.elementalsmithing.truth_or_tale.title" : "Truth or tale?",
   "advancement.elementalsmithing.truth_or_tale.description" : "Test the effectiveness of the Pure Crystal Hoe",
   "advancement.elementalsmithing.cry_of_the_soul.title" : "Cry of the soul",
-  "advancement.elementalsmithing.cry_of_the_soul.description" : "Витягніть душу з невинних тварин"
-
-
+  "advancement.elementalsmithing.cry_of_the_soul.description" : "Extract the soul from innocent animals",
+  "advancement.elementalsmithing.divinity.title": "Divinity",
+  "advancement.elementalsmithing.divinity.description": "Stabilize Amorphous Sword"
 }

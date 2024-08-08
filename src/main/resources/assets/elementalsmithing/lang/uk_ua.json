@@ -18,7 +18,7 @@
   "block.elementalsmithing.energy_condensator" : "Збирач енергії",
 
   "item.elementalsmithing.steel_axe": "Сталева сокира",
-  "item.elementalsmithing.steel_pickaxe": "Сталева кирка",
+  "item.elementalsmithing.steel_pickaxe": "Сталеве кайло",
   "item.elementalsmithing.steel_shovel": "Сталева лопата",
   "item.elementalsmithing.steel_hoe": "Сталева сапа",
   "item.elementalsmithing.steel_sword": "Сталевий меч",
@@ -26,7 +26,7 @@
   "item.elementalsmithing.reinforced_steel_sword": "Міцний сталевий меч",
 
   "item.elementalsmithing.damask_steel_axe": "Сокира з дамаської сталі",
-  "item.elementalsmithing.damask_steel_pickaxe": "Кирка з дамаської сталі",
+  "item.elementalsmithing.damask_steel_pickaxe": "Кайло з дамаської сталі",
   "item.elementalsmithing.damask_steel_shovel": "Лопата з дамаської сталі",
   "item.elementalsmithing.damask_steel_hoe": "Сапа з дамаської сталі",
   "item.elementalsmithing.damask_steel_sword": "Меч з дамаської сталі",
@@ -47,26 +47,25 @@
 
   "item.elementalsmithing.blessed_crystal_sword": "Благословенний кристалічний меч",
   "item.elementalsmithing.blessed_crystal_shovel": "Благословенна кристалічна лопата",
-  "item.elementalsmithing.blessed_crystal_pickaxe": "Благословенна кристалічна кирка",
+  "item.elementalsmithing.blessed_crystal_pickaxe": "Благословенне кристалічне кайло",
   "item.elementalsmithing.blessed_crystal_axe": "Благословенна кристалічна сокира",
   "item.elementalsmithing.blessed_crystal_hoe": "Благословенна кристалічна сапа",
 
   "item.elementalsmithing.cursed_crystal_sword": "Проклятий кристалічний меч",
   "item.elementalsmithing.cursed_crystal_shovel": "Проклята кристалічна лопата",
-  "item.elementalsmithing.cursed_crystal_pickaxe": "Проклята кристалічна кирка",
-
-
+  "item.elementalsmithing.cursed_crystal_pickaxe": "Прокляте кристалічне кайло",
   "item.elementalsmithing.cursed_crystal_axe": "Проклята кристалічна сокира",
   "item.elementalsmithing.cursed_crystal_hoe": "Проклята кристалічна сапа",
 
   "item.elementalsmithing.pure_crystal_sword": "Чистий кристалічний меч",
   "item.elementalsmithing.pure_crystal_shovel": "Чиста кристалічна лопата",
-  "item.elementalsmithing.pure_crystal_pickaxe": "Чиста кристалічна кирка",
+  "item.elementalsmithing.pure_crystal_pickaxe": "Чисте кристалічне кайло",
   "item.elementalsmithing.pure_crystal_axe": "Чиста кристалічна сокира",
   "item.elementalsmithing.pure_crystal_hoe": "Чиста кристалічна сапа",
 
   "item.elementalsmithing.flame_sword": "Полум'яний меч",
-  "item.elementalsmithing.frost_sword": "Морозний меч",
+  "item.elementalsmithing.frost_sword": "Крижаний меч",
+  "item.elementalsmithing.unstable_amorphous_sword": "Нестабільний безформний меч",
   "item.elementalsmithing.amorphous_sword": "Безформний меч",
 
 
@@ -119,7 +118,7 @@
 
   "effect.elementalsmithing.flame_embodiment": "Втілення вогню",
   "effect.elementalsmithing.frost_embodiment": "Втілення морозу",
-  "effect.elementalsmithing.vital_energy_overflow": "Переповнення життєвою енергією",
+  "effect.elementalsmithing.vital_energy_overflow": "Переповнення",
   "effect.elementalsmithing.amorphousness": "Аморфність",
 
   "itemgroup.global": "Стихійне ковальство",
@@ -168,7 +167,7 @@
   "advancement.elementalsmithing.imbued_force.title": "Закладена сила",
   "advancement.elementalsmithing.imbued_force.description": "Отримайте стихійну зброю",
   "advancement.elementalsmithing.unstable_deity.title": "Нестійке божество",
-  "advancement.elementalsmithing.unstable_deity.description": "Отримайте Безформний меч",
+  "advancement.elementalsmithing.unstable_deity.description": "Отримайте нестабільний безформний меч",
   "advancement.elementalsmithing.purity.title": "Небесна чистота",
   "advancement.elementalsmithing.purity.description": "Отримайте чистий кристал",
   "advancement.elementalsmithing.fast_charger.title": "Швидка зарядка",
@@ -176,6 +175,9 @@
   "advancement.elementalsmithing.truth_or_tale.title": "Правда чи казка?",
   "advancement.elementalsmithing.truth_or_tale.description": "Перевірте ефективність Чистої кристалічної сапи",
   "advancement.elementalsmithing.cry_of_the_soul.title": "Крик душі",
-  "advancement.elementalsmithing.cry_of_the_soul.description": "Витягніть душу з невинних тварин"
+  "advancement.elementalsmithing.cry_of_the_soul.description": "Витягніть душу з невинних тварин",
+  "item.elementalsmithing.steel_chronicles_book": "Steel Chronicles",
+  "advancement.elementalsmithing.divinity.title": "Божественність",
+  "advancement.elementalsmithing.divinity.description": "Стабілізуйте безформний меч"
 
 }

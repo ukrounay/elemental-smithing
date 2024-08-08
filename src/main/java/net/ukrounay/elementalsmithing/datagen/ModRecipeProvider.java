@@ -24,8 +24,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         ModItems.STEEL_HOE,
         ModItems.STEEL_PICKAXE,
         ModItems.STEEL_SHOVEL,
-        ModItems.STEEL_SWORD,
-        ModItems.DAMASK_STEEL_SWORD
+        ModItems.STEEL_SWORD
     );
     private static final List<ItemConvertible> GRAPHITE_SMELTABLES = List.of(
         Items.COAL,

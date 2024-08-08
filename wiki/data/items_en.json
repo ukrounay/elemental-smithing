@@ -1,0 +1,648 @@
+{
+  "categories": [
+    {
+      "name": "Materials",
+      "items": [
+        {
+          "name": "Graphite",
+          "id": "graphite",
+          "properties": [
+            {"name": "Blasting time", "value": "1200 ticks (1m)"},
+            {"name": "Experience from blasting", "value": "10"}
+          ],
+          "recipe": "image",
+          "description": "Used to make raw steel."
+        },
+        {
+          "name": "Raw Steel",
+          "id": "raw_steel",
+          "properties": [
+            {"name": "Blasting ingredient", "value": "Yes"},
+            {"name": "Smelting ingredient", "value": "If you wasteful enough"}
+          ],
+          "recipe": "image",
+          "description": "Used to blast steel gobbet. Be careful, because if you smelt it in regular furnace, it will just produce iron nugget."
+        },
+        {
+          "name": "Steel Gobbet",
+          "id": "steel_gobbet",
+          "properties": [
+            {"name": "Blasting time", "value": "800 ticks (40s)"},
+            {"name": "Experience from blasting", "value": "5"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Steel Ingot",
+          "id": "steel_ingot",
+          "properties": [],
+          "recipe": "image",
+          "description": "Base material for most of mod crafts"
+        }
+      ]
+    },
+    {
+      "name": "Steel tools",
+      "description": "Regular tools that crafted from steel on crafting table. Third tier among all steel items.",
+      "items": [
+        {
+          "name": "Steel Axe",
+          "id": "steel_axe",
+          "material": "steel",
+          "properties": [
+            {"name": "Attack damage", "value": "8.5"},
+            {"name": "Attack speed", "value": "1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Steel Pickaxe",
+          "id": "steel_pickaxe",
+          "material": "steel",
+          "properties": [
+            {"name": "Attack damage", "value": "4.5"},
+            {"name": "Attack speed", "value": "1.2"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Steel Shovel",
+          "id": "steel_shovel",
+          "material": "steel",
+          "properties": [
+            {"name": "Attack damage", "value": "5"},
+            {"name": "Attack speed", "value": "1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Steel Hoe",
+          "id": "steel_hoe",
+          "material": "steel",
+          "properties": [
+            {"name": "Attack damage", "value": "1.5"},
+            {"name": "Attack speed", "value": "4"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Steel Sword",
+          "id": "steel_sword",
+          "material": "steel",
+          "properties": [
+            {"name": "Attack damage", "value": "6.5"},
+            {"name": "Attack speed", "value": "1.6"}
+          ],
+          "recipe": "image"
+        }
+      ]
+    },
+    {
+      "name": "Damask tools",
+      "description": "Tools made by upgrading iron on smithing table. Second tier steel items.",
+      "items": [
+        {
+          "name": "Damask Steel Axe",
+          "id": "damask_steel_axe",
+          "material": "damask_steel",
+          "properties": [
+            {"name": "Attack damage", "value": "9.5"},
+            {"name": "Attack speed", "value": "1.1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Damask Steel Pickaxe",
+          "id": "damask_steel_pickaxe",
+          "material": "damask_steel",
+          "properties": [
+            {"name": "Attack damage", "value": "5.5"},
+            {"name": "Attack speed", "value": "1.3"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Damask Steel Shovel",
+          "id": "damask_steel_shovel",
+          "material": "damask_steel",
+          "properties": [
+            {"name": "Attack damage", "value": "5"},
+            {"name": "Attack speed", "value": "1.1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Damask Steel Hoe",
+          "id": "damask_steel_hoe",
+          "material": "damask_steel",
+          "properties": [
+            {"name": "Attack damage", "value": "1.5"},
+            {"name": "Attack speed", "value": "4.1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Damask Steel Sword",
+          "id": "damask_steel_sword",
+          "material": "damask_steel",
+          "properties": [
+            {"name": "Attack damage", "value": "7.5"},
+            {"name": "Attack speed", "value": "1.7"}
+          ],
+          "recipe": "image"
+        }
+      ]
+    },
+    {
+      "name": "Knight armor",
+      "description": "Armor made by upgrading iron on smithing table. Second tier steel items.",
+      "items": [
+        {
+          "name": "Knight Helmet",
+          "id": "knight_helmet",
+          "material": "damask_steel_armor",
+          "properties": [
+            {"name": "Armour", "value": "3"},
+            {"name": "Durability", "value": "440"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Knight Chestplate",
+          "id": "knight_chestplate",
+          "material": "damask_steel_armor",
+          "properties": [
+            {"name": "Armour", "value": "6"},
+            {"name": "Durability", "value": "640"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Knight Leggings",
+          "id": "knight_leggings",
+          "material": "damask_steel_armor",
+          "properties": [
+            {"name": "Armour", "value": "8"},
+            {"name": "Durability", "value": "600"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Knight Boots",
+          "id": "knight_boots",
+          "material": "damask_steel_armor",
+          "properties": [
+            {"name": "Armour", "value": "3"},
+            {"name": "Durability", "value": "520"}
+          ],
+          "recipe": "image"
+        }
+      ]
+    },
+    {
+      "name": "Reinforced steel items",
+      "description": "First tier, made by upgrading steel items on fusion table.",
+      "items": [
+        {
+          "name": "Reinforced Knight Helmet",
+          "id": "reinforced_knight_helmet",
+          "material": "reinforced_damask_steel_armor",
+          "properties": [
+            {"name": "Armour", "value": "4"},
+            {"name": "Durability", "value": "495"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Reinforced Knight Chestplate",
+          "id": "reinforced_knight_chestplate",
+          "material": "reinforced_damask_steel_armor",
+          "properties": [
+            {"name": "Armour", "value": "9"},
+            {"name": "Durability", "value": "720"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Reinforced Knight Leggings",
+          "id": "reinforced_knight_leggings",
+          "material": "reinforced_damask_steel_armor",
+          "properties": [
+            {"name": "Armour", "value": "7"},
+            {"name": "Durability", "value": "675"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Reinforced Knight Boots",
+          "id": "reinforced_knight_boots",
+          "material": "reinforced_damask_steel_armor",
+          "properties": [
+            {"name": "Armour", "value": "4"},
+            {"name": "Durability", "value": "585"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Reinforced Steel Sword",
+          "id": "reinforced_steel_sword",
+          "material": "reinforced_damask_steel",
+          "properties": [
+            {"name": "Attack damage", "value": "8.5"},
+            {"name": "Attack speed", "value": "1.3"}
+          ],
+          "recipe": "image"
+        }
+      ]
+    },
+    {
+      "name": "Crystals",
+      "description": "Can be made only on fusion table, advanced ingredients.",
+      "items": [
+        {
+          "name": "Blessed Crystal",
+          "id": "blessed_crystal",
+          "properties": [
+            {"name": "Energy worth", "value": "250"}
+          ],
+          "description": "<p>Tool material, crafting ingredient for pure crystal.</p><p>Can be compressed to block.</p>",
+          "recipe": "image"
+        },
+        {
+          "name": "Cursed Crystal",
+          "id": "cursed_crystal",
+          "properties": [
+            {"name": "Energy worth", "value": "250"}
+          ],
+          "description": "<p>Tool material, crafting ingredient for pure crystal.</p><p>Can be compressed to block.</p>",
+          "recipe": "image"
+        },
+        {
+          "name": "Pure Crystal",
+          "id": "pure_crystal",
+          "properties": [
+            {"name": "Energy worth", "value": "500"}
+          ],
+          "description": "<p>Tool material, crafting ingredient for elemental cores.</p><p>Can be compressed to block.</p>",
+          "recipe": "image"
+        }
+      ]
+    },
+    {
+      "name": "Crystal Tools",
+      "description": "<p>Can be crafted regular way.</p><p>Each material has unique infused enchantment that applies on craft.</p><p>Can be repaired on Energy condensator.</p>",
+      "items": [
+        {
+          "name": "Blessed Crystal Sword",
+          "id": "blessed_crystal_sword",
+          "material": "blessed_crystal",
+          "properties": [
+            {"name": "Attack damage", "value": "6"},
+            {"name": "Attack speed", "value": "1.6"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Blessed Crystal Shovel",
+          "id": "blessed_crystal_shovel",
+          "material": "blessed_crystal",
+          "properties": [
+            {"name": "Attack damage", "value": "4.5"},
+            {"name": "Attack speed", "value": "1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Blessed Crystal Pickaxe",
+          "id": "blessed_crystal_pickaxe",
+          "material": "blessed_crystal",
+          "properties": [
+            {"name": "Attack damage", "value": "4"},
+            {"name": "Attack speed", "value": "1.2"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Blessed Crystal Axe",
+          "id": "blessed_crystal_axe",
+          "material": "blessed_crystal",
+          "properties": [
+            {"name": "Attack damage", "value": "8"},
+            {"name": "Attack speed", "value": "1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Blessed Crystal Hoe",
+          "id": "blessed_crystal_hoe",
+          "material": "blessed_crystal",
+          "properties": [
+            {"name": "Attack damage", "value": "1"},
+            {"name": "Attack speed", "value": "4"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Cursed Crystal Sword",
+          "id": "cursed_crystal_sword",
+          "material": "cursed_crystal",
+          "properties": [
+            {"name": "Attack damage", "value": "10"},
+            {"name": "Attack speed", "value": "1.6"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Cursed Crystal Shovel",
+          "id": "cursed_crystal_shovel",
+          "material": "cursed_crystal",
+          "properties": [
+            {"name": "Attack damage", "value": "8.5"},
+            {"name": "Attack speed", "value": "1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Cursed Crystal Pickaxe",
+          "id": "cursed_crystal_pickaxe",
+          "material": "cursed_crystal",
+          "properties": [
+            {"name": "Attack damage", "value": "8"},
+            {"name": "Attack speed", "value": "1.2"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Cursed Crystal Axe",
+          "id": "cursed_crystal_axe",
+          "material": "cursed_crystal",
+          "properties": [
+            {"name": "Attack damage", "value": "12"},
+            {"name": "Attack speed", "value": "1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Cursed Crystal Hoe",
+          "id": "cursed_crystal_hoe",
+          "material": "cursed_crystal",
+          "properties": [
+            {"name": "Attack damage", "value": "5"},
+            {"name": "Attack speed", "value": "4"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Pure Crystal Sword",
+          "id": "pure_crystal_sword",
+          "material": "pure_crystal",
+          "properties": [
+            {"name": "Attack damage", "value": "8.5"},
+            {"name": "Attack speed", "value": "1.6"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Pure Crystal Shovel",
+          "id": "pure_crystal_shovel",
+          "material": "pure_crystal",
+          "properties": [
+            {"name": "Attack damage", "value": "7"},
+            {"name": "Attack speed", "value": "1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Pure Crystal Pickaxe",
+          "id": "pure_crystal_pickaxe",
+          "material": "pure_crystal",
+          "properties": [
+            {"name": "Attack damage", "value": "6.5"},
+            {"name": "Attack speed", "value": "1.2"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Pure Crystal Axe",
+          "id": "pure_crystal_axe",
+          "material": "pure_crystal",
+          "properties": [
+            {"name": "Attack damage", "value": "10.5"},
+            {"name": "Attack speed", "value": "1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Pure Crystal Hoe",
+          "id": "pure_crystal_hoe",
+          "material": "pure_crystal",
+          "properties": [
+            {"name": "Attack damage", "value": "3.5"},
+            {"name": "Attack speed", "value": "4"}
+          ],
+          "recipe": "image"
+        }
+      ]
+    },
+    {
+      "name": "Elemental Cores",
+      "description": "<p>Cores are special items used for crafting elemental weapons.</p><p>Each core can be crafted on the Fusion Table or obtained from locations related to its element. Cores must be charged with the appropriate type of energy. All crafted cores will start at 0 energy level. Incomplete cores cannot be used for crafting.</p><p>When used, each core provides its effect for a limited time and consumes some energy. The duration of the effect (as well as the cooldown) and the energy cost will increase as the core’s energy level rises.</p>",
+      "items": [
+        {
+          "name": "Flame Core",
+          "id": "flame_core",
+          "properties": [
+            {"name": "Element", "value": "Flame"},
+            {"name": "Energy capacity", "value": "1000"},
+            {"name": "Absorb cooldown", "value": "0.5s"},
+            {"name": "Base use cooldown", "value": "2s"},
+            {"name": "Effect", "value": "Flame embodiment"}
+          ],
+          "recipe": "image",
+          "video": "flame_core.webm",
+          "description": "<p>Flame core can be found in broken portal or nether fortress chests, craft ingredient for flame sword.</p><p>If used, give you Flame embodiment. If used on block/entity, sets it on fire, or consume fire if entity was burning or block was on fire.</p>"
+        },
+        {
+          "name": "Frost Core",
+          "id": "frost_core",
+          "properties": [
+            {"name": "Element", "value": "Frost"},
+            {"name": "Energy capacity", "value": "1000"},
+            {"name": "Absorb cooldown", "value": "0.9s"},
+            {"name": "Base use cooldown", "value": "0.9s"},
+            {"name": "Effect", "value": "Frost embodiment"}
+          ],
+          "recipe": "image",
+          "video": "frost_core.webm",
+          "description": "<p>Frost core can be found in igloo undeground lab or in ancient city ice room, used for frost sword crafting.</p><p>If used, give you Frost embodiment. If used on block, it absorb/extract snow.</p>"
+        },
+        {
+          "name": "Soul Core",
+          "id": "soul_core",
+          "properties": [
+            {"name": "Element", "value": "Soul"},
+            {"name": "Energy capacity", "value": "2000"},
+            {"name": "Absorb cooldown", "value": "0.9s"},
+            {"name": "Base use cooldown", "value": "0.9s"},
+            {"name": "Effect", "value": "Vital energy overflow"}
+          ],
+          "recipe": "Uncraftable",
+          "video": "soul_core.webm",
+          "description": "<p>Soul core spawns only in end city treasure room.</p><p>It's used for stabilizing two opposite ingredients, such as Flame sword and Frost sword, to create Amorphous sword.</p><p>If used, give you vital energy overflow.</p><p>If used on entity, deals damage, and consume exact the same energy amount. If entity weaker than player, max damage is 1. If entity has 20+ health, dealt damage is 5% of entity health, and if entity has more than 100 it will be 2%.</p>"
+        }
+      ]
+    },
+    {
+      "name": "Elemental Weapons",
+      "description": "<p>Swords, imbued with certain element power. On use, start to spread element territory, if it possible, and grants elemental effect.</p><p>Unbreakable, but consumes energy every use to terraform and every hit to deal bonus damage. See more about terraforming in <a href='#other'>Other</a> category.</p><p>Can recharge only with help of energy condensator.</p>",
+      "items": [
+        {
+          "name": "Flame Sword",
+          "id": "flame_sword",
+          "material": "elemental",
+          "properties": [
+            {"name": "Element", "value": "Flame"},
+            {"name": "Territory", "value": "Yes"},
+            {"name": "Base cooldown", "value": "0.75s"},
+            {"name": "Energy capacity", "value": "1000"},
+            {"name": "Attack damage", "value": "7"},
+            {"name": "Bonus attack damage", "value": "9"},
+            {"name": "Attack speed", "value": "2.2"},
+            {"name": "Infused enchantment", "value": "Fire aspect [max]"},
+            {"name": "Effect", "value": "Flame embodiment"}
+          ],
+          "description": "Summons frozen territory and gives you status effect.",
+          "video": "flame_sword.webm",
+          "recipe": "image"
+        },
+        {
+          "name": "Frost Sword",
+          "id": "frost_sword",
+          "material": "elemental",
+          "properties": [
+            {"name": "Element", "value": "Frost"},
+            {"name": "Territory", "value": "Yes"},
+            {"name": "Base cooldown", "value": "0.9s"},
+            {"name": "Energy capacity", "value": "1000"},
+            {"name": "Attack damage", "value": "7"},
+            {"name": "Bonus attack damage", "value": "9"},
+            {"name": "Attack speed", "value": "2.2"},
+            {"name": "Infused enchantment", "value": "Sweeping Edge [max]"},
+            {"name": "Effect", "value": "Frost embodiment"}
+          ],
+          "description": "Summons frozen territory and gives you status effect.",
+          "video": "frost_sword.webm",
+          "recipe": "image"
+        },
+        {
+          "name": "Unstable Amorphous Sword",
+          "id": "unstable_amorphous_sword",
+          "material": "elemental",
+          "properties": [
+            {"name": "Element", "value": "Amorphous"},
+            {"name": "Territory", "value": "No"},
+            {"name": "Base cooldown", "value": "1s"},
+            {"name": "Energy capacity", "value": "2000"},
+            {"name": "Attack damage", "value": "7"},
+            {"name": "Bonus attack damage", "value": "19"},
+            {"name": "Attack speed", "value": "2.6"},
+            {"name": "Infused enchantment", "value": "Looting [max]"},
+            {"name": "Effect", "value": "Amorphousness"}
+          ],
+          "description": "Gives you status effect for a small amount of time.",
+          "recipe": "image"
+        },
+        {
+          "name": "Amorphous Sword",
+          "id": "amorphous_sword",
+          "material": "elemental",
+          "properties": [
+            {"name": "Element", "value": "Amorphous"},
+            {"name": "Territory", "value": "No"},
+            {"name": "Base cooldown", "value": "1s"},
+            {"name": "Energy capacity", "value": "5000"},
+            {"name": "Attack damage", "value": "7"},
+            {"name": "Bonus attack damage", "value": "23"},
+            {"name": "Attack speed", "value": "2.6"},
+            {"name": "Infused enchantment", "value": "Looting [max]"},
+            {"name": "Effect", "value": "Amorphousness"}
+          ],
+          "description": "Stable amorphous sword will give you status effect for free when it's in a hand.",
+          "video": "amorphous_sword.webm",
+          "recipe": "image"
+        }
+      ]
+    },
+    {
+      "name": "Music Disks",
+      "description": "Cannot be crafted or looted from structures. They only drop when you absorb energy of certain mob with Soul core and this action causes its death.",
+      "items": [
+        {
+          "name": "tegukjflk",
+          "id": "tegukjflk_music_disk",
+          "properties": [
+            {"name": "Animal", "value": "Frog"},
+            {"name": "Track duration", "value": "0:59"}
+          ],
+          "recipe": "Only obtainable by killing a frog with Soul core.",
+          "sound": "tegukjflk.ogg"
+        },
+        {
+          "name": "iwseuvhjk",
+          "id": "iwseuvhjk_music_disk",
+          "properties": [
+            {"name": "Animal", "value": "Squid"},
+            {"name": "Track duration", "value": "1:15"}
+          ],
+          "recipe": "Only obtainable by killing a squid with Soul core.",
+          "sound": "iwseuvhjk.ogg"
+        },
+        {
+          "name": "zsdxghjmr",
+          "id": "zsdxghjmr_music_disk",
+          "properties": [
+            {"name": "Animal", "value": "Cow"},
+            {"name": "Track duration", "value": "1:47"}
+          ],
+          "recipe": "Only obtainable by killing a cow with Soul core.",
+          "sound": "zsdxghjmr.ogg"
+        },
+        {
+          "name": "ezsxdfcgh",
+          "id": "ezsxdfcgh_music_disk",
+          "properties": [
+            {"name": "Animal", "value": "Rabbit"},
+            {"name": "Track duration", "value": "1:16"}
+          ],
+          "recipe": "Only obtainable by killing a rabbit with Soul core.",
+          "sound": "ezsxdfcgh.ogg"
+        },
+        {
+          "name": "ubdcwjnk",
+          "id": "ubdcwjnk_music_disk",
+          "properties": [
+            {"name": "Animal", "value": "Bat"},
+            {"name": "Track duration", "value": "1:28"}
+          ],
+          "recipe": "Only obtainable by killing a bat with Soul core.",
+          "sound": "ubdcwjnk.ogg"
+        }
+      ]
+    },
+    {
+      "name": "Books",
+      "items": [
+        {
+          "name": "Steel Chronicles",
+          "id": "steel_chronicles_book",
+          "properties": [
+            {"name": "Languages", "value": "English"}
+          ],
+          "recipe": "image",
+          "description": "Can be looted in Grand Blacksmith's house.",
+          "bookContents": "steel_chronicles"
+        }
+      ]
+    }
+  ]
+}

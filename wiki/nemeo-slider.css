@@ -1,0 +1,192 @@
+/* slider styles */
+
+.nemeo-slider {
+    position: relative;
+    width: 100%;
+    margin: 0.5rem auto;
+    display: block;
+
+    /* vars */
+    --p-s: 0.5rem;
+    --br: 0rem;
+    --br-s: 0rem;
+}
+.slider-content {
+    position: relative;
+    width: 100%;
+    border-radius: var(--br);
+    overflow: hidden;
+}
+.slider-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    touch-action: pan-y;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    z-index: 1;
+    cursor: grab;
+    border-radius: var(--br);
+    overflow: hidden;
+}
+
+.slide-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+.slide {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    border-radius: var(--br);
+    width: 100%;
+    height: 100%;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.slide-container * {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    min-height: fit-content;
+}
+
+.slide-bg {
+    position: absolute;
+    width: calc(100% + calc(2 * var(--p-s)));
+    height: 120%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    z-index: -1;
+    filter: blur(var(--p-s));
+}
+
+
+.previous-btn, .next-btn {
+    color: #f1f1f1;
+    fill: #f1f1f1;
+    opacity: 0.4;
+    padding: calc(var(--p-s) * 2);
+    border-radius: var(--br-s);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: 0.2s;
+    font-size: 1.5rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.nemeo-slider:hover .previous-btn, .nemeo-slider:hover .next-btn {
+    opacity: 0.8;
+    background-color: #1f1f1f60;
+}
+.previous-btn:hover, .next-btn:hover {
+    opacity: 1 !important;
+}
+
+.previous-btn.unavialable, .next-btn.unavialable {
+    opacity: 0 !important;
+}
+
+.previous-btn {left: 0;}
+.next-btn {right: 0;}
+
+.indicators-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: inline-flex;
+    transform: translateX(-50%);
+    z-index: 2;
+    opacity: 0.4;
+    transition: 0.2s;
+    border-radius: var(--br);
+    justify-content: center;
+    align-items: center;
+}
+.nemeo-slider:hover .indicators-container {
+    opacity: 0.6;
+    background-color: #1f1f1faa;
+} 
+.indicators-container:hover {
+    opacity: 1 !important;
+}
+.indicator {
+    position: relative;
+    display: inline-block;
+    width: calc(var(--p-s) * 4);
+    height: calc(var(--p-s) * 4);
+    padding: var(--p-s);
+    
+}
+
+.indicator::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+    border-radius: var(--br-s);
+    background-color: #f1f1f1;
+    transition: inherit;
+}
+
+.indicator:hover::before {
+    width: 70%;
+    height: 70%;
+}
+.indicator.active::before {
+    width: 100%;
+    height: 100%;  
+}
+.number-indicator {
+    font-weight: 300;
+    line-height: 1;
+    border-radius: var(--br-s);
+    padding-bottom: 0.2em;
+    padding-right: var(--p-s);
+    /* position: absolute;
+    z-index: 9;
+    left:  var(--p-s);w
+    top:  var(--p-s);
+    background-color: #1f1f1f60; */
+    color: #f1f1f1;
+    /* opacity: 0; */
+    transition: 0.2s;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    order: -1;
+    padding: var(--p-s);
+    text-wrap: nowrap;
+}
+/* .nemeo-slider:hover .number-indicator {opacity: 1;} */

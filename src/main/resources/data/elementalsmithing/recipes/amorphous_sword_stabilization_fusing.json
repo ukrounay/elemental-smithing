@@ -1,0 +1,9 @@
+{
+  "type": "elementalsmithing:fusion",
+  "category": "misc",
+  "fusing_craft_1" : {"item": "elementalsmithing:pure_crystal"},
+  "fusing_craft_6" : {"item": "elementalsmithing:pure_crystal"},
+  "fusing_left": {"item": "elementalsmithing:unstable_amorphous_sword"},
+  "fusing_right": {"item": "elementalsmithing:soul_core"},
+  "result": {"item": "elementalsmithing:amorphous_sword"}
+}

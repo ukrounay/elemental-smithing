@@ -1,0 +1,649 @@
+{
+  "categories": [
+    {
+      "name": "Матеріали",
+      "items": [
+        {
+          "name": "Графіт",
+          "id": "graphite",
+          "properties": [
+            {"name": "Час виплавки", "value": "1200 тіків (1хв)"},
+            {"name": "Досвід від виплавки", "value": "10"}
+          ],
+          "recipe": "image",
+          "description": "Використовується для створення необробленої сталі."
+        },
+        {
+          "name": "Необроблена сталь",
+          "id": "raw_steel",
+          "properties": [
+            {"name": "Плавиться в плавильній печі", "value": "Так"},
+            {"name": "Плавиться в звичайній печі", "value": "Так, якщо ви куркуль"}
+          ],
+          "recipe": "image",
+          "description": "Використовується для виплавки сталі. Будьте уважні, якщо переробити в звичайній печі, отримаєте залізний самородок замість сталі."
+        },
+        {
+          "name": "Сталева грудка",
+          "id": "steel_gobbet",
+          "properties": [
+            {"name": "Час виплавки", "value": "800 тіків (40с)"},
+            {"name": "Досвід від виплавки", "value": "5"}
+          ],
+          "recipe": "image",
+          "description": "Використовуються для крафту сталевих злитків"
+        },
+        {
+          "name": "Сталевий злиток",
+          "id": "steel_ingot",
+          "properties": [],
+          "recipe": "image",
+          "description": "Базовий матеріал для рецептів цього моду"
+        }
+      ]
+    },
+    {
+      "name": "Сталеві інструменти",
+      "description": "Звичайні інструменти, створюються стандартним шляхом на верстаку. Третій сорт сталевих предметів.",
+      "items": [
+        {
+          "name": "Сталева сокира",
+          "id": "steel_axe",
+          "material": "steel",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "8.5"},
+            {"name": "Швидкість атаки", "value": "1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Сталеве кайло",
+          "id": "steel_pickaxe",
+          "material": "steel",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "4.5"},
+            {"name": "Швидкість атаки", "value": "1.2"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Сталева лопата",
+          "id": "steel_shovel",
+          "material": "steel",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "5"},
+            {"name": "Швидкість атаки", "value": "1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Сталева сапа",
+          "id": "steel_hoe",
+          "material": "steel",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "1.5"},
+            {"name": "Швидкість атаки", "value": "4"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Сталевий меч",
+          "id": "steel_sword",
+          "material": "steel",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "6.5"},
+            {"name": "Швидкість атаки", "value": "1.6"}
+          ],
+          "recipe": "image"
+        }
+      ]
+    },
+    {
+      "name": "Інструменти з дамаської сталі",
+      "description": "Виготовляються покращенням заліза сталлю на ковальскому столі. Другосортні інструменти.",
+      "items": [
+        {
+          "name": "Сокира з дамаської сталі",
+          "id": "damask_steel_axe",
+          "material": "damask_steel",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "9.5"},
+            {"name": "Швидкість атаки", "value": "1.1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Кайло з дамаської сталі",
+          "id": "damask_steel_pickaxe",
+          "material": "damask_steel",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "5.5"},
+            {"name": "Швидкість атаки", "value": "1.3"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Лопата з дамаської сталі",
+          "id": "damask_steel_shovel",
+          "material": "damask_steel",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "5"},
+            {"name": "Швидкість атаки", "value": "1.1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Сапа з дамаської сталі",
+          "id": "damask_steel_hoe",
+          "material": "damask_steel",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "1.5"},
+            {"name": "Швидкість атаки", "value": "4.1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Меч з дамаської сталі",
+          "id": "damask_steel_sword",
+          "material": "damask_steel",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "7.5"},
+            {"name": "Швидкість атаки", "value": "1.7"}
+          ],
+          "recipe": "image"
+        }
+      ]
+    },
+    {
+      "name": "Лицарські обладунки",
+      "description": "Броня, кована із залізної, покращена сталлю. Другий сорт.",
+      "items": [
+        {
+          "name": "Лицарський шолом",
+          "id": "knight_helmet",
+          "material": "damask_steel_armor",
+          "properties": [
+            {"name": "Броня", "value": "3"},
+            {"name": "Міцність", "value": "440"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Лицарська кираса",
+          "id": "knight_chestplate",
+          "material": "damask_steel_armor",
+          "properties": [
+            {"name": "Броня", "value": "6"},
+            {"name": "Міцність", "value": "640"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Лицарські поножі",
+          "id": "knight_leggings",
+          "material": "damask_steel_armor",
+          "properties": [
+            {"name": "Броня", "value": "8"},
+            {"name": "Міцність", "value": "600"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Лицарські сабатони",
+          "id": "knight_boots",
+          "material": "damask_steel_armor",
+          "properties": [
+            {"name": "Броня", "value": "3"},
+            {"name": "Міцність", "value": "520"}
+          ],
+          "recipe": "image"
+        }
+      ]
+    },
+    {
+      "name": "Посилені стальні речі",
+      "description": "Перший сорт, виготовленяються за стародавніми технологіями на столі злиття.",
+      "items": [
+        {
+          "name": "Міцний лицарський шолом",
+          "id": "reinforced_knight_helmet",
+          "material": "reinforced_damask_steel_armor",
+          "properties": [
+            {"name": "Броня", "value": "4"},
+            {"name": "Міцність", "value": "495"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Міцна лицарська кираса",
+          "id": "reinforced_knight_chestplate",
+          "material": "reinforced_damask_steel_armor",
+          "properties": [
+            {"name": "Броня", "value": "9"},
+            {"name": "Міцність", "value": "720"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Міцні лицарські поножі",
+          "id": "reinforced_knight_leggings",
+          "material": "reinforced_damask_steel_armor",
+          "properties": [
+            {"name": "Броня", "value": "7"},
+            {"name": "Міцність", "value": "675"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Міцні лицарські черевики",
+          "id": "reinforced_knight_boots",
+          "material": "reinforced_damask_steel_armor",
+          "properties": [
+            {"name": "Броня", "value": "4"},
+            {"name": "Міцність", "value": "585"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Міцний сталевий меч",
+          "id": "reinforced_steel_sword",
+          "material": "reinforced_damask_steel",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "8.5"},
+            {"name": "Швидкість атаки", "value": "1.3"}
+          ],
+          "recipe": "image"
+        }
+      ]
+    },
+    {
+      "name": "Кристали",
+      "description": "Можна отримати на столі злиття, рідкісні матеріали.",
+      "items": [
+        {
+          "name": "Благословенний кристал",
+          "id": "blessed_crystal",
+          "properties": [
+            {"name": "Енергетична цінність", "value": "250"}
+          ],
+          "description": "<p>Матеріал для створення інструментів та інгредієнт для чистого кристалу.</p><p>Можна стиснути в блок.</p>",
+          "recipe": "image"
+        },
+        {
+          "name": "Проклятий кристал",
+          "id": "cursed_crystal",
+          "properties": [
+            {"name": "Енергетична цінність", "value": "250"}
+          ],
+          "description": "<p>Матеріал для створення інструментів та інгредієнт для чистого кристалу.</p><p>Можна стиснути в блок.</p>",
+          "recipe": "image"
+        },
+        {
+          "name": "Чистий кристал",
+          "id": "pure_crystal",
+          "properties": [
+            {"name": "Енергетична цінність", "value": "500"}
+          ],
+          "description": "<p>Матеріал для створення інструментів та стихійних ядер.</p><p>Можна стиснути в блок.</p>",
+          "recipe": "image"
+        }
+      ]
+    },
+    {
+      "name": "Кристалічні інструменти",
+      "description": "<p>Виготовляються як зазвичай.</p><p>Кожен матеріал має приховані чари, що проявляються при створенні.</p><p>Можна відновлювати збирачем енергії.</p>",
+      "items": [
+        {
+          "name": "Благословенний кристалічний меч",
+          "id": "blessed_crystal_sword",
+          "material": "blessed_crystal",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "6"},
+            {"name": "Швидкість атаки", "value": "1.6"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Благословенна кристалічна лопата",
+          "id": "blessed_crystal_shovel",
+          "material": "blessed_crystal",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "4.5"},
+            {"name": "Швидкість атаки", "value": "1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Благословенне кристалічне кайло",
+          "id": "blessed_crystal_pickaxe",
+          "material": "blessed_crystal",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "4"},
+            {"name": "Швидкість атаки", "value": "1.2"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Благословенна кристалічна сокира",
+          "id": "blessed_crystal_axe",
+          "material": "blessed_crystal",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "8"},
+            {"name": "Швидкість атаки", "value": "1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Благословенна кристалічна сапа",
+          "id": "blessed_crystal_hoe",
+          "material": "blessed_crystal",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "1"},
+            {"name": "Швидкість атаки", "value": "4"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Проклятий кристалічний меч",
+          "id": "cursed_crystal_sword",
+          "material": "cursed_crystal",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "10"},
+            {"name": "Швидкість атаки", "value": "1.6"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Проклята кристалічна лопата",
+          "id": "cursed_crystal_shovel",
+          "material": "cursed_crystal",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "8.5"},
+            {"name": "Швидкість атаки", "value": "1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Прокляте кристалічне кайло",
+          "id": "cursed_crystal_pickaxe",
+          "material": "cursed_crystal",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "8"},
+            {"name": "Швидкість атаки", "value": "1.2"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Проклята кристалічна сокира",
+          "id": "cursed_crystal_axe",
+          "material": "cursed_crystal",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "12"},
+            {"name": "Швидкість атаки", "value": "1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Проклята кристалічна сапа",
+          "id": "cursed_crystal_hoe",
+          "material": "cursed_crystal",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "5"},
+            {"name": "Швидкість атаки", "value": "4"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Чистий кристалічний меч",
+          "id": "pure_crystal_sword",
+          "material": "pure_crystal",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "8.5"},
+            {"name": "Швидкість атаки", "value": "1.6"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Чиста кристалічна лопата",
+          "id": "pure_crystal_shovel",
+          "material": "pure_crystal",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "7"},
+            {"name": "Швидкість атаки", "value": "1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Чисте кристалічне кайло",
+          "id": "pure_crystal_pickaxe",
+          "material": "pure_crystal",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "6.5"},
+            {"name": "Швидкість атаки", "value": "1.2"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Чиста кристалічна сокира",
+          "id": "pure_crystal_axe",
+          "material": "pure_crystal",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "10.5"},
+            {"name": "Швидкість атаки", "value": "1"}
+          ],
+          "recipe": "image"
+        },
+        {
+          "name": "Чиста кристалічна сапа",
+          "id": "pure_crystal_hoe",
+          "material": "pure_crystal",
+          "properties": [
+            {"name": "Шкода від атаки", "value": "3.5"},
+            {"name": "Швидкість атаки", "value": "4"}
+          ],
+          "recipe": "image"
+        }
+      ]
+    },
+    {
+      "name": "Стихійні ядра",
+      "description": "<p>Ядра - це спеціальні предмети, що необхідні для виготовлення стихійної зброї.</p><p>Ядро може бути або створене на столі злиття (окрім ядра душі) або знайдене в місцях, пов'язаних з його стихією. Ядро потрібно заряджати відповідною енергією. Кожне тільки-но створене ядро буде пусте. Незавершені ядра неможливо використати для крафту.</p><p>При використанні, дає ефект елементу на деякрй час та споживає певну кількість енергії. Як тривалість ефекту, так і час відновлення та споживання енергії, будуть рости з наповненням ядра.<p>",
+      "items": [
+        {
+          "name": "Полум'яне ядро",
+          "id": "flame_core",
+          "properties": [
+            {"name": "Стихія", "value": "Вогонь"},
+            {"name": "Енергетична ємність", "value": "1000"},
+            {"name": "Час відновлення після вбирання енергії", "value": "0.5s"},
+            {"name": "Час відновлення після використання", "value": "2s"},
+            {"name": "Ефект", "value": "Втілення вогню"}
+          ],
+          "recipe": "image",
+          "video": "flame_core.webm",
+          "description": "<p>Можна знайти в скринях біля розбитого порталу в нижній світ, або в незерській фортеці, інгредієнт для полум'яного меча.</p><p>При використанні на блок/сутність, запалює або тушить вогонь.</p>"
+        },
+        {
+          "name": "Морозне ядро",
+          "id": "frost_core",
+          "properties": [
+            {"name": "Стихія", "value": "Мороз"},
+            {"name": "Енергетична ємність", "value": "1000"},
+            {"name": "Час відновлення після вбирання енергії", "value": "0.9s"},
+            {"name": "Час відновлення після використання", "value": "0.9s"},
+            {"name": "Ефект", "value": "Втілення морозу"}
+          ],
+          "recipe": "image",
+          "video": "frost_core.webm",
+          "description": "<p>Можна знайти в підземній лабораторії під іглу або в морозильній камері руїн стародавнього міста, інгредієнт для крижаного меча.</p><p>При взаємодії з блоком вбирає або витрушує сніг.</p>"
+        },
+        {
+          "name": "Ядро душі",
+          "id": "soul_core",
+          "properties": [
+            {"name": "Стихія", "value": "Душа"},
+            {"name": "Енергетична ємність", "value": "2000"},
+            {"name": "Час відновлення після вбирання енергії", "value": "0.9s"},
+            {"name": "Час відновлення після використання", "value": "0.9s"},
+            {"name": "Ефект", "value": "Переповненя"}
+          ],
+          "recipe": "Створити неможливо.",
+          "video": "soul_core.webm",
+          "description": "<p>Знаходиться в кожній скарбниці міст Енду.</p><p>Використовується для стабілізації двох протилежних стихій (наприклад, перетворює союз вогню з морозом на аморфність).</p><p>Якщо використати на будь-якій істоті, ядро витягне її життєву силу та перетворить її в свою енергію. Якщо істота слабша за користувача ядра, максимальна шкода зменшується до 1. Якщо істота має 20+ здоров'я, ядро забирає 5%, і якщо в істоти більше 100, ядро може увібрати лише 2% за раз.</p>"
+        }
+      ]
+    },
+    {
+      "name": "Стихійна зброя",
+      "description": "<p>Мечі, злиті з енергією елементів. При взаємодії викликають територію стихії, якщо це можливо, та дають стихійний ефект.</p><p>Незламні, але споживають енергію при кожному використанні. Читайте більше про тераформування в категорії <a href='#other'>Інше</a>.</p><p>Можна відновлювати енергетичний рівень лише за допомогою збирача енергії.</p>",
+      "items": [
+        {
+          "name": "Полум'яний меч",
+          "id": "flame_sword",
+          "material": "elemental",
+          "properties": [
+            {"name": "Стихія", "value": "Вогонь"},
+            {"name": "Територія", "value": "Так"},
+            {"name": "Базовий час відновлення", "value": "0.75s"},
+            {"name": "Енергетична ємність", "value": "1000"},
+            {"name": "Шкода від атаки", "value": "7"},
+            {"name": "Бонусна шкода від атаки", "value": "9"},
+            {"name": "Швидкість атаки", "value": "2.2"},
+            {"name": "Закладене зачарування", "value": "Сила вогню [max]"},
+            {"name": "Ефект", "value": "Втілення вогню"}
+          ],
+          "description": "Викликає територію вогню та дає ефект.",
+          "video": "flame_sword.webm",
+          "recipe": "image"
+        },
+        {
+          "name": "Крижаний меч",
+          "id": "frost_sword",
+          "material": "elemental",
+          "properties": [
+            {"name": "Стихія", "value": "Мороз"},
+            {"name": "Територія", "value": "Так"},
+            {"name": "Базовий час відновлення", "value": "0.9s"},
+            {"name": "Енергетична ємність", "value": "1000"},
+            {"name": "Шкода від атаки", "value": "7"},
+            {"name": "Бонусна шкода від атаки", "value": "9"},
+            {"name": "Швидкість атаки", "value": "2.2"},
+            {"name": "Закладене зачарування", "value": "Нищівне лезо [max]"},
+            {"name": "Ефект", "value": "Втілення морозу"}
+          ],
+          "description": "Викликає територію морозу та дає ефект.",
+          "video": "frost_sword.webm",
+          "recipe": "image"
+        },
+        {
+          "name": "Нестабільний безформний меч",
+          "id": "unstable_amorphous_sword",
+          "material": "elemental",
+          "properties": [
+            {"name": "Стихія", "value": "Аморфність"},
+            {"name": "Територія", "value": "Ні"},
+            {"name": "Базовий час відновлення", "value": "1s"},
+            {"name": "Енергетична ємність", "value": "2000"},
+            {"name": "Шкода від атаки", "value": "7"},
+            {"name": "Бонусна шкода від атаки", "value": "19"},
+            {"name": "Швидкість атаки", "value": "2.6"},
+            {"name": "Закладене зачарування", "value": "Грабунок [max]"},
+            {"name": "Ефект", "value": "Аморфність"}
+          ],
+          "description": "Дає ефект на короткий проміжок часу.",
+          "recipe": "image"
+        },
+        {
+          "name": "Безформний меч",
+          "id": "amorphous_sword",
+          "material": "elemental",
+          "properties": [
+            {"name": "Стихія", "value": "Аморфність"},
+            {"name": "Територія", "value": "Ні"},
+            {"name": "Базовий час відновлення", "value": "1s"},
+            {"name": "Енергетична ємність", "value": "5000"},
+            {"name": "Шкода від атаки", "value": "7"},
+            {"name": "Бонусна шкода від атаки", "value": "23"},
+            {"name": "Швидкість атаки", "value": "2.6"},
+            {"name": "Закладене зачарування", "value": "Грабунок [max]"},
+            {"name": "Ефект", "value": "Аморфність"}
+          ],
+          "description": "Дає безкоштовний ефект, коли гравець тримає в руці.",
+          "video": "amorphous_sword.webm",
+          "recipe": "image"
+        }
+      ]
+    },
+    {
+      "name": "Платівки",
+      "description": "Не можна ніяк створити або знайти в грі. Вони випадуть лише тоді, коли ви витягнете життя з певної тварини за допомогою ядра душі, і це спричинить її смерть.",
+      "items": [
+        {
+          "name": "tegukjflk",
+          "id": "tegukjflk_music_disk",
+          "properties": [
+            {"name": "Тварина", "value": "Жаба"},
+            {"name": "Довжина треку", "value": "0:59"}
+          ],
+          "recipe": "Можна отримати лише через вбивство жаби ядром душі.",
+          "sound": "tegukjflk.ogg"
+        },
+        {
+          "name": "iwseuvhjk",
+          "id": "iwseuvhjk_music_disk",
+          "properties": [
+            {"name": "Тварина", "value": "Спрут‌"},
+            {"name": "Довжина треку", "value": "1:15"}
+          ],
+          "recipe": "Можна отримати лише через вбивство спрута ядром душі.",
+          "sound": "iwseuvhjk.ogg"
+        },
+        {
+          "name": "zsdxghjmr",
+          "id": "zsdxghjmr_music_disk",
+          "properties": [
+            {"name": "Тварина", "value": "Корова"},
+            {"name": "Довжина треку", "value": "1:47"}
+          ],
+          "recipe": "Можна отримати лише через вбивство корови ядром душі.",
+          "sound": "zsdxghjmr.ogg"
+        },
+        {
+          "name": "ezsxdfcgh",
+          "id": "ezsxdfcgh_music_disk",
+          "properties": [
+            {"name": "Тварина", "value": "Заєць"},
+            {"name": "Довжина треку", "value": "1:16"}
+          ],
+          "recipe": "Можна отримати лише через вбивство зайця ядром душі.",
+          "sound": "ezsxdfcgh.ogg"
+        },
+        {
+          "name": "ubdcwjnk",
+          "id": "ubdcwjnk_music_disk",
+          "properties": [
+            {"name": "Тварина", "value": "Кажан"},
+            {"name": "Довжина треку", "value": "1:28"}
+          ],
+          "recipe": "Можна отримати лише через вбивство кажана ядром душі.",
+          "sound": "ubdcwjnk.ogg"
+        }
+      ]
+    },
+    {
+      "name": "Книги",
+      "items": [
+        {
+          "name": "Хроніки сталі",
+          "id": "steel_chronicles_book",
+          "properties": [
+            {"name": "Мови", "value": "Англійська"}
+          ],
+          "recipe": "image",
+          "description": "Можна знайти на дачі бувалого коваля.",
+          "bookContents": "steel_chronicles"
+        }
+      ]
+    }
+  ]
+}

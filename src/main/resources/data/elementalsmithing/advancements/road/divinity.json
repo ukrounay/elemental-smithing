@@ -1,0 +1,33 @@
+{
+  "display": {
+    "title": {
+      "translate": "advancement.elementalsmithing.divinity.title"
+    },
+    "description": {
+      "translate": "advancement.elementalsmithing.divinity.description"
+    },
+    "icon": {
+      "item": "elementalsmithing:amorphous_sword"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "elementalsmithing:road/imbued_force",
+  "criteria": {
+    "elementalsmithing:get_amorphous_sword": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["elementalsmithing:amorphous_sword"]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 500
+  }
+}

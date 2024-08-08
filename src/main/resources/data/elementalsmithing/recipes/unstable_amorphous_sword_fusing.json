@@ -1,0 +1,7 @@
+{
+  "type": "elementalsmithing:fusion",
+  "category": "misc",
+  "fusing_left": {"item": "elementalsmithing:flame_sword"},
+  "fusing_right": {"item": "elementalsmithing:frost_sword"},
+  "result": {"item": "elementalsmithing:unstable_amorphous_sword"}
+}

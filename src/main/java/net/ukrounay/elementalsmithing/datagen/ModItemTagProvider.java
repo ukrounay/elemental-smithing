@@ -31,25 +31,41 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 ModItems.KNIGHT_HELMET,
                 ModItems.KNIGHT_CHESTPLATE,
                 ModItems.KNIGHT_LEGGINGS,
-                ModItems.KNIGHT_BOOTS
+                ModItems.KNIGHT_BOOTS,
+                ModItems.REINFORCED_KNIGHT_HELMET,
+                ModItems.REINFORCED_KNIGHT_CHESTPLATE,
+                ModItems.REINFORCED_KNIGHT_LEGGINGS,
+                ModItems.REINFORCED_KNIGHT_BOOTS
         );
 
         getOrCreateTagBuilder(ItemTags.HOES).add(
                 ModItems.DAMASK_STEEL_HOE,
                 ModItems.STEEL_HOE,
+                ModItems.BLESSED_CRYSTAL_HOE,
+                ModItems.CURSED_CRYSTAL_HOE,
                 ModItems.PURE_CRYSTAL_HOE
         );
         getOrCreateTagBuilder(ItemTags.AXES).add(
                 ModItems.DAMASK_STEEL_AXE,
                 ModItems.STEEL_AXE,
+                ModItems.BLESSED_CRYSTAL_AXE,
+                ModItems.CURSED_CRYSTAL_AXE,
                 ModItems.PURE_CRYSTAL_AXE
         );
         getOrCreateTagBuilder(ItemTags.PICKAXES).add(
                 ModItems.DAMASK_STEEL_PICKAXE,
                 ModItems.STEEL_PICKAXE,
+                ModItems.BLESSED_CRYSTAL_PICKAXE,
+                ModItems.CURSED_CRYSTAL_PICKAXE,
                 ModItems.PURE_CRYSTAL_PICKAXE
         );
-
+        getOrCreateTagBuilder(ItemTags.SHOVELS).add(
+                ModItems.DAMASK_STEEL_SHOVEL,
+                ModItems.STEEL_SHOVEL,
+                ModItems.BLESSED_CRYSTAL_SHOVEL,
+                ModItems.CURSED_CRYSTAL_SHOVEL,
+                ModItems.PURE_CRYSTAL_SHOVEL
+        );
         getOrCreateTagBuilder(ModTags.Items.SWORDS).add(
                 ModItems.DAMASK_STEEL_SWORD,
                 ModItems.STEEL_SWORD,
@@ -60,6 +76,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ModTags.Items.ELEMENTAL_SWORDS).add(
                 ModItems.FLAME_SWORD,
                 ModItems.FROST_SWORD,
+                ModItems.UNSTABLE_AMORPHOUS_SWORD,
                 ModItems.AMORPHOUS_SWORD
         );
         getOrCreateTagBuilder(ModTags.Items.SWORDS).forceAddTag(ModTags.Items.ELEMENTAL_SWORDS);
@@ -73,6 +90,26 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ModTags.Items.ELEMENTAL_ITEMS).forceAddTag(ModTags.Items.ELEMENTAL_CORES);
         getOrCreateTagBuilder(ModTags.Items.ELEMENTAL_ITEMS).forceAddTag(ModTags.Items.ELEMENTAL_SWORDS);
 
+        getOrCreateTagBuilder(ModTags.Items.CRYSTAL_TOOLS).add(
+                ModItems.BLESSED_CRYSTAL_HOE,
+                ModItems.CURSED_CRYSTAL_HOE,
+                ModItems.PURE_CRYSTAL_HOE,
+                ModItems.BLESSED_CRYSTAL_AXE,
+                ModItems.CURSED_CRYSTAL_AXE,
+                ModItems.PURE_CRYSTAL_AXE,
+                ModItems.BLESSED_CRYSTAL_PICKAXE,
+                ModItems.CURSED_CRYSTAL_PICKAXE,
+                ModItems.PURE_CRYSTAL_PICKAXE,
+                ModItems.BLESSED_CRYSTAL_SHOVEL,
+                ModItems.CURSED_CRYSTAL_SHOVEL,
+                ModItems.PURE_CRYSTAL_SHOVEL,
+                ModItems.CURSED_CRYSTAL_SWORD,
+                ModItems.BLESSED_CRYSTAL_SWORD,
+                ModItems.PURE_CRYSTAL_SWORD
+        );
+
+        getOrCreateTagBuilder(ModTags.Items.ENERGY_REPAIRABLE).forceAddTag(ModTags.Items.ELEMENTAL_ITEMS);
+        getOrCreateTagBuilder(ModTags.Items.ENERGY_REPAIRABLE).forceAddTag(ModTags.Items.CRYSTAL_TOOLS);
 
         getOrCreateTagBuilder(ModTags.Items.MUSIC_DISCS).add(
                 ModItems.TEGUKJFLK_MUSIC_DISK,

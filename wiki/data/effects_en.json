@@ -1,0 +1,41 @@
+{
+  "categories": [
+    {
+      "name": "Elemental Effects",
+      "effects": [
+        {
+          "name": "Flame embodiment",
+          "id": "flame_embodiment",
+          "properties": [
+            {"name": "Element", "value": "Flame"}
+          ],
+          "description": "Gives additional health, speed boost, regeneration and fire resistance, additionally reducing fire ticks to zero."
+        },
+        {
+          "name": "Frost embodiment",
+          "id": "frost_embodiment",
+          "properties": [
+            {"name": "Element", "value": "Frost"}
+          ],
+          "description": "Gives additional health, speed boost and regeneration, also reducing frozen ticks to zero."
+        },
+        {
+          "name": "Vital energy overflow",
+          "id": "vital_energy_overflow",
+          "properties": [
+            {"name": "Element", "value": "Soul"}
+          ],
+          "description": "Gives a lot of additional hearts, speed boost, and ultra fast regeneration."
+        },
+        {
+          "name": "Amorphousness",
+          "id": "amorphousness",
+          "properties": [
+            {"name": "Element", "value": "Amorphous"}
+          ],
+          "description": "You can fly) As in creative. But this effect gives you feather falling upon ending, so you can diving to the clouds without worries. No fall damage, as in creative, and fast regeneration."
+        }
+      ]
+    }
+  ]
+}

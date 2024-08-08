@@ -3,6 +3,8 @@
   "values": [
     "elementalsmithing:damask_steel_pickaxe",
     "elementalsmithing:steel_pickaxe",
+    "elementalsmithing:blessed_crystal_pickaxe",
+    "elementalsmithing:cursed_crystal_pickaxe",
     "elementalsmithing:pure_crystal_pickaxe"
   ]
 }

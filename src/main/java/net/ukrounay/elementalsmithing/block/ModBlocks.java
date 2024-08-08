@@ -33,9 +33,9 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.COAL_BLOCK).hardness(5.0f).resistance(6.0f)));
 
     public static final Block BLESSED_CRYSTAL_BLOCK = registerBlock("blessed_crystal_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).hardness(3.0f).resistance(10.0f).luminance(4).nonOpaque().allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
-    public static final Block CURSED_CRYSTAL_BLOCK = registerBlock("cursed_crystal_block",
             new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).hardness(3.0f).resistance(4.0f).luminance(4).nonOpaque().allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+    public static final Block CURSED_CRYSTAL_BLOCK = registerBlock("cursed_crystal_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).hardness(3.0f).resistance(10.0f).luminance(4).nonOpaque().allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
     public static final Block PURE_CRYSTAL_BLOCK = registerBlock("pure_crystal_block",
             new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).hardness(3.0f).resistance(8.0f).luminance(8).nonOpaque().allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
 

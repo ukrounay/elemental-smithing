@@ -7,7 +7,7 @@
       "translate": "advancement.elementalsmithing.unstable_deity.description"
     },
     "icon": {
-      "item": "elementalsmithing:amorphous_sword"
+      "item": "elementalsmithing:unstable_amorphous_sword"
     },
     "frame": "goal",
     "show_toast": true,
@@ -16,18 +16,18 @@
   },
   "parent": "elementalsmithing:road/imbued_force",
   "criteria": {
-    "elementalsmithing:get_amorphous_sword": {
+    "elementalsmithing:get_unstable_amorphous_sword": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": ["elementalsmithing:amorphous_sword"]
+            "items": ["elementalsmithing:unstable_amorphous_sword"]
           }
         ]
       }
     }
   },
   "rewards": {
-    "experience": 500
+    "experience": 200
   }
 }

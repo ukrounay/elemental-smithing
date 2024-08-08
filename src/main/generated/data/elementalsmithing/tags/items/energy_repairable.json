@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#elementalsmithing:elemental_items",
+    "#elementalsmithing:crystal_tools"
+  ]
+}
