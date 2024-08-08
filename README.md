@@ -1,4 +1,4 @@
-![title](wiki/images/header.png)
+![title](docs/images/header.png)
 
 ## Elemental Smithing for Fabric 1.20.1
 
