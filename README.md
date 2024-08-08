@@ -1,4 +1,4 @@
-![title](https://github.com/ukrounay/elemental-smithing/wiki/images/header.png)
+![title](wiki/images/header.png)
 
 ## Elemental Smithing for Fabric 1.20.1
 
