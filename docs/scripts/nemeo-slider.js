@@ -6,13 +6,14 @@
 
 class nemeo_slider {
 
-    constructor(name, body, slides, currentSlide, previousButton, nextButton, indicators, numberIndicator, infinite, x, previousX, marginX, busy, dragging, finishTimer) {
+    constructor(name, body, slides, currentSlide, previousButton, nextButton, indicators, indicatorsContainer, numberIndicator, infinite, x, previousX, marginX, busy, dragging, finishTimer) {
         this.name = name;
         this.body = body;
         this.slides = slides;
         this.currentSlide = currentSlide;
         this.previousButton = previousButton;
         this.nextButton = nextButton;
+        this.indicatorsContainer = indicatorsContainer;
         this.indicators = indicators;
         this.numberIndicator = numberIndicator;
         this.infinite = infinite;
@@ -82,6 +83,12 @@ class nemeo_slider {
             if (slide == this.slides.length - 1) this.nextButton.classList.add("unavialable"); else this.nextButton.classList.remove("unavialable");
             this.indicators.forEach(indicator => {indicator.classList.remove("active")});
             this.indicators[slide].classList.add("active");
+            this.indicatorsContainer.scrollTo(
+                {
+                    left: this.indicators[slide].getBoundingClientRect().left + this.indicatorsContainer.scrollLeft - this.indicatorsContainer.clientWidth / 2 - this.indicators[slide].clientWidth * 2, 
+                    behavior: "smooth"
+                }
+            );
             this.body.style.transition = "300ms";
             this.body.style.left = -slide*100 + "%";
             this.finishTimer = setTimeout(()=>{
@@ -141,9 +148,11 @@ function initializeSlider(htmlSlider) {
         slider.body = htmlSlider.querySelector(".slider-body");
     }
 
+    
     let indicatorsContainer = document.createElement("div");
     indicatorsContainer.classList = "indicators-container";
     htmlSlider.appendChild(indicatorsContainer);
+    slider.indicatorsContainer = htmlSlider.querySelector(".indicators-container");
 
     slider.slides = htmlSlider.dataset.sources.split(",");
 

@@ -127,8 +127,12 @@
     opacity: 0.4;
     transition: 0.2s;
     border-radius: var(--br);
-    justify-content: center;
     align-items: center;
+    max-width: calc(100% - 6rem);
+    overflow-x: scroll;
+}
+.indicators-container::-webkit-scrollbar {
+    display: none;
 }
 .nemeo-slider:hover .indicators-container {
     opacity: 0.6;
@@ -138,12 +142,12 @@
     opacity: 1 !important;
 }
 .indicator {
+    flex-shrink: 0;
     position: relative;
     display: inline-block;
     width: calc(var(--p-s) * 4);
     height: calc(var(--p-s) * 4);
     padding: var(--p-s);
-    
 }
 
 .indicator::before {
@@ -169,6 +173,7 @@
     height: 100%;  
 }
 .number-indicator {
+    flex-shrink: 0;
     font-weight: 300;
     line-height: 1;
     border-radius: var(--br-s);
