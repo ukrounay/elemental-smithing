@@ -75,8 +75,8 @@
           "description": "<p>Main mod workstation.</p><p>Has 2 fusion slots and 8 fusion craft slots - total 10 inputs and 1 output. You can craft only 1 item at a time.</p><p>Gives a custom profession to villagers (see Other section).</p>",
           "recipe": "image",
           "gallery": [
-            "fst-1.png",
-            "fst-2.png"
+            "fst-1.webp",
+            "fst-2.webp"
           ]
         },
         {
@@ -91,8 +91,8 @@
           "description": "<p>Auto charging station for elemental items.</p><p>Player can put or grab items on right click. Block inventory can contain one item of any type, it will be rendered on top of block.</p><p>If item is elemental, block will start working and increasing energy by 1 point each 72 ticks. Charging will be progressing faster, if energy providers placed around in radius of 2 blocks, similar to enchanting table leveling.</p>",
           "recipe": "image",
           "gallery": [
-            "ec-1.png",
-            "ec-2.png"
+            "ec-1.webp",
+            "ec-2.webp"
           ]
         }
       ]
