@@ -1,7 +1,7 @@
 {
   "categories": [
     {
-      "name": "Materials",
+      "name": "Materials and templates",
       "items": [
         {
           "name": "Graphite",
@@ -38,6 +38,13 @@
           "properties": [],
           "recipe": "image",
           "description": "Base material for most of mod crafts"
+        },
+        {
+          "name": "Steel Upgrade",
+          "id": "damask_steel_upgrade",
+          "properties": [],
+          "recipe": "image",
+          "description": "<p>Equipment upgrade template, neccecary for creating damask items.</p><p>Can be found in houses of villagers with a smithing related professions.</p>"
         }
       ]
     },
