@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    {
-      "id": "elementalsmithing:grand_blacksmith_poi",
-      "required": false
-    }
-  ]
-}
