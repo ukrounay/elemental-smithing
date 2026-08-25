@@ -60,6 +60,7 @@ public class ElementalCoreItem extends Item {
         ItemStack stack = context.getStack();
         BlockPos pos = context.getBlockPos();
         PlayerEntity player = context.getPlayer();
+        assert player != null;
         if(player.isSneaking()) {
             use(world, player, context.getHand());
             return ActionResult.CONSUME;

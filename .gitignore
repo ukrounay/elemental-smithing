@@ -40,5 +40,9 @@ replay_*.log
 *.jfr
 
 
-src\main\generated\
+src/main/generated/
+
+
+src/main/resources/assets/elementalsmithing/textures/playground/
+
 

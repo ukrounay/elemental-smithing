@@ -19,6 +19,8 @@ import net.ukrounay.elementalsmithing.screen.ModScreenHandlers;
 import org.jetbrains.annotations.Nullable;
 import org.joml.Vector2i;
 
+import java.util.List;
+
 import static net.ukrounay.elementalsmithing.block.entity.FusionSmithingTableBlockEntity.*;
 
 public class FusionSmithingScreenHandler extends ScreenHandler {
@@ -159,22 +161,13 @@ public class FusionSmithingScreenHandler extends ScreenHandler {
         }
     }
 
-    public boolean isFusingIngredientInLeftSlot() {
-        Slot slot = this.slots.get(FUSION_INGREDIENT_LEFT);
-        return slot != null && slot.hasStack();
+    public boolean isSlotActive(int i) {
+        return List.of(
+            FUSION_INGREDIENT_LEFT,
+            FUSION_INGREDIENT_RIGHT,
+            FUSION_OUTPUT
+        ).contains(i) && this.slots.get(i).hasStack();
     }
 
-    public boolean isFusingIngredientInRightSlot() {
-        Slot slot = this.slots.get(FUSION_INGREDIENT_RIGHT);
-        return slot != null && slot.hasStack();
-    }
 
-    public boolean isFusingResultInOutputSlot() {
-        Slot slot = this.slots.get(FUSION_OUTPUT);
-        return slot != null && slot.hasStack();
-    }
-
-//    public boolean canSwitchMode() {
-//        return FusionSmithingTableBlock.getPower(entity.getWorld(), entity.getPos()) > 0;
-//    }
 }

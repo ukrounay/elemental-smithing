@@ -9,6 +9,7 @@ import net.minecraft.client.render.RenderLayer;
 import net.ukrounay.elementalsmithing.block.ModBlocks;
 import net.ukrounay.elementalsmithing.block.entity.ModBlockEntities;
 import net.ukrounay.elementalsmithing.block.entity.renderer.EnergyCondensatorBlockEntityRenderer;
+import net.ukrounay.elementalsmithing.particles.custom.EnergyFluctuationParticle;
 import net.ukrounay.elementalsmithing.particles.custom.EnergyParticle;
 import net.ukrounay.elementalsmithing.particles.ModParticles;
 import net.ukrounay.elementalsmithing.particles.custom.TracingEnergyParticle;
@@ -28,6 +29,7 @@ public class ElementalSmithingClient implements ClientModInitializer {
 
         ParticleFactoryRegistry.getInstance().register(ModParticles.ENERGY_PARTICLE, EnergyParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticles.TRACING_ENERGY_PARTICLE, TracingEnergyParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(ModParticles.ENERGY_FLUCTUATION_PARTICLE, EnergyFluctuationParticle.Factory::new);
 
     }
 }
