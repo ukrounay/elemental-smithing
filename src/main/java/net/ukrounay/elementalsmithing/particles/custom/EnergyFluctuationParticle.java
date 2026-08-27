@@ -7,7 +7,9 @@ import net.minecraft.client.render.*;
 import net.minecraft.client.texture.Sprite;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.DefaultParticleType;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.LightType;
 import org.joml.Quaternionf;
 import org.joml.Vector3f;
 
@@ -23,6 +25,8 @@ public class EnergyFluctuationParticle extends Particle {
     private float headPosition = 0f;
     private final float rotationSpeed;
     private final float trailLength;
+
+    private int cachedLight = 15728880;
 
     private static class Point {
         Vector3f position = new Vector3f();
@@ -69,6 +73,15 @@ public class EnergyFluctuationParticle extends Particle {
         float laps = 1.5f + random.nextFloat();
         this.rotationSpeed = STEP_COUNT * laps / maxAge;
         this.trailLength = STEP_COUNT * 0.55f;
+
+        BlockPos pos = BlockPos.ofFloored(x, y, z);
+        int blockLight = world.getLightLevel(LightType.BLOCK, pos);
+        int skyLight = world.getLightLevel(LightType.SKY, pos);
+
+        int boostedBlock = Math.min(blockLight + 4, 15); // "+1 or 2" felt low in practice, tune this
+        int boostedSky = Math.min(skyLight + 4, 15);
+
+        cachedLight = boostedBlock << 4 | boostedSky << 20;
     }
 
 
@@ -204,12 +217,11 @@ public class EnergyFluctuationParticle extends Particle {
             a0 = points[i].alpha * alpha;
             a1 = points[i + 1].alpha * alpha;
 
-
-
-            vc.vertex(A.x, A.y, A.z).texture(u, v0).color(red, green, blue, a0).light(15728880).next();
-            vc.vertex(B.x, B.y, B.z).texture(u, v1).color(red, green, blue, a0).light(15728880).next();
-            vc.vertex(C.x, C.y, C.z).texture(u, v1).color(red, green, blue, a1).light(15728880).next();
-            vc.vertex(D.x, D.y, D.z).texture(u, v0).color(red, green, blue, a1).light(15728880).next();        }
+            vc.vertex(A.x, A.y, A.z).texture(u, v0).color(red, green, blue, a0).light(cachedLight).next();
+            vc.vertex(B.x, B.y, B.z).texture(u, v1).color(red, green, blue, a0).light(cachedLight).next();
+            vc.vertex(C.x, C.y, C.z).texture(u, v1).color(red, green, blue, a1).light(cachedLight).next();
+            vc.vertex(D.x, D.y, D.z).texture(u, v0).color(red, green, blue, a1).light(cachedLight).next();
+        }
     }
 
 

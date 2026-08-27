@@ -84,7 +84,7 @@ public class EnergyCondensatorBlock extends BlockWithEntity implements BlockEnti
                 && blockEntity instanceof EnergyCondensatorBlockEntity
                 && ((EnergyCondensatorBlockEntity) blockEntity).isCharging())
             world.addParticle(ModParticles.ENERGY_FLUCTUATION_PARTICLE,
-                    pos.getX() + 0.5, pos.getY() + 1.6, pos.getZ() + 0.5,
+                    pos.getX() + 0.5, pos.getY() + 1.28125, pos.getZ() + 0.5,
                     0,     0.05, 0
             );
     }

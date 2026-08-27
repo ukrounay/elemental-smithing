@@ -53,34 +53,38 @@ public class EnergyCondensatorBlockEntityRenderer implements BlockEntityRenderer
         ItemStack stack = entity.getItem();
         float time = 0;
 
+        if(this.portalTicks > 0) {
+            if (entity.isCharging()) {
+                if (this.portalTicks < 20) this.portalTicks++;
+            } else this.portalTicks--;
+            renderCharging(entity, matrices, vertexConsumers);
+        } else this.portalTicks = entity.isCharging() ? 1 : 0;
+
         World world = entity.getWorld();
-        if (world != null) {
-            if (!stack.isEmpty()) {
-                matrices.push();
-                BlockPos pos = entity.getPos();
-                time = world.getTime() + tickDelta;
-                double offset = Math.sin(time / 10.0) / 16;
-                matrices.translate(0.5, 1.25 + offset, 0.5);
-                matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(time * 3));
-                if(stack.isIn(ItemTags.SWORDS) && !stack.isOf(ModItems.UNSTABLE_AMORPHOUS_SWORD)) {
-                    matrices.multiply(RotationAxis.NEGATIVE_Z.rotationDegrees(135));
-                    matrices.scale(0.65f, 0.65f, 0.65f);
-                } else {
-                    matrices.scale(0.5f, 0.5f, 0.5f);
-                }
-                int blockLighting = WorldRenderer.getLightmapCoordinates(world, pos.up());
-                int itemLighting = entity.isCharging() ? 255 - (int)(20 * Math.sin((time % 20) / 20)) : blockLighting;
-                itemRenderer.renderItem(stack, ModelTransformationMode.GUI, itemLighting, OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(),1);
-                matrices.pop();
+        if (world == null) return;
+
+        if (!stack.isEmpty()) {
+            matrices.push();
+            BlockPos pos = entity.getPos();
+            time = world.getTime() + tickDelta;
+
+            matrices.translate(0.5, 1.25 + Math.sin(time / 10.0) / 16, 0.5);
+
+
+            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(time * 3));
+            if(stack.isIn(ItemTags.SWORDS) && !stack.isOf(ModItems.UNSTABLE_AMORPHOUS_SWORD)) {
+                matrices.multiply(RotationAxis.NEGATIVE_Z.rotationDegrees(135));
+                matrices.scale(0.65f, 0.65f, 0.65f);
+            } else {
+                matrices.scale(0.5f, 0.5f, 0.5f);
             }
 
-            if(this.portalTicks > 0) {
-                if (entity.isCharging()) {
-                    if (this.portalTicks < 20) this.portalTicks++;
-                } else this.portalTicks--;
-                renderCharging(entity, matrices, vertexConsumers);
-            } else this.portalTicks = entity.isCharging() ? 1 : 0;
+            int blockLighting = WorldRenderer.getLightmapCoordinates(world, pos.up());
+            int itemLighting = entity.isCharging() ? 255 - (int)(20 * Math.sin((time % 20) / 20)) : blockLighting;
+            itemRenderer.renderItem(stack, ModelTransformationMode.GUI, itemLighting, OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(),1);
+            matrices.pop();
         }
+
     }
 
     protected void renderCharging(EnergyCondensatorBlockEntity entity, MatrixStack matrices, VertexConsumerProvider vertexConsumers) {
