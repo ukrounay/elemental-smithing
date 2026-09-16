@@ -43,7 +43,7 @@ public class ModBlocks {
             new FusionSmithingTableBlock(FabricBlockSettings.copyOf(Blocks.ANVIL).hardness(5.0f).resistance(6.0f).nonOpaque()));
 
     public static final Block ENERGY_CONDENSATOR = registerBlock("energy_condensator",
-            new EnergyCondensatorBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE).hardness(5.0f).resistance(6.0f).nonOpaque()));
+            new EnergyCondensatorBlock(FabricBlockSettings.copyOf(Blocks.LIGHTNING_ROD).hardness(5.0f).resistance(6.0f).nonOpaque()));
 
 
     private static Block registerBlock(String name, Block block) {

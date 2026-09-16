@@ -11,31 +11,29 @@ import net.minecraft.client.render.model.json.ModelTransformationMode;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.ColorHelper;
+import net.minecraft.state.property.Properties;
+import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RotationAxis;
 import net.minecraft.world.World;
-import net.ukrounay.elementalsmithing.ElementalSmithing;
 import net.ukrounay.elementalsmithing.block.entity.EnergyCondensatorBlockEntity;
+import net.ukrounay.elementalsmithing.client.render.ModRenderLayers;
 import net.ukrounay.elementalsmithing.item.ModItems;
 import net.ukrounay.elementalsmithing.util.FastMath;
+import net.ukrounay.elementalsmithing.util.RotationHelper;
 import org.joml.Matrix4f;
 import org.joml.Quaternionf;
 import org.joml.Vector3f;
 
-import java.awt.*;
-
-import static net.minecraft.client.render.RenderPhase.END_PORTAL_PROGRAM;
-
 
 public class EnergyCondensatorBlockEntityRenderer implements BlockEntityRenderer<EnergyCondensatorBlockEntity> {
+
+    private static final float FRAME_HALF_SIZE = 3 / 32f;
+    private static final int PIXEL_DENSITY = 4;
 
     private final BlockEntityRenderDispatcher dispatcher;
     private final TextRenderer textRenderer;
     private final ItemRenderer itemRenderer;
-    private int portalTicks = 0;
 
     public EnergyCondensatorBlockEntityRenderer(BlockEntityRendererFactory.Context context) {
         this.dispatcher = context.getRenderDispatcher();
@@ -50,85 +48,107 @@ public class EnergyCondensatorBlockEntityRenderer implements BlockEntityRenderer
 
     @Override
     public void render(EnergyCondensatorBlockEntity entity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay) {
-        ItemStack stack = entity.getItem();
-        float time = 0;
-
-        if(this.portalTicks > 0) {
-            if (entity.isCharging()) {
-                if (this.portalTicks < 20) this.portalTicks++;
-            } else this.portalTicks--;
-            renderCharging(entity, matrices, vertexConsumers);
-        } else this.portalTicks = entity.isCharging() ? 1 : 0;
-
         World world = entity.getWorld();
         if (world == null) return;
 
+        if (entity.getStorageOwner() != entity) return;
+
+        ItemStack stack = entity.getItem();
+        float time = world.getTime() + tickDelta;
+        boolean charging = entity.isCharging();
+
+        Direction facing = entity.getCachedState().get(Properties.FACING);
+
+//        if(entity.portalTicks > 0) {
+//            if (charging) {
+//                if (entity.portalTicks < 20) entity.portalTicks++;
+//            } else entity.portalTicks--;
+//
+//            matrices.push();
+//            renderScreen(entity, matrices, vertexConsumers, light, time, facing);
+//            matrices.pop();
+//
+//        } else entity.portalTicks = charging ? 1 : 0;
+
         if (!stack.isEmpty()) {
             matrices.push();
-            BlockPos pos = entity.getPos();
-            time = world.getTime() + tickDelta;
-
-            matrices.translate(0.5, 1.25 + Math.sin(time / 10.0) / 16, 0.5);
-
-
-            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(time * 3));
-            if(stack.isIn(ItemTags.SWORDS) && !stack.isOf(ModItems.UNSTABLE_AMORPHOUS_SWORD)) {
-                matrices.multiply(RotationAxis.NEGATIVE_Z.rotationDegrees(135));
-                matrices.scale(0.65f, 0.65f, 0.65f);
-            } else {
-                matrices.scale(0.5f, 0.5f, 0.5f);
-            }
-
-            int blockLighting = WorldRenderer.getLightmapCoordinates(world, pos.up());
-            int itemLighting = entity.isCharging() ? 255 - (int)(20 * Math.sin((time % 20) / 20)) : blockLighting;
-            itemRenderer.renderItem(stack, ModelTransformationMode.GUI, itemLighting, OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(),1);
+            renderStack(matrices, vertexConsumers, light, time, stack, world, facing);
             matrices.pop();
         }
 
     }
 
-    protected void renderCharging(EnergyCondensatorBlockEntity entity, MatrixStack matrices, VertexConsumerProvider vertexConsumers) {
-        Text text = Text.of(String.valueOf(entity.ticksToCharge));
-        matrices.push();
-        float size = FastMath.expgrow(this.portalTicks / 20f, 2);
-        float portalSize = size * (3 / 16f);
+
+    private void renderStack(MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, float time, ItemStack stack, World world, Direction facing) {
+        matrices.translate(0.5, 1.25 + Math.sin(time / 10.0) / 16, 0.5);
+        matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(time * 3));
+
+        if(stack.isIn(ItemTags.SWORDS) && !stack.isOf(ModItems.UNSTABLE_AMORPHOUS_SWORD)) {
+            matrices.multiply(RotationAxis.NEGATIVE_Z.rotationDegrees(135));
+            RotationHelper.applyFacingRotation(matrices, facing);
+            matrices.scale(0.65f, 0.65f, 0.65f);
+        } else {
+            matrices.scale(0.5f, 0.5f, 0.5f);
+        }
+
+        itemRenderer.renderItem(stack, ModelTransformationMode.GUI, light, OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, world,1);
+    }
+
+//    private final Quaternionf adjustedRotation = new Quaternionf();
+
+    private void renderScreen(EnergyCondensatorBlockEntity entity, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, float time, Direction facing) {
+
+        float size = FastMath.expgrow(entity.portalTicks / 20f, 2);
 
         matrices.translate(0.5, 0.60001, 0.5);
+        RotationHelper.applyFacingRotation(matrices, facing);
 
-        VertexConsumer vertexConsumer = vertexConsumers.getBuffer(RenderLayer.getEndGateway());
-        this.renderSide(matrices.peek().getPositionMatrix(), vertexConsumer,
-                -portalSize/2,portalSize/2, 0.0f, 0.0f,
-                portalSize/2, portalSize/2, -portalSize/2, -portalSize/2);
+        renderParallaxCircuit(matrices, vertexConsumers.getBuffer(ModRenderLayers.getParallaxCircuit()), time, size, light);
 
-        matrices.translate(0, 0.0001, 0);
-        Quaternionf rotation = dispatcher.camera.getRotation();
-        Quaternionf adjustedRotation = new Quaternionf(0, rotation.y, 0, rotation.w)
-                .rotateX((float) (Math.PI / 2));
-        matrices.multiply(adjustedRotation);
+        Vector3f textElevation = new Vector3f(0, 0.0001f, 0);
+        RotationHelper.applyFacingRotation(textElevation, facing);
+        matrices.translate(textElevation.x(), textElevation.y(), textElevation.z());
+
+//        Quaternionf rotation = dispatcher.camera.getRotation();
+//        adjustedRotation.set(0, rotation.y, 0, rotation.w).rotateX((float) (Math.PI / 2));
+//        matrices.multiply(adjustedRotation);
+
+
         float textScale = size * 0.01f;
         matrices.scale(-textScale, -textScale, textScale);
 
-        float h = -textRenderer.getWidth(text) / 2f;
+        float h = -textRenderer.getWidth(entity.cachedText) / 2f;
         float y = -textRenderer.fontHeight / 2f;
         long alpha = (int) (size * 0xFF);
         long color = (alpha << 24) + 0xFFFFFF;
-        textRenderer.draw(text, h, y, (int) color, false, matrices.peek().getPositionMatrix(),
-                vertexConsumers, TextRenderer.TextLayerType.NORMAL, 0, 255);
-
-        matrices.pop();
+        textRenderer.draw(entity.cachedText, h, y, (int) color, false, matrices.peek().getPositionMatrix(),
+                vertexConsumers, TextRenderer.TextLayerType.NORMAL, 0, light);
     }
 
-    private void renderSide(Matrix4f model, VertexConsumer vertices, float x1, float x2, float y1, float y2, float z1, float z2, float z3, float z4) {
-        vertices.vertex(model, x1, y1, z1).next();
-        vertices.vertex(model, x2, y1, z2).next();
-        vertices.vertex(model, x2, y2, z3).next();
-        vertices.vertex(model, x1, y2, z4).next();
+
+    private void renderParallaxCircuit(MatrixStack matrices, VertexConsumer vc, float time, float growth, int light) {
+        Matrix4f model = matrices.peek().getPositionMatrix();
+
+        emitLayer(model, vc, 0, 0f, growth, 1.0f, light);
+        emitLayer(model, vc, -time * 0.015f, 0.5f, growth, 0.65f, light);
+        emitLayer(model, vc, 0.5f, -time * 0.015f, growth, 0.65f, light);
+        emitLayer(model, vc, time * 0.030f, 0.25f, growth, 0.33f, light);
+        emitLayer(model, vc, 0.25f, time * 0.030f, growth, 0.33f, light);
     }
-//    private void renderSide(Matrix4f model, VertexConsumer vertices, float x1, float x2, float y1, float y2, float z1, float z2, float z3, float z4, int light) {
-//        vertices.vertex(model, x1, y1, z1).texture(0,0).light(light).color(0xFFFFFFFF).next();
-//        vertices.vertex(model, x2, y1, z2).texture(0,1).light(light).color(0xFFFFFFFF).next();
-//        vertices.vertex(model, x2, y2, z3).texture(1,0).light(light).color(0xFFFFFFFF).next();
-//        vertices.vertex(model, x1, y2, z4).texture(1,1).light(light).color(0xFFFFFFFF).next();
-//    }
+
+    private void emitLayer(Matrix4f model, VertexConsumer vc, float uScroll, float vScroll, float growth, float alphaMul, int light) {
+        float half = FRAME_HALF_SIZE * growth;
+        int a = MathHelper.clamp((int) (alphaMul * 255), 0, 255);
+        float u0 = uScroll % 1.0f - half * PIXEL_DENSITY;
+        float v0 = vScroll % 1.0f - half * PIXEL_DENSITY;
+        float u1 = u0 + half * 2 * PIXEL_DENSITY;
+        float v1 = v0 + half * 2 * PIXEL_DENSITY;
+
+        vc.vertex(model, -half, 0, -half).color(255, 255, 255, a).texture(u0, v0).light(light).next();
+        vc.vertex(model, -half, 0,  half).color(255, 255, 255, a).texture(u0, v1).light(light).next();
+        vc.vertex(model,  half, 0,  half).color(255, 255, 255, a).texture(u1, v1).light(light).next();
+        vc.vertex(model,  half, 0, -half).color(255, 255, 255, a).texture(u1, v0).light(light).next();
+    }
+
 
 }

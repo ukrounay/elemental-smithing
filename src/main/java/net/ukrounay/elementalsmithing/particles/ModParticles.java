@@ -10,15 +10,17 @@ import net.ukrounay.elementalsmithing.ElementalSmithing;
 public class ModParticles {
 
     public static final DefaultParticleType ENERGY_PARTICLE = FabricParticleTypes.simple();
-    public static final DefaultParticleType SPIRAL_ENERGY_PARTICLE = FabricParticleTypes.simple();
+//    public static final DefaultParticleType SPIRAL_ENERGY_PARTICLE = FabricParticleTypes.simple();
     public static final DefaultParticleType TRACING_ENERGY_PARTICLE = FabricParticleTypes.simple();
     public static final DefaultParticleType ENERGY_FLUCTUATION_PARTICLE = FabricParticleTypes.simple();
+    public static final DefaultParticleType ENERGY_DISCHARGE_PARTICLE = FabricParticleTypes.simple();
 
     public static void registerParticles() {
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(ElementalSmithing.MOD_ID, "energy"), ENERGY_PARTICLE);
-        Registry.register(Registries.PARTICLE_TYPE, new Identifier(ElementalSmithing.MOD_ID, "spiral_energy"), SPIRAL_ENERGY_PARTICLE);
+//        Registry.register(Registries.PARTICLE_TYPE, new Identifier(ElementalSmithing.MOD_ID, "spiral_energy"), SPIRAL_ENERGY_PARTICLE);
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(ElementalSmithing.MOD_ID, "tracing_energy"), TRACING_ENERGY_PARTICLE);
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(ElementalSmithing.MOD_ID, "energy_fluctuation"), ENERGY_FLUCTUATION_PARTICLE);
+        Registry.register(Registries.PARTICLE_TYPE, new Identifier(ElementalSmithing.MOD_ID, "energy_discharge"), ENERGY_DISCHARGE_PARTICLE);
     }
 
 }

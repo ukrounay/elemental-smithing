@@ -24,7 +24,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLESSED_CRYSTAL_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PURE_CRYSTAL_BLOCK);
 
-        blockStateModelGenerator.registerSimpleState(ModBlocks.ENERGY_CONDENSATOR);
+//        blockStateModelGenerator.registerSimpleState(ModBlocks.ENERGY_CONDENSATOR);
     }
 
     @Override

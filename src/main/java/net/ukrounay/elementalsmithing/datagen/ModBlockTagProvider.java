@@ -29,9 +29,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(ModTags.Blocks.ENERGY_PROVIDER).add(ModBlocks.CURSED_CRYSTAL_BLOCK);
         getOrCreateTagBuilder(ModTags.Blocks.ENERGY_PROVIDER).add(ModBlocks.PURE_CRYSTAL_BLOCK);
 
-        getOrCreateTagBuilder(ModTags.Blocks.ENERGY_BARRIER).forceAddTag(BlockTags.WITHER_IMMUNE);
-        getOrCreateTagBuilder(ModTags.Blocks.ENERGY_BARRIER).add(ModBlocks.STEEL_BLOCK);
-
         getOrCreateTagBuilder(ModTags.Blocks.CONDENSED_ENERGY_PROVIDER).add(ModBlocks.ENERGY_CONDENSATOR);
     }
 }

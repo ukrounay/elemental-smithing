@@ -14,7 +14,6 @@ public class ModTags {
     public static class Blocks {
 
         public static final TagKey<Block> ENERGY_PROVIDER = createTag("energy_providers");
-        public static final TagKey<Block> ENERGY_BARRIER = createTag("energy_barriers");
         public static final TagKey<Block> CONDENSED_ENERGY_PROVIDER = createTag("condensed_energy_providers");
 
         private static TagKey<Block> createTag(String name) {
