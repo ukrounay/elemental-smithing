@@ -19,6 +19,7 @@ import net.minecraft.util.*;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.Vec3i;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
@@ -140,11 +141,12 @@ public class EnergyCondensatorBlock extends BlockWithEntity implements BlockEnti
         BlockEntity blockEntity = world.getBlockEntity(pos);
         if (blockEntity instanceof EnergyCondensatorBlockEntity ecbe) {
             if (ecbe.isStorageOwner()) {
-                Vector3f offset = new Vector3f(0.5f, 1.28125f, 0.5f);
-                RotationHelper.applyFacingRotation(offset, state.get(FACING));
+                Vec3i offset = state.get(FACING).getVector();
                 if (random.nextInt(4) == 0 && ecbe.isCharging())
                     world.addParticle(ModParticles.ENERGY_FLUCTUATION_PARTICLE,
-                            (float)pos.getX() + offset.x(), (float)pos.getY() + offset.y(), (float)pos.getZ() + offset.z(),
+                            pos.getX() + offset.getX() + 0.5f,
+                            pos.getY() + offset.getY() + 0.5f,
+                            pos.getZ() + offset.getZ() + 0.5f,
                             0,     0, 0
                 );
 
@@ -237,7 +239,7 @@ public class EnergyCondensatorBlock extends BlockWithEntity implements BlockEnti
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
         if (!world.isClient())
             return EnergyCondensatorBlock.checkType(type, ModBlockEntities.ENERGY_CONDENSATOR, EnergyCondensatorBlockEntity::tick);
-        return null;
+        return EnergyCondensatorBlock.checkType(type, ModBlockEntities.ENERGY_CONDENSATOR, EnergyCondensatorBlockEntity::tickClient);
     }
 
 

@@ -15,6 +15,7 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RotationAxis;
+import net.minecraft.util.math.Vec3i;
 import net.minecraft.world.World;
 import net.ukrounay.elementalsmithing.block.entity.EnergyCondensatorBlockEntity;
 import net.ukrounay.elementalsmithing.client.render.ModRenderLayers;
@@ -72,27 +73,70 @@ public class EnergyCondensatorBlockEntityRenderer implements BlockEntityRenderer
 
         if (!stack.isEmpty()) {
             matrices.push();
-            renderStack(matrices, vertexConsumers, light, time, stack, world, facing);
+            renderStack(entity, tickDelta, matrices, vertexConsumers, light, time, stack, world, facing);
             matrices.pop();
         }
 
     }
 
 
-    private void renderStack(MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, float time, ItemStack stack, World world, Direction facing) {
-        matrices.translate(0.5, 1.25 + Math.sin(time / 10.0) / 16, 0.5);
-        matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(time * 3));
+//    private void renderStack(EnergyCondensatorBlockEntity entity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, float time, ItemStack stack, World world, Direction facing) {
+//
+//        Vec3i dir = facing.getVector();
+//        float floatDist = 0.75f + (float) (Math.sin(time / 10.0) / 16);
+//
+//        matrices.translate(
+//            0.5 + dir.getX() * floatDist,
+//            0.5 + dir.getY() * floatDist,
+//            0.5 + dir.getZ() * floatDist
+//        );
+//
+//        Vector3f interpolated = new Vector3f(entity.prevItemOffset).lerp(entity.itemOffset, tickDelta);
+//        matrices.translate(0.5 + interpolated.x, 0.5 + interpolated.y, 0.5 + interpolated.z);
+//
+////        RotationHelper.applyFacingRotation(matrices, facing);
+//        matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(time * 3));
+//
+//
+//        if(stack.isIn(ItemTags.SWORDS) && !stack.isOf(ModItems.UNSTABLE_AMORPHOUS_SWORD)) {
+//            matrices.multiply(RotationAxis.NEGATIVE_Z.rotationDegrees(135));
+//            matrices.scale(0.65f, 0.65f, 0.65f);
+//        } else {
+//            matrices.scale(0.5f, 0.5f, 0.5f);
+//        }
+//
+//
+//        itemRenderer.renderItem(stack, ModelTransformationMode.GUI, light, OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, world,1);
+//    }
 
-        if(stack.isIn(ItemTags.SWORDS) && !stack.isOf(ModItems.UNSTABLE_AMORPHOUS_SWORD)) {
-            matrices.multiply(RotationAxis.NEGATIVE_Z.rotationDegrees(135));
-            RotationHelper.applyFacingRotation(matrices, facing);
-            matrices.scale(0.65f, 0.65f, 0.65f);
-        } else {
-            matrices.scale(0.5f, 0.5f, 0.5f);
-        }
+private void renderStack(EnergyCondensatorBlockEntity entity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, float time, ItemStack stack, World world, Direction facing) {
+    Vec3i dir = facing.getVector();
+    float floatDist = 0.75f + (float) (Math.sin(time / 10.0) / 16);
 
-        itemRenderer.renderItem(stack, ModelTransformationMode.GUI, light, OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, world,1);
+    matrices.translate(
+            0.5 + dir.getX() * floatDist,
+            0.5 + dir.getY() * floatDist,
+            0.5 + dir.getZ() * floatDist
+    );
+
+    RotationHelper.applyFacingRotation(matrices, facing);
+
+    Quaternionf interpolatedOffset = new Quaternionf(entity.prevRotationOffset).slerp(entity.rotationOffset, tickDelta);
+    matrices.multiply(interpolatedOffset);
+
+    matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(time * 3));
+
+    if (stack.isIn(ItemTags.SWORDS) && !stack.isOf(ModItems.UNSTABLE_AMORPHOUS_SWORD)) {
+        matrices.multiply(RotationAxis.NEGATIVE_Z.rotationDegrees(135));
+        matrices.scale(0.65f, 0.65f, 0.65f);
+    } else {
+        matrices.scale(0.5f, 0.5f, 0.5f);
     }
+
+    itemRenderer.renderItem(stack, ModelTransformationMode.GUI, light, OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, world, 1);
+}
+
+
 
 //    private final Quaternionf adjustedRotation = new Quaternionf();
 

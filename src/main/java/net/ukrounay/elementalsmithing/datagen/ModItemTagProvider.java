@@ -71,7 +71,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 ModItems.STEEL_SWORD,
                 ModItems.CURSED_CRYSTAL_SWORD,
                 ModItems.BLESSED_CRYSTAL_SWORD,
-                ModItems.PURE_CRYSTAL_SWORD
+                ModItems.PURE_CRYSTAL_SWORD,
+                ModItems.REINFORCED_STEEL_SWORD
         );
         getOrCreateTagBuilder(ModTags.Items.ELEMENTAL_SWORDS).add(
                 ModItems.FLAME_SWORD,

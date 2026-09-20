@@ -18,6 +18,7 @@ import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.Vec3i;
 import net.minecraft.world.World;
 import net.ukrounay.elementalsmithing.ElementalSmithing;
 import net.ukrounay.elementalsmithing.block.custom.EnergyCondensatorBlock;
@@ -25,6 +26,8 @@ import net.ukrounay.elementalsmithing.item.custom.ElementalCoreItem;
 import net.ukrounay.elementalsmithing.item.custom.ElementalSwordItem;
 import net.ukrounay.elementalsmithing.sound.ModSounds;
 import net.ukrounay.elementalsmithing.util.ModTags;
+import org.joml.Quaternionf;
+import org.joml.Vector3f;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +40,30 @@ public class EnergyCondensatorBlockEntity extends BlockEntity {
     public int portalTicks = 0;
     public Text cachedText = Text.of("?");
 
+    // transient visual state — never persisted, never synced
+
+
+    public final Quaternionf rotationOffset = new Quaternionf();     // current smoothed orientation
+    public final Quaternionf prevRotationOffset = new Quaternionf(); // for render-frame interpolation
+    private final Quaternionf targetRotation = new Quaternionf();
+
+    private int currentTargetIndex = 0;
+    private int retargetCooldown = 0;
+
+    private static final float ROTATE_SMOOTHING = 0.06f; // lower = slower/heavier drift, higher = snappier
+    private static final Vector3f REFERENCE_AXIS = new Vector3f(0, 1, 0); // arbitrary "neutral" forward
+
+
+    // transient visual state — never persisted, never synced
+    private final Vector3f itemOffset = new Vector3f();
+    private final Vector3f prevItemOffset = new Vector3f();
+    private final Vector3f itemVelocity = new Vector3f();
+
+    private static final float FLOAT_DIST = 0.75f;
+    private static final float ACCEL = 0.004f;
+    private static final float DAMPING = 0.92f;
+    private static final float MAX_SPEED = 0.05f;
+
     // Per-tick cache, refreshed at the top of every tick() call — NOT persisted, NOT a source
     // of truth. Ownership is always derived fresh from BlockPos comparison; this field only
     // exists so the renderer (called every frame, more often than tick()) can read a cheap
@@ -44,11 +71,104 @@ public class EnergyCondensatorBlockEntity extends BlockEntity {
     private boolean cachedIsOwner = true;
 
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(size(), ItemStack.EMPTY);
-    private int countcount = 0;
-    private final ArrayList<Integer> counts = new ArrayList<>();
 
     public EnergyCondensatorBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.ENERGY_CONDENSATOR, pos, state);
+    }
+
+    // -------- cosmetics ----------
+
+
+    private List<Vector3f> computePullPoints() {
+        List<Vector3f> points = new ArrayList<>();
+
+        Vec3i fv = getCachedState().get(EnergyCondensatorBlock.FACING).getVector();
+        points.add(new Vector3f(fv.getX(), fv.getY(), fv.getZ()).normalize().mul(FLOAT_DIST));
+
+        for (EnergyCondensatorBlockEntity partner : getArrayPartners()) {
+            BlockPos delta = partner.getPos().subtract(this.pos);
+            Vector3f dir = new Vector3f(delta.getX(), delta.getY(), delta.getZ());
+            if (dir.lengthSquared() > 1.0E-4f) {
+                points.add(dir.normalize().mul(FLOAT_DIST));
+            }
+        }
+        return points;
+    }
+
+    private void updateItemMotion() {
+        prevItemOffset.set(itemOffset);
+
+        List<Vector3f> points = computePullPoints();
+        if (currentTargetIndex >= points.size()) currentTargetIndex = 0;
+
+        if (retargetCooldown-- <= 0 && world != null) {
+            int newIndex = currentTargetIndex;
+            if (points.size() > 1) {
+                while (newIndex == currentTargetIndex) {
+                    newIndex = world.random.nextInt(points.size());
+                }
+            }
+            currentTargetIndex = newIndex;
+            retargetCooldown = 4 + world.random.nextInt(10); // ~1.5–4s between retargets at 20 ticks/sec
+        }
+
+        Vector3f toTarget = new Vector3f(points.get(currentTargetIndex)).sub(itemOffset);
+        if (toTarget.lengthSquared() > 1.0E-4f) {
+            itemVelocity.add(toTarget.normalize().mul(ACCEL));
+        }
+
+        itemVelocity.mul(DAMPING); // friction — without this it never settles, just accelerates forever
+        if (itemVelocity.length() > MAX_SPEED) {
+            itemVelocity.normalize().mul(MAX_SPEED);
+        }
+
+        itemOffset.add(itemVelocity);
+    }
+
+    private List<Vector3f> computeAxisTargets() {
+        List<Vector3f> axes = new ArrayList<>();
+
+        Vec3i fv = getCachedState().get(EnergyCondensatorBlock.FACING).getVector();
+        axes.add(new Vector3f(fv.getX(), fv.getY(), fv.getZ()).normalize());
+
+        for (EnergyCondensatorBlockEntity partner : getArrayPartners()) {
+            BlockPos delta = partner.getPos().subtract(this.pos);
+            Vector3f dir = new Vector3f(delta.getX(), delta.getY(), delta.getZ());
+            if (dir.lengthSquared() > 1.0E-4f) {
+                axes.add(dir.normalize());
+            }
+        }
+        return axes;
+    }
+
+    private void updateItemRotation() {
+
+//        ElementalSmithing.LOGGER.info("Updating item rotation of energy condensator at {}", pos.toString());
+
+
+        prevRotationOffset.set(rotationOffset);
+
+        List<Vector3f> axes = computeAxisTargets();
+        if (currentTargetIndex >= axes.size()) {
+            currentTargetIndex = 0;
+        }
+
+        if (retargetCooldown-- <= 0 && world != null) {
+            int newIndex = currentTargetIndex;
+            if (axes.size() > 1) {
+                while (newIndex == currentTargetIndex) {
+                    newIndex = world.random.nextInt(axes.size());
+                }
+            }
+            currentTargetIndex = newIndex;
+            retargetCooldown = 30 + world.random.nextInt(20);
+            targetRotation.rotationTo(REFERENCE_AXIS, axes.get(currentTargetIndex));
+
+
+            ElementalSmithing.LOGGER.info("Retargeting item in energy condensator at position {}", pos.toString());
+
+        }
+        rotationOffset.slerp(targetRotation, ROTATE_SMOOTHING);
     }
 
     // ---------- ticking ----------
@@ -63,7 +183,7 @@ public class EnergyCondensatorBlockEntity extends BlockEntity {
             entity.tickCharging(world, pos, blockState);
         }
 
-        if (!entity.cachedIsOwner && !entity.inventory.isEmpty()) {
+        if (!entity.cachedIsOwner && !entity.inventory.isEmpty() && world != null) {
             ItemScatterer.spawn(world, pos, entity.inventory);
             entity.inventory.clear();
         }
@@ -74,16 +194,6 @@ public class EnergyCondensatorBlockEntity extends BlockEntity {
                 partner.ticksToCharge = entity.ticksToCharge;
                 partner.cachedText = entity.cachedText;
             }
-        }
-        entity.counts.add(entity.countcount);
-        entity.countcount = 0;
-        if (entity.counts.size() > 10) {
-            String logstring = "Neighbours counted count last 10 ticks: ";
-            for (int count : entity.counts) {
-                logstring = logstring.concat(String.valueOf(count)).concat(", ");
-            }
-            ElementalSmithing.LOGGER.info(logstring);
-            entity.counts.clear();
         }
     }
 
@@ -100,6 +210,13 @@ public class EnergyCondensatorBlockEntity extends BlockEntity {
             ticksToCharge--;
         }
         updateListeners();
+    }
+
+    public static void tickClient(World world, BlockPos blockPos, BlockState blockState, EnergyCondensatorBlockEntity entity) {
+        if (entity.cachedIsOwner) {
+            entity.updateItemRotation();
+        }
+
     }
 
     private SoundEvent resolveCompletionSound(ItemStack stack) {
@@ -138,7 +255,6 @@ public class EnergyCondensatorBlockEntity extends BlockEntity {
     }
 
     public List<EnergyCondensatorBlockEntity> getArrayPartners() {
-        countcount++;
         return findArrayPartners();
     }
 
@@ -265,4 +381,6 @@ public class EnergyCondensatorBlockEntity extends BlockEntity {
             ticksToCharge = nbt.getInt("TicksToCharge");
         }
     }
+
+
 }
