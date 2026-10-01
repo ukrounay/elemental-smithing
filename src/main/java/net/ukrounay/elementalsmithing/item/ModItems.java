@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.ukrounay.elementalsmithing.ElementalSmithing;
 import net.ukrounay.elementalsmithing.item.custom.*;
+import net.ukrounay.elementalsmithing.item.custom.book.ModBookItem;
 import net.ukrounay.elementalsmithing.sound.ModSounds;
 import net.ukrounay.elementalsmithing.util.Element;
 
@@ -23,7 +24,10 @@ public class ModItems {
 
 
     public static final Item STEEL_CHRONICLES_BOOK = registerItem("steel_chronicles_book",
-            new PrescribedBookItem(new FabricItemSettings(), "steel_chronicles"));
+            new ModBookItem(new FabricItemSettings(), "steel_chronicles"));
+
+    public static final Item STEEL_MANUAL_BOOK = registerItem("steel_manual_book",
+            new ModBookItem(new FabricItemSettings(), "steel_manual"));
 
     // miscellaneous
     public static final Item TEGUKJFLK_MUSIC_DISK = registerItem("tegukjflk_music_disk",
@@ -112,144 +116,55 @@ public class ModItems {
 
     // crystal tools
     public static final Item BLESSED_CRYSTAL_SWORD = registerItem("blessed_crystal_sword",
-            new SwordItem(ModToolMaterials.BLESSED_CRYSTAL,3, -2.4f, new FabricItemSettings().rarity(Rarity.UNCOMMON)) {
-                @Override
-                public ItemStack getDefaultStack() {
-                    ItemStack stack = super.getDefaultStack();
-                    stack.addEnchantment(Enchantments.POWER, 10);
-                    return stack;
-                }
-            });
+            new ModEnchantedSwordItem(ModToolMaterials.BLESSED_CRYSTAL,3, -2.4f,
+                    Enchantments.POWER, 10, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item BLESSED_CRYSTAL_SHOVEL = registerItem("blessed_crystal_shovel",
-            new ShovelItem(ModToolMaterials.BLESSED_CRYSTAL,1.5f, -3f, new FabricItemSettings().rarity(Rarity.UNCOMMON)){
-                @Override
-                public ItemStack getDefaultStack() {
-                    ItemStack stack = super.getDefaultStack();
-                    stack.addEnchantment(Enchantments.POWER, 10);
-                    return stack;
-                }
-            });
+            new ModEnchantedShovelItem(ModToolMaterials.BLESSED_CRYSTAL,1.5f, -3f,
+                    Enchantments.POWER, 10, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item BLESSED_CRYSTAL_PICKAXE = registerItem("blessed_crystal_pickaxe",
-            new PickaxeItem(ModToolMaterials.BLESSED_CRYSTAL,1, -2.8f, new FabricItemSettings().rarity(Rarity.UNCOMMON)){
-                @Override
-                public ItemStack getDefaultStack() {
-                    ItemStack stack = super.getDefaultStack();
-                    stack.addEnchantment(Enchantments.POWER, 10);
-                    return stack;
-                }
-            });
+            new ModEnchantedPickaxeItem(ModToolMaterials.BLESSED_CRYSTAL,1, -2.8f,
+                    Enchantments.POWER, 10, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item BLESSED_CRYSTAL_AXE = registerItem("blessed_crystal_axe",
-            new AxeItem(ModToolMaterials.BLESSED_CRYSTAL,5.0f, -3.0f, new FabricItemSettings().rarity(Rarity.UNCOMMON)){
-                @Override
-                public ItemStack getDefaultStack() {
-                    ItemStack stack = super.getDefaultStack();
-                    stack.addEnchantment(Enchantments.POWER, 10);
-                    return stack;
-                }
-            });
+            new ModEnchantedAxeItem(ModToolMaterials.BLESSED_CRYSTAL,5.0f, -3.0f,
+                    Enchantments.POWER, 10, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item BLESSED_CRYSTAL_HOE = registerItem("blessed_crystal_hoe",
-            new HoeItem(ModToolMaterials.BLESSED_CRYSTAL,-2, 0.0f, new FabricItemSettings().rarity(Rarity.UNCOMMON)){
-                @Override
-                public ItemStack getDefaultStack() {
-                    ItemStack stack = super.getDefaultStack();
-                    stack.addEnchantment(Enchantments.POWER, 10);
-                    return stack;
-                }
-            });
+            new ModEnchantedHoeItem(ModToolMaterials.BLESSED_CRYSTAL,-2, 0.0f,
+                    Enchantments.POWER, 10, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
 
     public static final Item CURSED_CRYSTAL_SWORD = registerItem("cursed_crystal_sword",
-            new SwordItem(ModToolMaterials.CURSED_CRYSTAL,3, -2.4f, new FabricItemSettings().rarity(Rarity.UNCOMMON)){
-                @Override
-                public ItemStack getDefaultStack() {
-                    ItemStack stack = super.getDefaultStack();
-                    stack.addEnchantment(Enchantments.BINDING_CURSE, 10);
-                    return stack;
-                }
-            });
+            new ModEnchantedSwordItem(ModToolMaterials.CURSED_CRYSTAL,3, -2.4f,
+                    Enchantments.BINDING_CURSE, 10, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item CURSED_CRYSTAL_SHOVEL = registerItem("cursed_crystal_shovel",
-            new ShovelItem(ModToolMaterials.CURSED_CRYSTAL,1.5f, -3f, new FabricItemSettings().rarity(Rarity.UNCOMMON)){
-                @Override
-                public ItemStack getDefaultStack() {
-                    ItemStack stack = super.getDefaultStack();
-                    stack.addEnchantment(Enchantments.BINDING_CURSE, 10);
-                    return stack;
-                }
-            });
+            new ModEnchantedShovelItem(ModToolMaterials.CURSED_CRYSTAL,1.5f, -3f,
+                    Enchantments.BINDING_CURSE, 10, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item CURSED_CRYSTAL_PICKAXE = registerItem("cursed_crystal_pickaxe",
-            new PickaxeItem(ModToolMaterials.CURSED_CRYSTAL,1, -2.8f, new FabricItemSettings().rarity(Rarity.UNCOMMON)){
-                @Override
-                public ItemStack getDefaultStack() {
-                    ItemStack stack = super.getDefaultStack();
-                    stack.addEnchantment(Enchantments.BINDING_CURSE, 10);
-                    return stack;
-                }
-            });
+            new ModEnchantedPickaxeItem(ModToolMaterials.CURSED_CRYSTAL,1, -2.8f,
+                    Enchantments.BINDING_CURSE, 10, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item CURSED_CRYSTAL_AXE = registerItem("cursed_crystal_axe",
-            new AxeItem(ModToolMaterials.CURSED_CRYSTAL,5.0f, -3.0f, new FabricItemSettings().rarity(Rarity.UNCOMMON)){
-                @Override
-                public ItemStack getDefaultStack() {
-                    ItemStack stack = super.getDefaultStack();
-                    stack.addEnchantment(Enchantments.BINDING_CURSE, 10);
-                    return stack;
-                }
-            });
+            new ModEnchantedAxeItem(ModToolMaterials.CURSED_CRYSTAL,5.0f, -3.0f,
+                    Enchantments.BINDING_CURSE, 10, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item CURSED_CRYSTAL_HOE = registerItem("cursed_crystal_hoe",
-            new HoeItem(ModToolMaterials.CURSED_CRYSTAL,-2, 0.0f, new FabricItemSettings().rarity(Rarity.UNCOMMON)){
-                @Override
-                public ItemStack getDefaultStack() {
-                    ItemStack stack = super.getDefaultStack();
-                    stack.addEnchantment(Enchantments.BINDING_CURSE, 10);
-                    return stack;
-                }
-            });
+            new ModEnchantedHoeItem(ModToolMaterials.CURSED_CRYSTAL,-2, 0.0f,
+                    Enchantments.BINDING_CURSE, 10, new FabricItemSettings().rarity(Rarity.UNCOMMON)));
 
 
 
     public static final Item PURE_CRYSTAL_SWORD = registerItem("pure_crystal_sword",
-            new SwordItem(ModToolMaterials.PURE_CRYSTAL,3, -2.4f, new FabricItemSettings().rarity(Rarity.RARE)){
-                @Override
-                public ItemStack getDefaultStack() {
-                    ItemStack stack = super.getDefaultStack();
-                    stack.addEnchantment(Enchantments.MENDING, 1);
-                    return stack;
-                }
-            });
+            new ModEnchantedSwordItem(ModToolMaterials.PURE_CRYSTAL,3, -2.4f,
+                    Enchantments.MENDING, 1, new FabricItemSettings().rarity(Rarity.RARE)));
     public static final Item PURE_CRYSTAL_SHOVEL = registerItem("pure_crystal_shovel",
-            new ShovelItem(ModToolMaterials.PURE_CRYSTAL,1.5f, -3f, new FabricItemSettings().rarity(Rarity.RARE)){
-                @Override
-                public ItemStack getDefaultStack() {
-                    ItemStack stack = super.getDefaultStack();
-                    stack.addEnchantment(Enchantments.MENDING, 1);
-                    return stack;
-                }
-            });
+            new ModEnchantedShovelItem(ModToolMaterials.PURE_CRYSTAL,1.5f, -3f,
+                    Enchantments.MENDING, 1, new FabricItemSettings().rarity(Rarity.RARE)));
     public static final Item PURE_CRYSTAL_PICKAXE = registerItem("pure_crystal_pickaxe",
-            new PickaxeItem(ModToolMaterials.PURE_CRYSTAL,1, -2.8f, new FabricItemSettings().rarity(Rarity.RARE)){
-                @Override
-                public ItemStack getDefaultStack() {
-                    ItemStack stack = super.getDefaultStack();
-                    stack.addEnchantment(Enchantments.MENDING, 1);
-                    return stack;
-                }
-            });
+            new ModEnchantedPickaxeItem(ModToolMaterials.PURE_CRYSTAL,1, -2.8f,
+                    Enchantments.MENDING, 1, new FabricItemSettings().rarity(Rarity.RARE)));
     public static final Item PURE_CRYSTAL_AXE = registerItem("pure_crystal_axe",
-            new AxeItem(ModToolMaterials.PURE_CRYSTAL,5.0f, -3.0f, new FabricItemSettings().rarity(Rarity.RARE)){
-                @Override
-                public ItemStack getDefaultStack() {
-                    ItemStack stack = super.getDefaultStack();
-                    stack.addEnchantment(Enchantments.MENDING, 1);
-                    return stack;
-                }
-            });
+            new ModEnchantedAxeItem(ModToolMaterials.PURE_CRYSTAL,5.0f, -3.0f,
+                    Enchantments.MENDING, 1, new FabricItemSettings().rarity(Rarity.RARE)));
     public static final Item PURE_CRYSTAL_HOE = registerItem("pure_crystal_hoe",
-            new HoeItem(ModToolMaterials.PURE_CRYSTAL,-2, 0.0f, new FabricItemSettings().rarity(Rarity.RARE)){
-                @Override
-                public ItemStack getDefaultStack() {
-                    ItemStack stack = super.getDefaultStack();
-                    stack.addEnchantment(Enchantments.MENDING, 1);
-                    return stack;
-                }
-            });
+            new ModEnchantedHoeItem(ModToolMaterials.PURE_CRYSTAL,-2, 0.0f,
+                Enchantments.MENDING, 1, new FabricItemSettings().rarity(Rarity.RARE)));
+
 
     // elemental items
     public static final Item FLAME_CORE = registerItem("flame_core",

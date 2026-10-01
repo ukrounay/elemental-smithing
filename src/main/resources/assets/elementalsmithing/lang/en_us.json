@@ -180,5 +180,6 @@
   "advancement.elementalsmithing.cry_of_the_soul.title" : "Cry of the soul",
   "advancement.elementalsmithing.cry_of_the_soul.description" : "Extract the soul from innocent animals",
   "advancement.elementalsmithing.divinity.title": "Divinity",
-  "advancement.elementalsmithing.divinity.description": "Stabilize Amorphous Sword"
+  "advancement.elementalsmithing.divinity.description": "Stabilize Amorphous Sword",
+  "book.elementalsmithing.contents": "Contents"
 }

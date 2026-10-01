@@ -1,0 +1,68 @@
+{
+  "title": {"text": "Steel Manual", "font": "alt", "color":"gold"},
+  "author": {"text": "Ray of Faro", "color": "gray"},
+  "generation": 3,
+  "custom_model_data": 867889687,
+  "summary": [
+    {
+      "label": "Introduction",
+      "icon": "elementalsmithing:steel_ingot",
+      "page": 0
+    },
+    {
+      "label": "Steel",
+      "icon": "elementalsmithing:steel_sword",
+      "page": 3
+    },
+    {
+      "label": "Upgrading",
+      "icon": "elementalsmithing:damask_steel_sword",
+      "page": 5
+    },
+    {
+      "label": "Crystals",
+      "icon": "elementalsmithing:pure_crystal",
+      "page": 9
+    }
+    {
+      "label": "Armor",
+      "icon": "elementalsmithing:knight_chestplate",
+      "page": 15
+    }
+    {
+      "label": "Elements",
+      "icon": "elementalsmithing:amorphous_sword",
+      "page": 19
+    }
+  ],
+  "pages": [
+    [{"text": "\n\n\n\nSteel Manual\n\n","color":"gold", "bold":true},{"text" : "A reference on elemental smithing", "font": "alt"}],
+    ["This guide documents the materials and equipment produced through elemental smithing: steel and its derivative alloys, the three crystal types, knight armor, elemental cores and swords."],
+    ["Each entry below lists the material's core properties, its crafting relationship to nearby tiers, and its combat or utility role."],
+    [{"text":"• The Essence of Steel","color":"blue","bold":true},"\n\nSteel is produced through a multi-step process: Graphite is blasted into Raw Steel, which is blasted again into Steel Gobbet before yielding a Steel Ingot. Smelting Raw Steel in a regular furnace instead only produces an Iron Nugget."],
+    ["Steel Ingot is the base material for most equipment in this guide, with 890 durability, a diamond-equivalent mining level, and enchantability 15. Steel tools and the Steel Sword (6.5 damage) are crafted directly on a crafting table — the mod's third tier."],
+    [{"text":"• The Strength of Damask Steel","color":"gold","bold":true},"\n\nDamask Steel equipment — both tools and Knight Armor — is produced by upgrading Iron gear with a Steel Upgrade template on a smithing table, forming the mod's second tier. The template can be found in the homes of villagers with smithing-related professions."],
+    ["Damask Steel reaches 3280 durability at a netherite-equivalent mining level, with enchantability 25 — notably higher than plain steel. The Damask Steel Sword deals 7.5 attack damage at speed 1.7."],
+    [{"text":"• Reinforced Damask Steel: The Unyielding","color":"dark_aqua","bold":true},"\n\nReinforced equipment is produced by upgrading Damask Steel gear on the Fusion Table, forming the mod's first tier. Reinforced Damask Steel holds 3460 durability at netherite mining level, though its enchantability drops to 15."],
+    ["The Reinforced Steel Sword deals 8.5 attack damage at speed 1.3 — the highest damage of any non-elemental weapon. Reinforced Knight Armor built from this alloy provides the strongest protection in the armor line, detailed further ahead."],
+    [{"text":"• The Wonder of Blessed Crystal","color":"light_purple","bold":true},"\n\nBlessed Crystal can only be produced on the Fusion Table. It carries an energy worth of 250, can be compressed into a block, and serves as a crafting ingredient for Pure Crystal."],
+    ["As a tool material, Blessed Crystal is fragile, holding only 64 durability, though it mines at netherite level with speed 15 and infuses new tools with Power X on creation."],
+    [{"text":"• The Darkness of Cursed Crystal","color":"dark_purple","bold":true},"\n\nCursed Crystal is likewise produced only on the Fusion Table, sharing Blessed Crystal's energy worth of 250 and its role as an ingredient for Pure Crystal."],
+    ["Cursed Crystal tools deal the highest damage of any crystal line — the axe reaches 12 — but mine only at a bare-hand level with mining speed 2, and are infused with Curse of Binding X on creation. Handle with care."],
+    [{"text":"• The Serenity of Pure Crystal","color":"aqua","bold":true},"\n\nPure Crystal is fused from Blessed and Cursed Crystal on the Fusion Table, carrying an energy worth of 500. It can be compressed into a block and serves in turn as the crafting ingredient for Elemental Cores."],
+    ["Pure Crystal tools combine 2560 durability with netherite-level mining and the Mending enchantment infused on creation, making them the most self-sustaining tools outside the elemental weapon line."],
+    [{"text":"• The Knight's Armor","color":"dark_gray","bold":true},"\n\nKnight Armor is produced by upgrading Iron armor with a Steel Upgrade template on a smithing table. It shares Damask Steel's armor properties: 1.5 armor toughness, 1 knockback resistance, and enchantability 27."],
+    ["Per-piece armor and durability: Helmet 3 / 440, Chestplate 6 / 640, Leggings 8 / 600, Boots 3 / 520."],
+    [{"text":"• The Reinforced Knight Armor","color":"black","bold":true},"\n\nReinforced Knight Armor is produced by upgrading Knight Armor on the Fusion Table. It carries 2 armor toughness, 2 knockback resistance, and enchantability 20."],
+    ["Per-piece armor and durability: Helmet 4 / 495, Chestplate 9 / 720, Leggings 7 / 675, Boots 4 / 585 — the highest protection of any armor set covered in this guide."],
+    [{"text":"• The Frost Sword","color":"aqua","bold":true},"\n\nThe Frost Sword is forged by combining steel with a Frost Core, found in an igloo's underground lab or an ancient city's ice room. It spreads a frost territory around its wielder and applies ice-based effects on hit."],
+    ["Frost Sword: 7 attack damage (9 bonus) at speed 2.2, Sweeping Edge [max] infused, 0.9s base cooldown. Using it grants Frost Embodiment — bonus health, speed, regeneration, and immunity to freezing."],
+    [{"text":"• The Flame Sword","color":"red","bold":true},"\n\nThe Flame Sword is forged by combining steel with a Flame Core, found in broken nether portals or nether fortress chests. It spreads a territory of fire around its wielder and applies fire-based effects on hit."],
+    ["Flame Sword: 7 attack damage (9 bonus) at speed 2.2, Fire Aspect [max] infused, 0.75s base cooldown. Using it grants Flame Embodiment — bonus health, speed, regeneration, and immunity to fire."],
+    [{"text":"• The Amorphous Sword","color":"light_purple","bold":true},"\n\nThe Amorphous Sword is forged by stabilizing a Flame Sword and a Frost Sword with a Soul Core — an item found only in End City treasure rooms."],
+    ["An unstable version can be made first: 7 attack damage (19 bonus) at speed 2.6, Looting [max] infused, granting Amorphousness only briefly on use. The stabilized Amorphous Sword raises bonus damage to 23 and grants Amorphousness continuously while held, at no energy cost."],
+    ["Amorphousness grants creative-like flight, immunity to fall damage, feather falling on landing, and fast regeneration. All elemental swords are unbreakable and recharge only at an Energy Condensator."],
+    ["This concludes the overview of materials and equipment covered in this guide. Refer to each section above for further detail on crafting requirements and recommended uses.\n\n\n"],
+    [{"text": "— Ray, Blacksmith", "italic": true, "color": "dark_gray"}]
+  ]
+}

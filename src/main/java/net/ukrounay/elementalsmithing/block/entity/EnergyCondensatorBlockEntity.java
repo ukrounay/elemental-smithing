@@ -165,7 +165,7 @@ public class EnergyCondensatorBlockEntity extends BlockEntity {
             targetRotation.rotationTo(REFERENCE_AXIS, axes.get(currentTargetIndex));
 
 
-            ElementalSmithing.LOGGER.info("Retargeting item in energy condensator at position {}", pos.toString());
+//            ElementalSmithing.LOGGER.info("Retargeting item in energy condensator at position {}", pos.toString());
 
         }
         rotationOffset.slerp(targetRotation, ROTATE_SMOOTHING);

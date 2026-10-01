@@ -1,4 +1,4 @@
-package net.ukrounay.elementalsmithing.item.custom;
+package net.ukrounay.elementalsmithing.item.custom.book;
 
 import com.google.gson.JsonElement;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
