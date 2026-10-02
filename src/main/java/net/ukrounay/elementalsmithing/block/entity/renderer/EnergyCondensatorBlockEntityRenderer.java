@@ -111,12 +111,12 @@ public class EnergyCondensatorBlockEntityRenderer implements BlockEntityRenderer
 
 private void renderStack(EnergyCondensatorBlockEntity entity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, float time, ItemStack stack, World world, Direction facing) {
     Vec3i dir = facing.getVector();
-    float floatDist = 0.75f + (float) (Math.sin(time / 10.0) / 16);
+    float floatDist = 1.0f + (float) (Math.sin(time / 10.0) / 16);
 
     matrices.translate(
-            0.5 + dir.getX() * floatDist,
-            0.5 + dir.getY() * floatDist,
-            0.5 + dir.getZ() * floatDist
+        0.5 + dir.getX() * floatDist,
+        0.5 + dir.getY() * floatDist,
+        0.5 + dir.getZ() * floatDist
     );
 
     RotationHelper.applyFacingRotation(matrices, facing);
